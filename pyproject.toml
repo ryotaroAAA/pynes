@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pynes"
+version = "0.1.0"
+description = ""
+authors = ["ryotaro <ryo.ex3991@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tabulate = "^0.8.9"
+cPython = "^0.0.6"
+hexdump = "^3.3"
+PyYAML = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[tool.poetry.scripts]
+main = "main:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
