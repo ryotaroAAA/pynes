@@ -1,11 +1,12 @@
 from pprint import *
 
+
 from pynes.cassette import *
 from pynes.cpu import *
 from pynes.ram import *
 
 def run():
-    cas = Cassette("hello.nes")
+    cas = Cassette("rom/hello.nes")
     # print(vars(cas))
     # print(cas.prog_size, cas.char_size)
     cpu = Cpu(cas)

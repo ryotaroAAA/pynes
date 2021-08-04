@@ -332,6 +332,10 @@ class Cpu:
             return data
         else:
             raise NotImplementedError
+    
+    def branch(self, addr):
+        self.reg.PC = addr
+        self.has_branched = True
 
     def get_op(self, opcode):
         opset = self.opset[opcode]
@@ -343,7 +347,8 @@ class Cpu:
             oprand["data"] = self.fetch(1)
         elif mode == Addrmode.REL:
             addr = self.fetch(1)
-            oprand["data"] = addr + self.reg.PC % 0xFF
+            oprand["data"] = addr + self.reg.PC
+            oprand["data"] -= 0 if addr < 0x80 else 0xFF
             oprand["add_cycle"] = \
                 1 if (oprand["data"] ^ self.reg.PC) & 0xFF00 else 0
         elif mode == Addrmode.ZPG_X:
@@ -362,12 +367,14 @@ class Cpu:
                 1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
         elif mode == Addrmode.IND_X:
             base = (self.reg.X + self.fetch(1)) & 0xFF
-            oprand["data"] = self.wread(base)
-            oprand["data"] = (self.reg.X + self.fetch(2)) & 0xFFFF
+            oprand["data"] = (self.reg.X + self.wread(base)) & 0xFFFF
             oprand["add_cycle"] = \
-                1 if not oprand["data"] == (self.reg.X & 0xFF00) else 0
+                1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
         elif mode == Addrmode.IND_Y:
-            pass
+            base = (self.reg.Y + self.fetch(1)) & 0xFF
+            oprand["data"] = (self.reg.Y + self.wread(base)) & 0xFFFF
+            oprand["add_cycle"] = \
+                1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
         elif mode == Addrmode.ABS_IND:
             pass
         else:
@@ -392,15 +399,17 @@ class Cpu:
         data = oprand["data"]
         mode = addrmode_dic[opset["mode"]]
         # load
-        if op == Opcode.LDA:
-            self.reg.A = data if mode == Addrmode.IMD else self.bread(data)
-            self.set_flag_for_after_calc(self.reg.A)
-        elif op == Opcode.LDX:
-            self.reg.X = data if mode == Addrmode.IMD else self.bread(data)
-            self.set_flag_for_after_calc(self.reg.X)
-        elif op == Opcode.LDY:
-            self.reg.Y = data if mode == Addrmode.IMD else self.bread(data)
-            self.set_flag_for_after_calc(self.reg.Y)
+        if op in [Opcode.LDA, Opcode.LDX, Opcode.LDY]:
+            data_ = data if mode == Addrmode.IMD else self.bread(data)
+            if op == Opcode.LDA:
+                self.reg.A = data_
+            elif op == Opcode.LDX:
+                self.reg.X = data_
+            elif op == Opcode.LDY:
+                self.reg.Y = data_
+            else:
+                raise NotImplementedError
+            self.set_flag_for_after_calc(data_)
         # store
         elif op == Opcode.STA:
             self.write(data, self.reg.A)
@@ -422,7 +431,7 @@ class Cpu:
             self.reg.A = self.reg.X
             self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.TXS:
-            self.reg.SP = self.reg.X & 0x0100
+            self.reg.SP = self.reg.X + 0x0100
         elif op == Opcode.TYA:
             self.reg.A = self.reg.Y
             self.set_flag_for_after_calc(self.reg.A)
@@ -441,12 +450,17 @@ class Cpu:
             raise NotImplementedError
         elif op == Opcode.CPY:
             raise NotImplementedError
+        # inc/dec
         elif op == Opcode.DEC:
-            raise NotImplementedError
+            data_ = self.read(data) - 1
+            self.write(data, data_)
+            self.set_flag_for_after_calc(data_)
         elif op == Opcode.DEX:
-            raise NotImplementedError
+            self.reg.X -= 1
+            self.set_flag_for_after_calc(self.reg.X)
         elif op == Opcode.DEY:
-            raise NotImplementedError
+            self.reg.Y -= 1
+            self.set_flag_for_after_calc(self.reg.Y)
         elif op == Opcode.EOR:
             self.reg.A ^= data if mode == Addrmode.IMD else self.bread(data)
             self.set_flag_for_after_calc(self.reg.A)
@@ -486,22 +500,30 @@ class Cpu:
             raise NotImplementedError
         elif op == Opcode.RTI:
             raise NotImplementedError
-        elif op == Opcode.BCC:
-            raise NotImplementedError
         elif op == Opcode.BCS:
-            raise NotImplementedError
+            if self.reg.P.CARRY:
+                self.branch(data)
+        elif op == Opcode.BCC:
+            if not self.reg.P.CARRY:
+                self.branch(data)
         elif op == Opcode.BEQ:
-            raise NotImplementedError
-        elif op == Opcode.BMI:
-            raise NotImplementedError
+            if self.reg.P.ZERO:
+                self.branch(data)
         elif op == Opcode.BNE:
-            raise NotImplementedError
+            if not self.reg.P.ZERO:
+                self.branch(data)
+        elif op == Opcode.BMI:
+            if self.reg.P.NEGATIVE:
+                self.branch(data)
         elif op == Opcode.BPL:
-            raise NotImplementedError
+            if not self.reg.P.NEGATIVE:
+                self.branch(data)
         elif op == Opcode.BVS:
-            raise NotImplementedError
+            if self.reg.P.OVERFLOW:
+                self.branch(data)
         elif op == Opcode.BVC:
-            raise NotImplementedError
+            if not self.reg.P.OVERFLOW:
+                self.branch(data)
         elif op == Opcode.CLD:
             self.reg.P.DECIMAL = False
         elif op == Opcode.CLC:
