@@ -1,6 +1,6 @@
 dist/*
 __pycache__/*
 *.pyc
-*.nes
+# *.nes
 htmlcov/*
 .coverage
