@@ -4,15 +4,15 @@ from pynes.cassette import *
 from pynes.cpu import *
 from pynes.ram import *
 
-def nestest():
+def nestest(limit = 1000):
     cas = Cassette("rom/nestest.nes")
     cpu = Cpu(cas)
     cpu.reset_addr(0xc000)
-    cpu.load_correct_log("log/nestest.yaml")
+    cpu.load_correct_log(f"log/nestest{limit}.yaml")
     pprint(vars(cpu.reg))
-    for _ in range(200):
+    for _ in range(limit):
         cpu.run()
-    cpu.dump_stat_yaml("sample/nestest.yaml")
+    cpu.dump_stat_yaml(f"sample/nestest{limit}.yaml")
 
 def hello():
     cas = Cassette("rom/hello.nes")

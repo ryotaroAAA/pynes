@@ -442,6 +442,10 @@ class Cpu:
             "SP"
         ]
         for item in check_items:
+            if correct_op[item] == "":
+                continue
+            if item == "SP":
+                sample_op[item] &= 0xFF
             if sample_op[item] != correct_op[item]:
                 print(f"{item}, sample:{sample_op[item]:X}, "
                     f"correct:{correct_op[item]:X}",
