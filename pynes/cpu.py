@@ -438,7 +438,7 @@ class Cpu:
             "P" : self.reg.P.get_val(),
             "SP" : self.reg.SP
         }
-        self.print_stat(op)
+        # self.print_stat(op)
         self.dump.append(op)
     
     def comp_stat(self):
@@ -769,7 +769,13 @@ class Cpu:
             raise NotImplementedError
 
     def run(self):
-        pc = self.reg.PC
-        opset, oprand = self.get_op(self.fetch(1))
-        self.check_stat(opset, oprand, pc)
-        self.exec(opset, oprand)
+        try:
+            pc = self.reg.PC
+            opset, oprand = self.get_op(self.fetch(1))
+            self.check_stat(opset, oprand, pc)
+            self.exec(opset, oprand)
+        except NotImplementedError:
+            start, end = max(0, self.op_index - 5), self.op_index + 1
+            for a in self.dump[start:end]:
+                self.print_stat(a)
+            raise NotImplementedError

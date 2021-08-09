@@ -4,7 +4,7 @@ from pynes.cassette import *
 from pynes.cpu import *
 from pynes.ram import *
 
-def nestest(limit = 1000):
+def nestest(limit = 4000):
     cas = Cassette("rom/nestest.nes")
     cpu = Cpu(cas)
     cpu.reset_addr(0xc000)
