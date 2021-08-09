@@ -378,7 +378,7 @@ class Cpu:
             oprand["data"] = addr + self.reg.PC
             oprand["data"] -= 0 if addr < 0x80 else 0xFF
             oprand["add_cycle"] = \
-                1 if (oprand["data"] ^ self.reg.PC) & 0xFF00 else 0
+                int((oprand["data"] ^ self.reg.PC) & 0xFF00)
         elif mode == Addrmode.ZPG_X:
             oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
         elif mode == Addrmode.ZPG_Y:
@@ -388,21 +388,21 @@ class Cpu:
         elif mode == Addrmode.ABS_X:
             oprand["data"] = (self.reg.X + self.fetch(2)) & 0xFFFF
             oprand["add_cycle"] = \
-                1 if not oprand["data"] == (self.reg.X & 0xFF00) else 0
+                int(not oprand["data"] == (self.reg.X & 0xFF00))
         elif mode == Addrmode.ABS_Y:
             oprand["data"] = (self.reg.Y + self.fetch(2)) & 0xFFFF
             oprand["add_cycle"] = \
-                1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
+                int(not oprand["data"] == (self.reg.Y & 0xFF00))
         elif mode == Addrmode.IND_X:
             base = (self.reg.X + self.fetch(1)) & 0xFF
             oprand["data"] = (self.reg.X + self.wread(base)) & 0xFFFF
             oprand["add_cycle"] = \
-                1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
+                int(not oprand["data"] == (self.reg.Y & 0xFF00))
         elif mode == Addrmode.IND_Y:
             base = (self.reg.Y + self.fetch(1)) & 0xFF
             oprand["data"] = (self.reg.Y + self.wread(base)) & 0xFFFF
             oprand["add_cycle"] = \
-                1 if not oprand["data"] == (self.reg.Y & 0xFF00) else 0
+                int(not oprand["data"] == (self.reg.Y & 0xFF00))
         elif mode == Addrmode.ABS_IND:
             pass
         else:
@@ -458,6 +458,7 @@ class Cpu:
             "P",
             "SP"
         ]
+        failed = False
         for item in check_items:
             if correct_op[item] == "":
                 continue
@@ -485,16 +486,17 @@ class Cpu:
                     print(f"{correct_op[item]:X}",
                         tag = "correct", tag_color = "yellow")
                     pprint(print_status(correct_op[item]))
-                start, end = max(0, self.op_index - 5), self.op_index + 1
+                failed = True
+        if failed:
+            start, end = max(0, self.op_index - 5), self.op_index + 1
+            print("", tag = "sample", tag_color = "yellow", color = "white")
+            for s in self.dump[start:end]:
+                self.print_stat(s)
 
-                print("", tag = "sample", tag_color = "yellow", color = "white")
-                for s in self.dump[start:end]:
-                    self.print_stat(s)
-
-                print("", tag = "correct", tag_color = "yellow", color = "white")
-                for c in self.correct[start:end]:
-                    self.print_stat(c)
-                assert False, "status check error!"
+            print("", tag = "correct", tag_color = "yellow", color = "white")
+            for c in self.correct[start:end]:
+                self.print_stat(c)
+            assert False, "status check error!"
 
     def dump_stat_yaml(self, path):
         Path("sample").mkdir(exist_ok = True)
@@ -502,8 +504,9 @@ class Cpu:
             yaml.dump(self.dump, f)
 
     def set_flag_for_after_calc(self, result):
-        self.reg.P.NEGATIVE = not not (result & 0x80)
-        self.reg.P.ZERO = not result
+        result &= 0xFF
+        self.reg.P.NEGATIVE = bool(result & 0x80)
+        self.reg.P.ZERO = result == 0
 
     def push(self, data):
         self.write(self.reg.SP & 0xFF | 0x100, data)
@@ -572,10 +575,14 @@ class Cpu:
         # op
         elif op == Opcode.ADC:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
-            result = self.reg.A + data_ + 1 if self.reg.P.CARRY else 0
-            self.reg.P.CARRY = (result & 0x80) > 0
-            self.reg.P.OVERFLOW = (
-                ((data_ ^ result) & 0x80) and ((self.reg.A ^ result) & 0x80))
+            result = self.reg.A + data_ + int(self.reg.P.CARRY)
+            # self.reg.P.CARRY = result >= 0
+            self.reg.P.CARRY = (result > 0xFF and
+                self.reg.A < 0xFF and data_ < 0xFF)
+            # print(result, bool(result & 0x80), result > 0xFF)
+            self.reg.P.OVERFLOW = bool(
+                ((data_ ^ result) & 0x80) and
+                ((self.reg.A ^ result) & 0x80))
             self.set_flag_for_after_calc(result)
             self.reg.A = result & 0xFF
         elif op == Opcode.AND:
@@ -584,15 +591,15 @@ class Cpu:
             self.set_flag_for_after_calc(self.reg.A) 
         elif op == Opcode.ASL:
             result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
-            self.reg.P.CARRY = (result & 0x80) > 0
+            self.reg.P.CARRY = result < 0
             result = (result << 1) & 0xFF
             if mode != Addrmode.ACM:
                 self.write(data, result)
             self.set_flag_for_after_calc(result)
         elif op == Opcode.BIT:
             data_ = self.bread(data)
-            self.reg.P.OVERFLOW = (data_ & 0x40) > 0
-            self.reg.P.NEGATIVE = (data_ & 0x80) > 0
+            self.reg.P.OVERFLOW = bool(data_ & 0x40)
+            self.reg.P.NEGATIVE = bool(data_ & 0x80)
             self.reg.P.ZERO = not (data_ & self.reg.A)
         elif op == Opcode.CMP:
             result = data if mode == Addrmode.IMD else self.bread(data)
@@ -611,27 +618,27 @@ class Cpu:
             self.set_flag_for_after_calc(comp)
         # inc/dec
         elif op == Opcode.DEC:
-            data_ = self.bread(data) - 1
+            data_ = (self.bread(data) - 1) & 0xFF
             self.write(data, data_)
             self.set_flag_for_after_calc(data_)
         elif op == Opcode.DEX:
-            self.reg.X -= 1
+            self.reg.X = (self.reg.X - 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.X)
         elif op == Opcode.DEY:
-            self.reg.Y -= 1
+            self.reg.Y = (self.reg.Y - 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.Y)
         elif op == Opcode.EOR:
             self.reg.A ^= data if mode == Addrmode.IMD else self.bread(data)
             self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.INC:
-            data_ = self.bread(data) + 1
+            data_ = (self.bread(data) + 1) & 0xFF
             self.write(data, data_)
             self.set_flag_for_after_calc(data_)
         elif op == Opcode.INX:
-            self.reg.X += 1
+            self.reg.X = (self.reg.X + 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.X)
         elif op == Opcode.INY:
-            self.reg.Y += 1
+            self.reg.Y = (self.reg.Y + 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.Y)
         elif op == Opcode.LSR:
             raise NotImplementedError
@@ -644,7 +651,15 @@ class Cpu:
         elif op == Opcode.ROR:
             raise NotImplementedError
         elif op == Opcode.SBC:
-            raise NotImplementedError
+            data_ = data if mode == Addrmode.IMD else self.bread(data)
+            result = self.reg.A - data_ - int(not self.reg.P.CARRY)
+            self.reg.P.CARRY = not(result < 0)
+            self.reg.P.OVERFLOW = bool(
+                self.reg.P.CARRY and
+                (((data_ ^ result) & 0x80) or
+                ((self.reg.A ^ result) & 0x80)))
+            self.set_flag_for_after_calc(result)
+            self.reg.A = result & 0xFF
         elif op == Opcode.PHA:
             self.push(self.reg.A)
         elif op == Opcode.PHP:
