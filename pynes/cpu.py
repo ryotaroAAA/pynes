@@ -591,9 +591,12 @@ class Cpu:
             self.set_flag_for_after_calc(self.reg.A) 
         elif op == Opcode.ASL:
             result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
-            self.reg.P.CARRY = result < 0
+            # print(result, self.reg.A, result & 0x01, bool(result & 0x01)
+            self.reg.P.CARRY = bool(result & 0x80)
             result = (result << 1) & 0xFF
-            if mode != Addrmode.ACM:
+            if mode == Addrmode.ACM:
+                self.reg.A = result
+            else:
                 self.write(data, result)
             self.set_flag_for_after_calc(result)
         elif op == Opcode.BIT:
@@ -641,7 +644,15 @@ class Cpu:
             self.reg.Y = (self.reg.Y + 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.Y)
         elif op == Opcode.LSR:
-            raise NotImplementedError
+            result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            self.reg.P.CARRY = result & 0x01
+            result = (result >> 1) & 0xFF
+            self.reg.P.ZERO = (result == 0)
+            if mode == Addrmode.ACM:
+                self.reg.A = result
+            else:
+                self.write(data, result)
+            self.reg.P.NEGATIVE = False
         elif op == Opcode.ORA:
             result = data if mode == Addrmode.IMD else self.bread(data)
             self.reg.A |= result
