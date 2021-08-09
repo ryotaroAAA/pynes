@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from enum import auto, Enum
 from pathlib import Path
+import traceback
 from typing import DefaultDict
 
 from hexdump import hexdump
@@ -470,6 +471,22 @@ class Cpu:
         self.reg.P.NEGATIVE = not not (result & 0x80)
         self.reg.P.ZERO = not result
 
+    def push(self, data):
+        self.write(self.reg.SP & 0xFF | 0x100, data)
+        self.reg.SP -= 1
+
+    def push_PC(self):
+        self.push((self.reg.PC >> 8) & 0xFF)
+        self.push(self.reg.PC & 0xFF)
+
+    def pop(self):
+        self.reg.SP += 1
+        return self.bread(self.reg.SP & 0xFF | 0x100)
+
+    def pop_PC(self):
+        self.reg.PC = self.pop()
+        self.reg.PC += (self.pop() << 8)
+
     def exec(self, opset, oprand):
         op = opcode_dic[opset["op"]]
         data = oprand["data"]
@@ -525,7 +542,10 @@ class Cpu:
         elif op == Opcode.ASL:
             raise NotImplementedError
         elif op == Opcode.BIT:
-            raise NotImplementedError
+            data_ = self.bread(data)
+            self.reg.P.OVERFLOW = (data_ & 0x40) > 0
+            self.reg.P.NEGATIVE = (data_ & 0x80) > 0
+            self.reg.P.zero = not (data_ & self.reg.A)
         elif op == Opcode.CMP:
             raise NotImplementedError
         elif op == Opcode.CPX:
@@ -534,7 +554,7 @@ class Cpu:
             raise NotImplementedError
         # inc/dec
         elif op == Opcode.DEC:
-            data_ = self.read(data) - 1
+            data_ = self.bread(data) - 1
             self.write(data, data_)
             self.set_flag_for_after_calc(data_)
         elif op == Opcode.DEX:
@@ -547,7 +567,7 @@ class Cpu:
             self.reg.A ^= data if mode == Addrmode.IMD else self.bread(data)
             self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.INC:
-            data_ = self.read(data) + 1
+            data_ = self.bread(data) + 1
             self.write(data, data_)
             self.set_flag_for_after_calc(data_)
         elif op == Opcode.INX:
@@ -577,9 +597,13 @@ class Cpu:
         elif op == Opcode.JMP:
             self.reg.PC = data
         elif op == Opcode.JSR:
-            raise NotImplementedError
+            pc = self.reg.PC - 1
+            self.push((pc >> 8) & 0xFF)
+            self.push(pc & 0xFF)
+            self.reg.PC = data
         elif op == Opcode.RTS:
-            raise NotImplementedError
+            self.pop_PC()
+            self.reg.PC += 1
         elif op == Opcode.RTI:
             raise NotImplementedError
         elif op == Opcode.BCS:
@@ -623,11 +647,11 @@ class Cpu:
         elif op == Opcode.BRK:
             raise NotImplementedError
         elif op == Opcode.NOP:
-            raise NotImplementedError
+            pass
         # TODO: unofficial
-        elif op == Opcode.NOP:
+        elif op == Opcode.NOPI:
             raise NotImplementedError
-        elif op == Opcode.NOP:
+        elif op == Opcode.NOPD:
             raise NotImplementedError
         elif op == Opcode.LAX:
             raise NotImplementedError

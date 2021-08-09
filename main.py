@@ -11,7 +11,16 @@ def nestest(limit = 1000):
     cpu.load_correct_log(f"log/nestest{limit}.yaml")
     pprint(vars(cpu.reg))
     for _ in range(limit):
-        cpu.run()
+        try:
+            cpu.run()
+        except NotImplementedError:
+            print(traceback.format_exc())
+            print(f"{cpu.dump[-1]['opset']}",
+                tag = "NotImplementedYet",
+                tag_color = "yellow",
+                color = "yellow")
+            break
+            
     cpu.dump_stat_yaml(f"sample/nestest{limit}.yaml")
 
 def hello():
