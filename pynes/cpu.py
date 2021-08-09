@@ -219,7 +219,16 @@ class Status:
         p += (1 << 6) if self.OVERFLOW else 0
         p += (1 << 7) if self.NEGATIVE else 0
         return p
-
+    
+    def set_val(self, p):
+        self.CARRY = p & (1 << 0) > 0
+        self.ZERO = p & (1 << 1) > 0
+        self.INTERRUPT = p & (1 << 2) > 0
+        self.DECIMAL = p & (1 << 3) > 0
+        self.BREAK = p & (1 << 4) > 0
+        self.RESERVED = p & (1 << 5) > 0
+        self.OVERFLOW = p & (1 << 6) > 0
+        self.NEGATIVE = p & (1 << 7) > 0
 @dataclass
 class Register:
     A: int = 0x00
@@ -310,29 +319,34 @@ class Cpu:
             raise NotImplementedError
 
     def write(self, addr, data):
-        # print(hex(addr), data)
         assert 0x0000 <= addr <= 0xFFFF, "invalid addr!"
-        if addr < 0x0800:
-            # wram
-            self.ram.data[addr] = data
-        elif addr < 0x2000:
-            # mirror
-            self.ram.data[addr - 0x0800] = data
-        elif addr < 0x2008:
-            # PPU
-            pass
-        elif 0x4000 <= addr < 0x4020:
-            if addr == 0x4014:
-                # DMA
+        try:
+            if addr < 0x0800:
+                # wram
+                self.ram.data[addr] = data
+            elif addr < 0x2000:
+                # mirror
+                self.ram.data[addr - 0x0800] = data
+            elif addr < 0x2008:
+                # PPU
                 pass
-            elif addr == 0x4016:
-                # keypad
-                pass
+            elif 0x4000 <= addr < 0x4020:
+                if addr == 0x4014:
+                    # DMA
+                    pass
+                elif addr == 0x4016:
+                    # keypad
+                    pass
+                else:
+                    # APU I/O
+                    pass 
             else:
-                # APU I/O
-                pass 
-        else:
+                raise NotImplementedError
+        except NotImplementedError:
             raise NotImplementedError
+        except:
+            print(traceback.format_exc())
+            print(hex(addr), data)
     
     def fetch(self, size):
         if size in [1, 2]:
@@ -402,7 +416,9 @@ class Cpu:
         self.op_index += 1
 
     def print_stat(self, op):
-        # pprint(op)
+        if op["data"] == "":
+            op["data"] = 0x00
+            
         print(
             f"{op['i']:4d} {op['pc']:04X} {op['opset']:3s} {op['mode']:5s} "
             f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
@@ -451,6 +467,24 @@ class Cpu:
                 print(f"{item}, sample:{sample_op[item]:X}, "
                     f"correct:{correct_op[item]:X}",
                     tag = "failure", tag_color = "red", color = "white")
+                if item == "P":
+                    def print_status(p):
+                        obj = {}
+                        obj["CARRY"] = p & (1 << 0) > 0
+                        obj["ZERO"] = p & (1 << 1) > 0
+                        obj["INTERRUPT"] = p & (1 << 2) > 0
+                        obj["DECIMAL"] = p & (1 << 3) > 0
+                        obj["BREAK"] = p & (1 << 4) > 0
+                        obj["RESERVED"] = p & (1 << 5) > 0
+                        obj["OVERFLOW"] = p & (1 << 6) > 0
+                        obj["NEGATIVE"] = p & (1 << 7) > 0
+                        return obj
+                    print(f"{sample_op[item]:X}",
+                        tag = "sample", tag_color = "yellow")
+                    pprint(vars(self.reg.P))
+                    print(f"{correct_op[item]:X}",
+                        tag = "correct", tag_color = "yellow")
+                    pprint(print_status(correct_op[item]))
                 start, end = max(0, self.op_index - 5), self.op_index + 1
 
                 print("", tag = "sample", tag_color = "yellow", color = "white")
@@ -478,6 +512,9 @@ class Cpu:
     def push_PC(self):
         self.push((self.reg.PC >> 8) & 0xFF)
         self.push(self.reg.PC & 0xFF)
+    
+    def push_reg_status(self):
+        self.push(self.reg.P.get_val())
 
     def pop(self):
         self.reg.SP += 1
@@ -486,6 +523,10 @@ class Cpu:
     def pop_PC(self):
         self.reg.PC = self.pop()
         self.reg.PC += (self.pop() << 8)
+    
+    def pop_reg_status(self):
+        status = self.pop()
+        self.reg.P.set_val(status)
 
     def exec(self, opset, oprand):
         op = opcode_dic[opset["op"]]
@@ -532,26 +573,42 @@ class Cpu:
         elif op == Opcode.ADC:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
             result = self.reg.A + data_ + 1 if self.reg.P.CARRY else 0
-            self.reg.P.CARRY = result > 0xFF
+            self.reg.P.CARRY = (result & 0x80) > 0
             self.reg.P.OVERFLOW = (
                 ((data_ ^ result) & 0x80) and ((self.reg.A ^ result) & 0x80))
             self.set_flag_for_after_calc(result)
             self.reg.A = result & 0xFF
         elif op == Opcode.AND:
-            raise NotImplementedError
+            data_ = data if mode == Addrmode.IMD else self.bread(data)
+            self.reg.A &= data_
+            self.set_flag_for_after_calc(self.reg.A) 
         elif op == Opcode.ASL:
-            raise NotImplementedError
+            result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            self.reg.P.CARRY = (result & 0x80) > 0
+            result = (result << 1) & 0xFF
+            if mode != Addrmode.ACM:
+                self.write(data, result)
+            self.set_flag_for_after_calc(result)
         elif op == Opcode.BIT:
             data_ = self.bread(data)
             self.reg.P.OVERFLOW = (data_ & 0x40) > 0
             self.reg.P.NEGATIVE = (data_ & 0x80) > 0
-            self.reg.P.zero = not (data_ & self.reg.A)
+            self.reg.P.ZERO = not (data_ & self.reg.A)
         elif op == Opcode.CMP:
-            raise NotImplementedError
+            result = data if mode == Addrmode.IMD else self.bread(data)
+            comp = self.reg.A - result
+            self.reg.P.CARRY = (comp >= 0)
+            self.set_flag_for_after_calc(comp)
         elif op == Opcode.CPX:
-            raise NotImplementedError
+            result = data if mode == Addrmode.IMD else self.bread(data)
+            comp = self.reg.X - result
+            self.reg.P.CARRY = (comp >= 0)
+            self.set_flag_for_after_calc(comp)
         elif op == Opcode.CPY:
-            raise NotImplementedError
+            result = data if mode == Addrmode.IMD else self.bread(data)
+            comp = self.reg.Y - result
+            self.reg.P.CARRY = (comp >= 0)
+            self.set_flag_for_after_calc(comp)
         # inc/dec
         elif op == Opcode.DEC:
             data_ = self.bread(data) - 1
@@ -579,7 +636,9 @@ class Cpu:
         elif op == Opcode.LSR:
             raise NotImplementedError
         elif op == Opcode.ORA:
-            raise NotImplementedError
+            result = data if mode == Addrmode.IMD else self.bread(data)
+            self.reg.A |= result
+            self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.ROL:
             raise NotImplementedError
         elif op == Opcode.ROR:
@@ -587,13 +646,20 @@ class Cpu:
         elif op == Opcode.SBC:
             raise NotImplementedError
         elif op == Opcode.PHA:
-            raise NotImplementedError
+            self.push(self.reg.A)
         elif op == Opcode.PHP:
-            raise NotImplementedError
+            break_ = self.reg.P.BREAK
+            self.reg.P.BREAK = True
+            self.push_reg_status()
+            self.reg.P.BREAK = break_
         elif op == Opcode.PLA:
-            raise NotImplementedError
+            self.reg.A = self.pop()
+            self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.PLP:
-            raise NotImplementedError
+            break_ = self.reg.P.BREAK
+            self.pop_reg_status()
+            self.reg.P.BREAK = break_
+            self.reg.P.RESERVED = True
         elif op == Opcode.JMP:
             self.reg.PC = data
         elif op == Opcode.JSR:
@@ -605,7 +671,11 @@ class Cpu:
             self.pop_PC()
             self.reg.PC += 1
         elif op == Opcode.RTI:
-            raise NotImplementedError
+            break_ = self.reg.P.BREAK
+            self.pop_reg_status()
+            self.pop_PC()
+            self.reg.P.BREAK = break_
+            self.reg.P.RESERVED = True
         elif op == Opcode.BCS:
             if self.reg.P.CARRY:
                 self.branch(data)
@@ -637,7 +707,7 @@ class Cpu:
         elif op == Opcode.CLI:
             self.reg.P.INTERRUPT = False
         elif op == Opcode.CLV:
-            self.reg.P.OVERFLOW = True
+            self.reg.P.OVERFLOW = False
         elif op == Opcode.SEC:
             self.reg.P.CARRY = True
         elif op == Opcode.SEI:
