@@ -1,5 +1,5 @@
 # PYNES
-[![unit-test](https://github.com/ryotaroAAA/pynes/actions/workflows/unit-test.yml/badge.svg)](https://github.com/ryotaroAAA/pynes/actions/workflows/unit-test.yml)
+[![pytest](https://github.com/ryotaroAAA/pynes/actions/workflows/pytest.yml/badge.svg)](https://github.com/ryotaroAAA/pynes/actions/workflows/pytest.yml)
 [![codecov](https://codecov.io/gh/ryotaroAAA/pynes/branch/main/graph/badge.svg?token=7PF98W2JPI)](https://codecov.io/gh/ryotaroAAA/pynes)
 ## Description
 ## Installation
