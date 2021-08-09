@@ -1,11 +1,13 @@
 from dataclasses import dataclass
-from enum import Flag, auto, Enum
+from enum import auto, Enum
 from pathlib import Path
 from typing import DefaultDict
 
 from hexdump import hexdump
-import yaml
+from pprint import *
+from print_color import print
 from tabulate import tabulate
+import yaml
 
 from pynes.cassette import *
 from pynes.ram import *
@@ -235,10 +237,12 @@ class Register:
 
 class Cpu:
     def __init__(self, cas):
+        self.op_index = 0
         self.reg = Register()
         self.ram = Ram(WRAM_SIZE)
         self.cas = cas
         self.reset()
+        self.dump = []
 
         with Path("opset.yaml").open() as f:
             self.opset = yaml.safe_load(f)
@@ -246,6 +250,15 @@ class Cpu:
     def reset(self):
         self.reg.reset()
         self.reg.PC = self.wread(0xFFFC)
+
+    def reset_addr(self, addr):
+        self.reg.reset()
+        self.reg.PC = addr
+    
+    def load_correct_log(self, path):
+        if Path(path).exists():
+            with Path(path).open() as f:
+                self.correct = yaml.safe_load(f)
 
     def bread(self, addr):
         return self._read(addr)
@@ -382,13 +395,72 @@ class Cpu:
         
         return opset, oprand
 
-    def op_dump(self, opset, oprand, pc):
-        r = self.reg
+    def check_stat(self, opset, oprand, pc):
+        self.dump_stat(opset, oprand, pc)
+        self.comp_stat()
+        self.op_index += 1
+
+    def print_stat(self, op):
+        # pprint(op)
         print(
-            f"{pc:04X} {opset['op']:3s} {opset['mode']:5s} "
-            f"{oprand['data']:04X} A:{r.A:02X} X:{r.X:02X} Y:{r.Y:02X} "
-            f"P:{r.P.get_val():02X} SP:{r.SP:04X}"
+            f"{op['i']:4d} {op['pc']:04X} {op['opset']:3s} {op['mode']:5s} "
+            f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
+            f"P:{op['P']:02X} SP:{op['SP']:04X}"
         )
+
+    def dump_stat(self, opset, oprand, pc):
+        op = {
+            "i" : self.op_index + 1,
+            "pc" : pc,
+            "opset" : opset['op'],
+            "mode" : opset['mode'],
+            "data" : oprand['data'],
+            "A" :self.reg.A,
+            "X" : self.reg.X,
+            "Y" : self.reg.Y,
+            "P" : self.reg.P.get_val(),
+            "SP" : self.reg.SP
+        }
+        self.print_stat(op)
+        self.dump.append(op)
+    
+    def comp_stat(self):
+        # last one
+        sample_op = self.dump[-1]
+        # load i-th log
+        correct_op = self.correct[self.op_index]
+        check_items = [
+            "i",
+            "pc",
+            "opset",
+            "mode",
+            "data",
+            "A",
+            "X",
+            "Y",
+            "P",
+            "SP"
+        ]
+        for item in check_items:
+            if sample_op[item] != correct_op[item]:
+                print(f"{item}, sample:{sample_op[item]:X}, "
+                    f"correct:{correct_op[item]:X}",
+                    tag = "failure", tag_color = "red", color = "white")
+                start, end = max(0, self.op_index - 5), self.op_index + 1
+
+                print("", tag = "sample", tag_color = "yellow", color = "white")
+                for s in self.dump[start:end]:
+                    self.print_stat(s)
+
+                print("", tag = "correct", tag_color = "yellow", color = "white")
+                for c in self.correct[start:end]:
+                    self.print_stat(c)
+                assert False, "status check error!"
+
+    def dump_stat_yaml(self, path):
+        Path("sample").mkdir(exist_ok = True)
+        with Path(path).open("w") as f:
+            yaml.dump(self.dump, f)
 
     def set_flag_for_after_calc(self, result):
         self.reg.P.NEGATIVE = not not (result & 0x80)
@@ -437,7 +509,13 @@ class Cpu:
             self.set_flag_for_after_calc(self.reg.A)
         # op
         elif op == Opcode.ADC:
-            raise NotImplementedError
+            data_ = data if mode == Addrmode.IMD else self.bread(data)
+            result = self.reg.A + data_ + 1 if self.reg.P.CARRY else 0
+            self.reg.P.CARRY = result > 0xFF
+            self.reg.P.OVERFLOW = (
+                ((data_ ^ result) & 0x80) and ((self.reg.A ^ result) & 0x80))
+            self.set_flag_for_after_calc(result)
+            self.reg.A = result & 0xFF
         elif op == Opcode.AND:
             raise NotImplementedError
         elif op == Opcode.ASL:
@@ -493,7 +571,7 @@ class Cpu:
         elif op == Opcode.PLP:
             raise NotImplementedError
         elif op == Opcode.JMP:
-            raise NotImplementedError
+            self.reg.PC = data
         elif op == Opcode.JSR:
             raise NotImplementedError
         elif op == Opcode.RTS:
@@ -569,7 +647,5 @@ class Cpu:
     def run(self):
         pc = self.reg.PC
         opset, oprand = self.get_op(self.fetch(1))
-        self.op_dump(opset, oprand, pc)
-        # print(opset, oprand)
-        # pass
+        self.check_stat(opset, oprand, pc)
         self.exec(opset, oprand)
