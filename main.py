@@ -15,7 +15,8 @@ def nestest(limit = 4000):
             cpu.run()
         except NotImplementedError:
             print(traceback.format_exc())
-            print(f"{cpu.dump[-1]['opset']}",
+            print(f"{cpu.dump[-1]['opset']}, "
+            f"{cpu.dump[-1]['mode']}",
                 tag = "NotImplementedYet",
                 tag_color = "yellow",
                 color = "yellow")

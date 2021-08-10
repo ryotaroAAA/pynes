@@ -1033,7 +1033,7 @@
   SP: 511
   X: 1
   Y: 12
-  data: 1
+  data: 0
   i: 104
   mode: IND_X
   opset: ADC
@@ -1083,7 +1083,7 @@
   SP: 511
   X: 2
   Y: 11
-  data: 2
+  data: 0
   i: 109
   mode: IND_X
   opset: ADC
@@ -1133,7 +1133,7 @@
   SP: 511
   X: 3
   Y: 10
-  data: 3
+  data: 0
   i: 114
   mode: IND_X
   opset: ADC
@@ -1183,7 +1183,7 @@
   SP: 511
   X: 4
   Y: 9
-  data: 4
+  data: 0
   i: 119
   mode: IND_X
   opset: ADC
@@ -1233,7 +1233,7 @@
   SP: 511
   X: 5
   Y: 8
-  data: 5
+  data: 0
   i: 124
   mode: IND_X
   opset: ADC
@@ -1283,7 +1283,7 @@
   SP: 511
   X: 6
   Y: 7
-  data: 6
+  data: 0
   i: 129
   mode: IND_X
   opset: ADC
@@ -1333,7 +1333,7 @@
   SP: 511
   X: 7
   Y: 6
-  data: 7
+  data: 0
   i: 134
   mode: IND_X
   opset: ADC
@@ -1383,7 +1383,7 @@
   SP: 511
   X: 8
   Y: 5
-  data: 8
+  data: 0
   i: 139
   mode: IND_X
   opset: ADC
@@ -1433,7 +1433,7 @@
   SP: 511
   X: 9
   Y: 4
-  data: 9
+  data: 0
   i: 144
   mode: IND_X
   opset: ADC
@@ -1483,7 +1483,7 @@
   SP: 511
   X: 10
   Y: 3
-  data: 10
+  data: 0
   i: 149
   mode: IND_X
   opset: ADC
@@ -1533,7 +1533,7 @@
   SP: 511
   X: 11
   Y: 2
-  data: 11
+  data: 0
   i: 154
   mode: IND_X
   opset: ADC
@@ -1583,7 +1583,7 @@
   SP: 511
   X: 12
   Y: 1
-  data: 12
+  data: 0
   i: 159
   mode: IND_X
   opset: ADC

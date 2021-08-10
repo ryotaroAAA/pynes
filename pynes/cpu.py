@@ -278,9 +278,9 @@ class Cpu:
 
     def _read(self, addr):
         assert 0x0000 <= addr <= 0xFFFF, "invalid addr!"
-        # print(hex(addr))
         if addr < 0x0800:
             # wram
+            # print(f" @@ {hex(addr)} {hex(self.ram.data[addr])}")
             return self.ram.data[addr]
         elif addr < 0x2000:
             # mirror
@@ -320,9 +320,11 @@ class Cpu:
 
     def write(self, addr, data):
         assert 0x0000 <= addr <= 0xFFFF, "invalid addr!"
+        assert 0x00 <= data <= 0xFF, "invalid value!"
         try:
             if addr < 0x0800:
                 # wram
+                # print(f" $$ {hex(addr)} {hex(data)}")
                 self.ram.data[addr] = data
             elif addr < 0x2000:
                 # mirror
@@ -365,54 +367,9 @@ class Cpu:
         self.reg.PC = addr
         self.has_branched = True
 
-    def get_op(self, opcode):
-        opset = self.opset[opcode]
-        mode = addrmode_dic[opset["mode"]]
-        oprand = DefaultDict(int)
-        if mode in [Addrmode.ACM, Addrmode.IMPL]:
-            pass
-        elif mode in [Addrmode.IMD, Addrmode.ZPG]:
-            oprand["data"] = self.fetch(1)
-        elif mode == Addrmode.REL:
-            addr = self.fetch(1)
-            oprand["data"] = addr + self.reg.PC
-            oprand["data"] -= 0 if addr < 0x80 else 0xFF
-            oprand["add_cycle"] = \
-                int((oprand["data"] ^ self.reg.PC) & 0xFF00)
-        elif mode == Addrmode.ZPG_X:
-            oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
-        elif mode == Addrmode.ZPG_Y:
-            oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
-        elif mode == Addrmode.ABS:
-            oprand["data"] = self.fetch(2)
-        elif mode == Addrmode.ABS_X:
-            oprand["data"] = (self.reg.X + self.fetch(2)) & 0xFFFF
-            oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.X & 0xFF00))
-        elif mode == Addrmode.ABS_Y:
-            oprand["data"] = (self.reg.Y + self.fetch(2)) & 0xFFFF
-            oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.Y & 0xFF00))
-        elif mode == Addrmode.IND_X:
-            base = (self.reg.X + self.fetch(1)) & 0xFF
-            oprand["data"] = (self.reg.X + self.wread(base)) & 0xFFFF
-            oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.Y & 0xFF00))
-        elif mode == Addrmode.IND_Y:
-            base = (self.reg.Y + self.fetch(1)) & 0xFF
-            oprand["data"] = (self.reg.Y + self.wread(base)) & 0xFFFF
-            oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.Y & 0xFF00))
-        elif mode == Addrmode.ABS_IND:
-            pass
-        else:
-            raise NotImplementedError
-        
-        return opset, oprand
-
     def check_stat(self, opset, oprand, pc):
         self.dump_stat(opset, oprand, pc)
-        self.comp_stat()
+        # self.comp_stat()
         self.op_index += 1
 
     def print_stat(self, op):
@@ -420,7 +377,7 @@ class Cpu:
             op["data"] = 0x00
             
         print(
-            f"{op['i']:4d} {op['pc']:04X} {op['opset']:3s} {op['mode']:5s} "
+            f"{op['i']:4d} {op['pc']:04X} {op['opset']:3s} {op['mode']:7s} "
             f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
             f"P:{op['P']:02X} SP:{op['SP']:04X}"
         )
@@ -465,8 +422,14 @@ class Cpu:
             if item == "SP" and not correct_op[item] & 0xFF00:
                 sample_op[item] &= 0xFF
             if sample_op[item] != correct_op[item]:
-                print(f"{item}, sample:{sample_op[item]:X}, "
-                    f"correct:{correct_op[item]:X}",
+                def form(s):
+                    if type(s) == int:
+                        return f"{s:X}"
+                    else:
+                        return s
+                sample = form(sample_op[item])
+                correct = form(correct_op[item])
+                print(f"{item}, sample:{sample}, correct:{correct}",
                     tag = "failure", tag_color = "red", color = "white")
                 if item == "P":
                     def print_status(p):
@@ -488,7 +451,7 @@ class Cpu:
                     pprint(print_status(correct_op[item]))
                 failed = True
         if failed:
-            start, end = max(0, self.op_index - 5), self.op_index + 1
+            start, end = max(0, self.op_index - 25), self.op_index + 1
             print("", tag = "sample", tag_color = "yellow", color = "white")
             for s in self.dump[start:end]:
                 self.print_stat(s)
@@ -531,6 +494,62 @@ class Cpu:
         status = self.pop()
         self.reg.P.set_val(status)
 
+    def get_op(self, opcode):
+        opset = self.opset[opcode]
+        mode = addrmode_dic[opset["mode"]]
+        oprand = DefaultDict(int)
+        if mode in [Addrmode.ACM, Addrmode.IMPL]:
+            pass
+        elif mode in [Addrmode.IMD, Addrmode.ZPG]:
+            oprand["data"] = self.fetch(1)
+        elif mode == Addrmode.REL:
+            addr = self.fetch(1)
+            oprand["data"] = addr + self.reg.PC
+            oprand["data"] -= 0 if addr < 0x80 else 0xFF
+            oprand["add_cycle"] = \
+                int((oprand["data"] ^ self.reg.PC) & 0xFF00)
+        elif mode == Addrmode.ZPG_X:
+            oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
+        elif mode == Addrmode.ZPG_Y:
+            oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
+        elif mode == Addrmode.ABS:
+            oprand["data"] = self.fetch(2)
+        elif mode == Addrmode.ABS_X:
+            oprand["data"] = (self.reg.X + self.fetch(2)) & 0xFFFF
+            oprand["add_cycle"] = \
+                int(not oprand["data"] == (self.reg.X & 0xFF00))
+        elif mode == Addrmode.ABS_Y:
+            oprand["data"] = (self.reg.Y + self.fetch(2)) & 0xFFFF
+            oprand["add_cycle"] = \
+                int(not oprand["data"] == (self.reg.Y & 0xFF00))
+        elif mode == Addrmode.IND_X:
+            base = (self.reg.X + self.fetch(1)) & 0xFF
+            base_ = (base + 1) & 0xFF
+            oprand["data"] = (self.bread(base) +
+                (self.bread(base_) << 8)) & 0xFFFF
+            oprand["add_cycle"] = \
+                int(not oprand["data"] == (self.reg.X & 0xFF00))
+        elif mode == Addrmode.IND_Y:
+            base = self.fetch(1)
+            base_ = (base + 1) & 0xFF
+            # print(" > ", hex(base), hex(self.bread(base)),
+            #     hex(self.bread(base+1)),
+            #     hex(self.wread(base)), hex(self.wread(base+1)))
+            oprand["data"] = (self.bread(base) +
+                (self.bread(base_) << 8) + self.reg.Y) & 0xFFFF
+            oprand["add_cycle"] = \
+                int(not oprand["data"] == (self.reg.Y & 0xFF00))
+        elif mode == Addrmode.ABS_IND:
+            base = self.fetch(2)
+            # print(")))", hex(base & 0xFF00), ((base + 1) & 0xFF))
+            base_ = (base & 0xFF00) + ((base + 1) & 0xFF)
+            # print(")))", hex(base_), hex((base & 0xFF00) + ((base + 1) & 0xFF)))
+            oprand["data"] = self.bread(base) + (self.bread(base_) << 8)
+            # print(hex(base), hex(base_), hex(oprand["data"]))
+        else:
+            raise NotImplementedError
+        return opset, oprand
+
     def exec(self, opset, oprand):
         op = opcode_dic[opset["op"]]
         data = oprand["data"]
@@ -539,6 +558,9 @@ class Cpu:
         if op in [Opcode.LDA, Opcode.LDX, Opcode.LDY]:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
             if op == Opcode.LDA:
+                # print(op, data, mode)
+                # print(f" # bread:{hex(self.bread(data))}, data:{hex(data)}, A:{hex(self.reg.A)}")
+                # print(f" # {hex(data_)}, {hex(self.bread(0x0400))}")
                 self.reg.A = data_
             elif op == Opcode.LDX:
                 self.reg.X = data_
@@ -576,10 +598,8 @@ class Cpu:
         elif op == Opcode.ADC:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
             result = self.reg.A + data_ + int(self.reg.P.CARRY)
-            # self.reg.P.CARRY = result >= 0
             self.reg.P.CARRY = (result > 0xFF and
                 self.reg.A < 0xFF and data_ < 0xFF)
-            # print(result, bool(result & 0x80), result > 0xFF)
             self.reg.P.OVERFLOW = bool(
                 ((data_ ^ result) & 0x80) and
                 ((self.reg.A ^ result) & 0x80))
@@ -591,7 +611,6 @@ class Cpu:
             self.set_flag_for_after_calc(self.reg.A) 
         elif op == Opcode.ASL:
             result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
-            # print(result, self.reg.A, result & 0x01, bool(result & 0x01)
             self.reg.P.CARRY = bool(result & 0x80)
             result = (result << 1) & 0xFF
             if mode == Addrmode.ACM:
@@ -659,9 +678,10 @@ class Cpu:
             self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.ROL:
             result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            carry = self.reg.P.CARRY
             self.reg.P.CARRY = bool(result & 0x80)
             result = (result << 1) & 0xFF
-            result = (result | 0x01) if self.reg.P.CARRY else (result & ~0x01)
+            result = (result | 0x01) if carry else (result & ~0x01)
             if mode == Addrmode.ACM:
                 self.reg.A = result
             else:
@@ -669,15 +689,15 @@ class Cpu:
             self.set_flag_for_after_calc(result)
         elif op == Opcode.ROR:
             result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            carry = self.reg.P.CARRY
             self.reg.P.CARRY = bool(result & 0x01)
             result = (result >> 1) & 0xFF
-            result = (result | 0x80) if self.reg.P.CARRY else (result & ~0x80)
+            result = (result | 0x80) if carry else (result & ~0x80)
             self.reg.P.ZERO = (result == 0)
             if mode == Addrmode.ACM:
                 self.reg.A = result
             else:
                 self.write(data, result)
-            print(hex(result), result & 0xFF, result & 0x80)
             self.set_flag_for_after_calc(result)
         elif op == Opcode.SBC:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
