@@ -658,9 +658,27 @@ class Cpu:
             self.reg.A |= result
             self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.ROL:
-            raise NotImplementedError
+            result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            self.reg.P.CARRY = bool(result & 0x80)
+            result = (result << 1) & 0xFF
+            result = (result | 0x01) if self.reg.P.CARRY else (result & ~0x01)
+            if mode == Addrmode.ACM:
+                self.reg.A = result
+            else:
+                self.write(data, result)
+            self.set_flag_for_after_calc(result)
         elif op == Opcode.ROR:
-            raise NotImplementedError
+            result = self.reg.A if mode == Addrmode.ACM else self.bread(data)
+            self.reg.P.CARRY = bool(result & 0x01)
+            result = (result >> 1) & 0xFF
+            result = (result | 0x80) if self.reg.P.CARRY else (result & ~0x80)
+            self.reg.P.ZERO = (result == 0)
+            if mode == Addrmode.ACM:
+                self.reg.A = result
+            else:
+                self.write(data, result)
+            print(hex(result), result & 0xFF, result & 0x80)
+            self.set_flag_for_after_calc(result)
         elif op == Opcode.SBC:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
             result = self.reg.A - data_ - int(not self.reg.P.CARRY)
