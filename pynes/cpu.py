@@ -367,7 +367,7 @@ class Cpu:
 
     def check_stat(self, opset, oprand, pc):
         self.dump_stat(opset, oprand, pc)
-        self.comp_stat()
+        # self.comp_stat()
         self.op_index += 1
 
     def print_stat(self, op):
@@ -803,21 +803,42 @@ class Cpu:
         elif op == Opcode.SAX:
             self.write(data, self.reg.A & self.reg.X)
         elif op == Opcode.DCP:
-            data_ = (self.read(data) - 1) & 0xFF
+            data_ = (self.bread(data) - 1) & 0xFF
             self.set_flag_for_after_calc(self.reg.A - data_)
             self.write(data, data_)
         elif op == Opcode.ISB:
-            pass
+            data_ = (self.bread(data) + 1) & 0xFF
+            data__ = (~data_ & 0xFF) + self.reg.A + self.reg.P.CARRY
+            self.reg.P.OVERFLOW = (not bool((self.reg.A ^ data_) & 0x80) and 
+                bool((self.reg.A ^ data__) & 0x80))
+            self.reg.P.CARRY = data__ > 0xFF
+            self.set_flag_for_after_calc(data__)
+            self.reg.A = data__ & 0xFF
+            self.write(data, data_)
         elif op == Opcode.SLO:
-            pass
+            data_ = self.bread(data)
+            self.reg.P.CARRY = bool(data_ & 0x80)
+            data_ = (data_ << 1) & 0xFF
+            self.reg.A |= data_
+            self.set_flag_for_after_calc(self.reg.A)
+            self.write(data, data_)
         elif op == Opcode.RLA:
-            pass
+            data_ = (self.bread(data) << 1) + self.reg.P.CARRY
+            self.reg.P.CARRY = bool(data_ & 0x100)
+            self.reg.A = (data_ & self.reg.A) & 0xFF
+            self.set_flag_for_after_calc(self.reg.A)
+            self.write(data, data_ & 0xFF)
         elif op == Opcode.SRE:
-            pass
+            data_ = self.bread(data)
+            self.reg.P.CARRY = bool(data_ & 0x01)
+            data_ >>= 1
+            self.reg.A ^= data_
+            self.set_flag_for_after_calc(self.reg.A)
+            self.write(data, data_)
         elif op == Opcode.RRA:
             data_ = self.bread(data)
-            carry = bool(data_ & 0x01)
-            data_ = (data_ >> 1) | 0x80 if self.reg.P.CARRY else 0x00
+            carry = int(data_ & 0x01)
+            data_ = (data_ >> 1) + (0x80 if self.reg.P.CARRY else 0x00)
             data__ = data_ + self.reg.A + carry
             self.reg.P.OVERFLOW = (not bool((self.reg.A ^ data_) & 0x80) and 
                 bool((self.reg.A ^ data__) & 0x80))

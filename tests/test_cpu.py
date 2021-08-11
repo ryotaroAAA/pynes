@@ -10,7 +10,7 @@ def hello_cpu():
     return cpu
 
 @pytest.fixture
-def nestest_cpu(limit = 4000):
+def nestest_cpu(limit = 8991):
     cas = Cassette("rom/nestest.nes")
     cpu = Cpu(cas)
     cpu.reset_addr(0xc000)
@@ -32,7 +32,7 @@ def test_status(hello_cpu):
     for _ in range(200):
         hello_cpu.run()
 
-def test_nestest(nestest_cpu, limit = 4000):
+def test_nestest(nestest_cpu, limit = 8991):
     cpu = nestest_cpu
     for _ in range(limit):
         try:

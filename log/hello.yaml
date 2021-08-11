@@ -163,7 +163,7 @@
   SP: 511
   X: 1
   Y: 15
-  data: 32795
+  data: 32794
   i: 17
   mode: REL
   opset: BNE
@@ -173,13 +173,13 @@
   SP: 511
   X: 1
   Y: 15
-  data: 15
+  data: 32850
   i: 18
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
-  P: 36
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 0
+  P: 38
   SP: 511
   X: 1
   Y: 15
@@ -188,8 +188,8 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
-  P: 36
+- A: 0
+  P: 38
   SP: 511
   X: 1
   Y: 15
@@ -198,7 +198,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 0
   P: 36
   SP: 511
   X: 2
@@ -208,27 +208,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 0
   P: 36
   SP: 511
   X: 2
   Y: 14
-  data: 32795
+  data: 32794
   i: 22
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 0
   P: 36
   SP: 511
   X: 2
   Y: 14
-  data: 14
+  data: 32851
   i: 23
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 16
   P: 36
   SP: 511
   X: 2
@@ -238,7 +238,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 16
   P: 36
   SP: 511
   X: 2
@@ -248,7 +248,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 16
   P: 36
   SP: 511
   X: 3
@@ -258,27 +258,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 16
   P: 36
   SP: 511
   X: 3
   Y: 13
-  data: 32795
+  data: 32794
   i: 27
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 16
   P: 36
   SP: 511
   X: 3
   Y: 13
-  data: 13
+  data: 32852
   i: 28
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 32
   P: 36
   SP: 511
   X: 3
@@ -288,7 +288,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 32
   P: 36
   SP: 511
   X: 3
@@ -298,7 +298,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 32
   P: 36
   SP: 511
   X: 4
@@ -308,26 +308,26 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 32
   P: 36
   SP: 511
   X: 4
   Y: 12
-  data: 32795
+  data: 32794
   i: 32
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 32
   P: 36
   SP: 511
   X: 4
   Y: 12
-  data: 12
+  data: 32853
   i: 33
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
 - A: 15
   P: 36
   SP: 511
@@ -363,7 +363,7 @@
   SP: 511
   X: 5
   Y: 11
-  data: 32795
+  data: 32794
   i: 37
   mode: REL
   opset: BNE
@@ -373,12 +373,12 @@
   SP: 511
   X: 5
   Y: 11
-  data: 11
+  data: 32854
   i: 38
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 6
   P: 36
   SP: 511
   X: 5
@@ -388,7 +388,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 6
   P: 36
   SP: 511
   X: 5
@@ -398,7 +398,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 6
   P: 36
   SP: 511
   X: 6
@@ -408,27 +408,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 6
   P: 36
   SP: 511
   X: 6
   Y: 10
-  data: 32795
+  data: 32794
   i: 42
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 6
   P: 36
   SP: 511
   X: 6
   Y: 10
-  data: 10
+  data: 32855
   i: 43
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 22
   P: 36
   SP: 511
   X: 6
@@ -438,7 +438,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 22
   P: 36
   SP: 511
   X: 6
@@ -448,7 +448,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 22
   P: 36
   SP: 511
   X: 7
@@ -458,27 +458,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 22
   P: 36
   SP: 511
   X: 7
   Y: 9
-  data: 32795
+  data: 32794
   i: 47
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 22
   P: 36
   SP: 511
   X: 7
   Y: 9
-  data: 9
+  data: 32856
   i: 48
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 38
   P: 36
   SP: 511
   X: 7
@@ -488,7 +488,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 38
   P: 36
   SP: 511
   X: 7
@@ -498,7 +498,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 38
   P: 36
   SP: 511
   X: 8
@@ -508,26 +508,26 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 38
   P: 36
   SP: 511
   X: 8
   Y: 8
-  data: 32795
+  data: 32794
   i: 52
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 38
   P: 36
   SP: 511
   X: 8
   Y: 8
-  data: 8
+  data: 32857
   i: 53
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
 - A: 15
   P: 36
   SP: 511
@@ -563,7 +563,7 @@
   SP: 511
   X: 9
   Y: 7
-  data: 32795
+  data: 32794
   i: 57
   mode: REL
   opset: BNE
@@ -573,12 +573,12 @@
   SP: 511
   X: 9
   Y: 7
-  data: 7
+  data: 32858
   i: 58
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 8
   P: 36
   SP: 511
   X: 9
@@ -588,7 +588,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 8
   P: 36
   SP: 511
   X: 9
@@ -598,7 +598,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 8
   P: 36
   SP: 511
   X: 10
@@ -608,27 +608,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 8
   P: 36
   SP: 511
   X: 10
   Y: 6
-  data: 32795
+  data: 32794
   i: 62
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 8
   P: 36
   SP: 511
   X: 10
   Y: 6
-  data: 6
+  data: 32859
   i: 63
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 24
   P: 36
   SP: 511
   X: 10
@@ -638,7 +638,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 24
   P: 36
   SP: 511
   X: 10
@@ -648,7 +648,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 24
   P: 36
   SP: 511
   X: 11
@@ -658,27 +658,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 24
   P: 36
   SP: 511
   X: 11
   Y: 5
-  data: 32795
+  data: 32794
   i: 67
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 24
   P: 36
   SP: 511
   X: 11
   Y: 5
-  data: 5
+  data: 32860
   i: 68
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 40
   P: 36
   SP: 511
   X: 11
@@ -688,7 +688,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 40
   P: 36
   SP: 511
   X: 11
@@ -698,7 +698,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 40
   P: 36
   SP: 511
   X: 12
@@ -708,26 +708,26 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 40
   P: 36
   SP: 511
   X: 12
   Y: 4
-  data: 32795
+  data: 32794
   i: 72
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 40
   P: 36
   SP: 511
   X: 12
   Y: 4
-  data: 4
+  data: 32861
   i: 73
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
 - A: 15
   P: 36
   SP: 511
@@ -763,7 +763,7 @@
   SP: 511
   X: 13
   Y: 3
-  data: 32795
+  data: 32794
   i: 77
   mode: REL
   opset: BNE
@@ -773,12 +773,12 @@
   SP: 511
   X: 13
   Y: 3
-  data: 3
+  data: 32862
   i: 78
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 10
   P: 36
   SP: 511
   X: 13
@@ -788,7 +788,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 10
   P: 36
   SP: 511
   X: 13
@@ -798,7 +798,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 10
   P: 36
   SP: 511
   X: 14
@@ -808,27 +808,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 10
   P: 36
   SP: 511
   X: 14
   Y: 2
-  data: 32795
+  data: 32794
   i: 82
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 10
   P: 36
   SP: 511
   X: 14
   Y: 2
-  data: 2
+  data: 32863
   i: 83
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 26
   P: 36
   SP: 511
   X: 14
@@ -838,7 +838,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 26
   P: 36
   SP: 511
   X: 14
@@ -848,7 +848,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 26
   P: 36
   SP: 511
   X: 15
@@ -858,27 +858,27 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 26
   P: 36
   SP: 511
   X: 15
   Y: 1
-  data: 32795
+  data: 32794
   i: 87
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 26
   P: 36
   SP: 511
   X: 15
   Y: 1
-  data: 1
+  data: 32864
   i: 88
-  mode: IND_Y
-  opset: EOR
-  pc: 32795
-- A: 15
+  mode: ABS_X
+  opset: LDA
+  pc: 32794
+- A: 42
   P: 36
   SP: 511
   X: 15
@@ -888,7 +888,7 @@
   mode: ABS
   opset: STA
   pc: 32797
-- A: 15
+- A: 42
   P: 36
   SP: 511
   X: 15
@@ -898,7 +898,7 @@
   mode: IMPL
   opset: INX
   pc: 32800
-- A: 15
+- A: 42
   P: 36
   SP: 511
   X: 16
@@ -908,17 +908,17 @@
   mode: IMPL
   opset: DEY
   pc: 32801
-- A: 15
+- A: 42
   P: 38
   SP: 511
   X: 16
   Y: 0
-  data: 32795
+  data: 32794
   i: 92
   mode: REL
   opset: BNE
   pc: 32802
-- A: 15
+- A: 42
   P: 38
   SP: 511
   X: 16
@@ -1023,7 +1023,7 @@
   SP: 511
   X: 1
   Y: 12
-  data: 32819
+  data: 32818
   i: 103
   mode: REL
   opset: BNE
@@ -1033,12 +1033,12 @@
   SP: 511
   X: 1
   Y: 12
-  data: 0
+  data: 32866
   i: 104
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 69
   P: 36
   SP: 511
   X: 1
@@ -1048,7 +1048,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 69
   P: 36
   SP: 511
   X: 1
@@ -1058,7 +1058,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 69
   P: 36
   SP: 511
   X: 2
@@ -1068,27 +1068,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 69
   P: 36
   SP: 511
   X: 2
   Y: 11
-  data: 32819
+  data: 32818
   i: 108
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 69
   P: 36
   SP: 511
   X: 2
   Y: 11
-  data: 0
+  data: 32867
   i: 109
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 76
   P: 36
   SP: 511
   X: 2
@@ -1098,7 +1098,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 2
@@ -1108,7 +1108,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 3
@@ -1118,27 +1118,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 3
   Y: 10
-  data: 32819
+  data: 32818
   i: 113
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 3
   Y: 10
-  data: 0
+  data: 32868
   i: 114
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 76
   P: 36
   SP: 511
   X: 3
@@ -1148,7 +1148,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 3
@@ -1158,7 +1158,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 4
@@ -1168,27 +1168,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 4
   Y: 9
-  data: 32819
+  data: 32818
   i: 118
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 4
   Y: 9
-  data: 0
+  data: 32869
   i: 119
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 79
   P: 36
   SP: 511
   X: 4
@@ -1198,7 +1198,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 4
@@ -1208,7 +1208,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 5
@@ -1218,27 +1218,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 5
   Y: 8
-  data: 32819
+  data: 32818
   i: 123
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 5
   Y: 8
-  data: 0
+  data: 32870
   i: 124
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 44
   P: 36
   SP: 511
   X: 5
@@ -1248,7 +1248,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 44
   P: 36
   SP: 511
   X: 5
@@ -1258,7 +1258,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 44
   P: 36
   SP: 511
   X: 6
@@ -1268,27 +1268,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 44
   P: 36
   SP: 511
   X: 6
   Y: 7
-  data: 32819
+  data: 32818
   i: 128
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 44
   P: 36
   SP: 511
   X: 6
   Y: 7
-  data: 0
+  data: 32871
   i: 129
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 32
   P: 36
   SP: 511
   X: 6
@@ -1298,7 +1298,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 32
   P: 36
   SP: 511
   X: 6
@@ -1308,7 +1308,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 32
   P: 36
   SP: 511
   X: 7
@@ -1318,27 +1318,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 32
   P: 36
   SP: 511
   X: 7
   Y: 6
-  data: 32819
+  data: 32818
   i: 133
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 32
   P: 36
   SP: 511
   X: 7
   Y: 6
-  data: 0
+  data: 32872
   i: 134
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 87
   P: 36
   SP: 511
   X: 7
@@ -1348,7 +1348,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 87
   P: 36
   SP: 511
   X: 7
@@ -1358,7 +1358,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 87
   P: 36
   SP: 511
   X: 8
@@ -1368,27 +1368,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 87
   P: 36
   SP: 511
   X: 8
   Y: 5
-  data: 32819
+  data: 32818
   i: 138
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 87
   P: 36
   SP: 511
   X: 8
   Y: 5
-  data: 0
+  data: 32873
   i: 139
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 79
   P: 36
   SP: 511
   X: 8
@@ -1398,7 +1398,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 8
@@ -1408,7 +1408,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 9
@@ -1418,27 +1418,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 9
   Y: 4
-  data: 32819
+  data: 32818
   i: 143
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 79
   P: 36
   SP: 511
   X: 9
   Y: 4
-  data: 0
+  data: 32874
   i: 144
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 82
   P: 36
   SP: 511
   X: 9
@@ -1448,7 +1448,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 82
   P: 36
   SP: 511
   X: 9
@@ -1458,7 +1458,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 82
   P: 36
   SP: 511
   X: 10
@@ -1468,27 +1468,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 82
   P: 36
   SP: 511
   X: 10
   Y: 3
-  data: 32819
+  data: 32818
   i: 148
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 82
   P: 36
   SP: 511
   X: 10
   Y: 3
-  data: 0
+  data: 32875
   i: 149
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 76
   P: 36
   SP: 511
   X: 10
@@ -1498,7 +1498,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 10
@@ -1508,7 +1508,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 11
@@ -1518,27 +1518,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 11
   Y: 2
-  data: 32819
+  data: 32818
   i: 153
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 76
   P: 36
   SP: 511
   X: 11
   Y: 2
-  data: 0
+  data: 32876
   i: 154
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 68
   P: 36
   SP: 511
   X: 11
@@ -1548,7 +1548,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 68
   P: 36
   SP: 511
   X: 11
@@ -1558,7 +1558,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 68
   P: 36
   SP: 511
   X: 12
@@ -1568,27 +1568,27 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 68
   P: 36
   SP: 511
   X: 12
   Y: 1
-  data: 32819
+  data: 32818
   i: 158
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 68
   P: 36
   SP: 511
   X: 12
   Y: 1
-  data: 0
+  data: 32877
   i: 159
-  mode: IND_X
-  opset: ADC
-  pc: 32819
-- A: 72
+  mode: ABS_X
+  opset: LDA
+  pc: 32818
+- A: 33
   P: 36
   SP: 511
   X: 12
@@ -1598,7 +1598,7 @@
   mode: ABS
   opset: STA
   pc: 32821
-- A: 72
+- A: 33
   P: 36
   SP: 511
   X: 12
@@ -1608,7 +1608,7 @@
   mode: IMPL
   opset: INX
   pc: 32824
-- A: 72
+- A: 33
   P: 36
   SP: 511
   X: 13
@@ -1618,17 +1618,17 @@
   mode: IMPL
   opset: DEY
   pc: 32825
-- A: 72
+- A: 33
   P: 38
   SP: 511
   X: 13
   Y: 0
-  data: 32819
+  data: 32818
   i: 163
   mode: REL
   opset: BNE
   pc: 32826
-- A: 72
+- A: 33
   P: 38
   SP: 511
   X: 13
