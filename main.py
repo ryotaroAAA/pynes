@@ -4,7 +4,7 @@ from pynes.cassette import *
 from pynes.cpu import *
 from pynes.ram import *
 
-def nestest(limit = 4000):
+def nestest(limit = 7000):
     cas = Cassette("rom/nestest.nes")
     cpu = Cpu(cas)
     cpu.reset_addr(0xc000)
@@ -21,7 +21,6 @@ def nestest(limit = 4000):
                 tag_color = "yellow",
                 color = "yellow")
             break
-            
     cpu.dump_stat_yaml(f"sample/nestest{limit}.yaml")
 
 def hello():

@@ -836,7 +836,7 @@
   op: CMP
 222:
   cycle: 7
-  mode: ZPG_Y
+  mode: ABS_X
   op: DEC
 223:
   cycle: 7
@@ -964,7 +964,7 @@
   op: SBC
 254:
   cycle: 7
-  mode: ZPG_Y
+  mode: ABS_X
   op: INC
 255:
   cycle: 7

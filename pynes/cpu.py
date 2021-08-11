@@ -17,7 +17,8 @@ NES_HSIZE = 0x0010
 PROG_ROM_UNIT_SIZE = 0x4000
 CHAR_ROM_UNIT_SIZE = 0x2000
 
-WRAM_SIZE = 0xFFFF
+WRAM_SIZE = 0x0800
+EXRAM_SIZE = 0x2000
 END = "little"
 
 class Opcode(Enum):
@@ -145,8 +146,8 @@ opcode_dic = {
     "PHP": Opcode.PHP,
     "PLP": Opcode.PLP,
     "NOP": Opcode.NOP,
-    "NOP": Opcode.NOP,
-    "NOP": Opcode.NOP,
+    "NOPD": Opcode.NOPD,
+    "NOPI": Opcode.NOPI,
     "LAX": Opcode.LAX,
     "SAX": Opcode.SAX,
     "DCP": Opcode.DCP,
@@ -250,6 +251,7 @@ class Cpu:
         self.op_index = 0
         self.reg = Register()
         self.ram = Ram(WRAM_SIZE)
+        self.exram = Ram(EXRAM_SIZE)
         self.cas = cas
         self.reset()
         self.dump = []
@@ -278,34 +280,31 @@ class Cpu:
 
     def _read(self, addr):
         assert 0x0000 <= addr <= 0xFFFF, "invalid addr!"
-        if addr < 0x0800:
+        if addr < 0x2000:
             # wram
-            # print(f" @@ {hex(addr)} {hex(self.ram.data[addr])}")
-            return self.ram.data[addr]
-        elif addr < 0x2000:
-            # mirror
-            return self.ram.data[addr - 0x0800]
+            return self.ram.data[addr % WRAM_SIZE]
         elif addr < 0x4000:
             # PPU
             pass
+            # raise NotImplementedError
             # return self.ram[(addr - 0x2000) % 8] 
         elif addr < 0x4020:
             if addr == 0x4014:
                 # DMA
-                pass
+                raise NotImplementedError
             elif addr == 0x4016:
                 # keypad
-                pass
+                raise NotImplementedError
             else:
                 # APU I/O
                 pass
             raise NotImplementedError
         elif addr < 0x6000:
             # ext rom
-            pass
+            raise NotImplementedError
         elif addr < 0x8000:
             # ext ram
-            pass
+            return self.exram.data[addr - 0x8000]
         elif addr < 0xC000:
             # prog rom
             return self.cas.prog_rom[addr - 0x8000]
@@ -322,13 +321,9 @@ class Cpu:
         assert 0x0000 <= addr <= 0xFFFF, "invalid addr!"
         assert 0x00 <= data <= 0xFF, "invalid value!"
         try:
-            if addr < 0x0800:
-                # wram
-                # print(f" $$ {hex(addr)} {hex(data)}")
-                self.ram.data[addr] = data
-            elif addr < 0x2000:
+            if addr < 0x2000:
                 # mirror
-                self.ram.data[addr - 0x0800] = data
+                self.ram.data[addr % WRAM_SIZE] = data
             elif addr < 0x2008:
                 # PPU
                 pass
@@ -342,13 +337,16 @@ class Cpu:
                 else:
                     # APU I/O
                     pass 
+            elif 0x6000 <= addr < 0x8000:
+                self.ram.data[addr - 0x8000] = data
             else:
                 raise NotImplementedError
         except NotImplementedError:
+            print(hex(addr), hex(data))
             raise NotImplementedError
         except:
             print(traceback.format_exc())
-            print(hex(addr), data)
+            print(hex(addr), hex(data))
     
     def fetch(self, size):
         if size in [1, 2]:
@@ -369,7 +367,7 @@ class Cpu:
 
     def check_stat(self, opset, oprand, pc):
         self.dump_stat(opset, oprand, pc)
-        # self.comp_stat()
+        self.comp_stat()
         self.op_index += 1
 
     def print_stat(self, op):
@@ -377,7 +375,7 @@ class Cpu:
             op["data"] = 0x00
             
         print(
-            f"{op['i']:4d} {op['pc']:04X} {op['opset']:3s} {op['mode']:7s} "
+            f"{op['i']:4d} {op['pc']:04X} {op['opset']:5s} {op['mode']:7s} "
             f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
             f"P:{op['P']:02X} SP:{op['SP']:04X}"
         )
@@ -422,6 +420,9 @@ class Cpu:
             if item == "SP" and not correct_op[item] & 0xFF00:
                 sample_op[item] &= 0xFF
             if sample_op[item] != correct_op[item]:
+                if item == "opset" and "NOP" in sample_op[item] \
+                        and "NOP" in correct_op[item]:
+                    continue
                 def form(s):
                     if type(s) == int:
                         return f"{s:X}"
@@ -451,7 +452,7 @@ class Cpu:
                     pprint(print_status(correct_op[item]))
                 failed = True
         if failed:
-            start, end = max(0, self.op_index - 25), self.op_index + 1
+            start, end = max(0, self.op_index - 10), self.op_index + 1
             print("", tag = "sample", tag_color = "yellow", color = "white")
             for s in self.dump[start:end]:
                 self.print_stat(s)
@@ -503,15 +504,16 @@ class Cpu:
         elif mode in [Addrmode.IMD, Addrmode.ZPG]:
             oprand["data"] = self.fetch(1)
         elif mode == Addrmode.REL:
+            # pc = self.reg.PC
             addr = self.fetch(1)
             oprand["data"] = addr + self.reg.PC
-            oprand["data"] -= 0 if addr < 0x80 else 0xFF
+            oprand["data"] -= 0 if addr < 0x80 else 0x100
             oprand["add_cycle"] = \
                 int((oprand["data"] ^ self.reg.PC) & 0xFF00)
         elif mode == Addrmode.ZPG_X:
             oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
         elif mode == Addrmode.ZPG_Y:
-            oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
+            oprand["data"] = (self.reg.Y + self.fetch(1)) & 0xFF
         elif mode == Addrmode.ABS:
             oprand["data"] = self.fetch(2)
         elif mode == Addrmode.ABS_X:
@@ -750,6 +752,8 @@ class Cpu:
             if self.reg.P.ZERO:
                 self.branch(data)
         elif op == Opcode.BNE:
+            # if mode == Addrmode.REL:
+            #     raise Exception
             if not self.reg.P.ZERO:
                 self.branch(data)
         elif op == Opcode.BMI:
@@ -779,30 +783,48 @@ class Cpu:
         elif op == Opcode.SED:
             self.reg.P.DECIMAL = True
         elif op == Opcode.BRK:
-            raise NotImplementedError
+            self.reg.PC += 1
+            self.push_PC()
+            self.push_reg_status()
+            if not self.reg.P.INTERRUPT:
+                self.reg.PC = self.wread(0xFFFE)
+            self.reg.P.INTERRUPT = True
+            self.reg.PC -= 1
         elif op == Opcode.NOP:
             pass
         # TODO: unofficial
-        elif op == Opcode.NOPI:
-            raise NotImplementedError
         elif op == Opcode.NOPD:
-            raise NotImplementedError
+            self.reg.PC += 1
+        elif op == Opcode.NOPI:
+            self.reg.PC += 2
         elif op == Opcode.LAX:
-            raise NotImplementedError
+            self.reg.A = self.reg.X = self.bread(data)
+            self.set_flag_for_after_calc(self.reg.A)
         elif op == Opcode.SAX:
-            raise NotImplementedError
+            self.write(data, self.reg.A & self.reg.X)
         elif op == Opcode.DCP:
-            raise NotImplementedError
+            data_ = (self.read(data) - 1) & 0xFF
+            self.set_flag_for_after_calc(self.reg.A - data_)
+            self.write(data, data_)
         elif op == Opcode.ISB:
-            raise NotImplementedError
+            pass
         elif op == Opcode.SLO:
-            raise NotImplementedError
+            pass
         elif op == Opcode.RLA:
-            raise NotImplementedError
+            pass
         elif op == Opcode.SRE:
-            raise NotImplementedError
+            pass
         elif op == Opcode.RRA:
-            raise NotImplementedError
+            data_ = self.bread(data)
+            carry = bool(data_ & 0x01)
+            data_ = (data_ >> 1) | 0x80 if self.reg.P.CARRY else 0x00
+            data__ = data_ + self.reg.A + carry
+            self.reg.P.OVERFLOW = (not bool((self.reg.A ^ data_) & 0x80) and 
+                bool((self.reg.A ^ data__) & 0x80))
+            self.set_flag_for_after_calc(data__)
+            self.reg.A = data__ & 0xFF
+            self.reg.P.CARRY = data__ > 0xFF
+            self.write(data, data_)
         else:
             raise NotImplementedError
 
@@ -812,8 +834,10 @@ class Cpu:
             opset, oprand = self.get_op(self.fetch(1))
             self.check_stat(opset, oprand, pc)
             self.exec(opset, oprand)
-        except NotImplementedError:
+        except Exception as e:
             start, end = max(0, self.op_index - 5), self.op_index + 1
+            print(" ### ")
             for a in self.dump[start:end]:
                 self.print_stat(a)
-            raise NotImplementedError
+            print(" ### ")
+            raise e
