@@ -28,6 +28,7 @@ def hello():
     cpu = Cpu(cas)
     cpu.load_correct_log("log/hello.yaml")
     pprint(vars(cpu.reg))
+
     for _ in range(200):
         cpu.run()
     cpu.dump_stat_yaml("sample/hello.yaml")

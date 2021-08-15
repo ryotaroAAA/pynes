@@ -1,17 +1,7 @@
-from dataclasses import dataclass
-from enum import auto, Enum
-from pathlib import Path
-import traceback
-from typing import DefaultDict
-
-from hexdump import hexdump
-from pprint import *
-from print_color import print
-from tabulate import tabulate
-import yaml
-
-from pynes.cassette import *
+from pynes import *
 from pynes.ram import *
+
+logger = PynesLogger.get_logger(__name__)
 
 NES_HSIZE = 0x0010
 PROG_ROM_UNIT_SIZE = 0x4000
@@ -19,7 +9,6 @@ CHAR_ROM_UNIT_SIZE = 0x2000
 
 WRAM_SIZE = 0x0800
 EXRAM_SIZE = 0x2000
-END = "little"
 
 class Opcode(Enum):
     ADC = auto() 
@@ -342,11 +331,11 @@ class Cpu:
             else:
                 raise NotImplementedError
         except NotImplementedError:
-            print(hex(addr), hex(data))
+            logger.error(hex(addr), hex(data))
             raise NotImplementedError
         except:
-            print(traceback.format_exc())
-            print(hex(addr), hex(data))
+            logger.error(traceback.format_exc())
+            logger.error(hex(addr), hex(data))
     
     def fetch(self, size):
         if size in [1, 2]:
@@ -857,8 +846,6 @@ class Cpu:
             self.exec(opset, oprand)
         except Exception as e:
             start, end = max(0, self.op_index - 5), self.op_index + 1
-            print(" ### ")
             for a in self.dump[start:end]:
                 self.print_stat(a)
-            print(" ### ")
             raise e

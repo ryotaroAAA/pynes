@@ -1,0 +1,41 @@
+
+# CRITICAL 50
+# ERROR 40
+# WARNING 30
+# INFO 20
+# DEBUG 10
+# NOTSET 0
+
+version: 1
+disable_existing_loggers : False
+formatters:
+  simple:
+    format: "%(asctime)s [%(levelname)s]: %(message)s
+      %(funcName)s() @ %(name)s(%(lineno)s)"
+    datefmt: "%H:%M:%S"
+  full:
+    format: "%(asctime)s [%(levelname)s]: %(message)s
+      %(funcName)s() @ %(name)s(%(lineno)s)"
+    datefmt: "%Y/%m/%d %H:%M:%S"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: full
+    stream: ext://sys.stdout
+loggers:
+  cpu:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  cassette:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  ram:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]
