@@ -22,6 +22,7 @@ def nestest():
                 color = "yellow")
             break
     cpu.dump_stat_yaml(f"sample/nestest.yaml")
+    print("success!")
 
 def hello():
     cas = Cassette("rom/hello.nes")
@@ -32,6 +33,7 @@ def hello():
     for _ in range(200):
         cpu.run()
     cpu.dump_stat_yaml("sample/hello.yaml")
+    print("success!")
 
 def run(args):
     cas = Cassette("rom/hello.nes")
