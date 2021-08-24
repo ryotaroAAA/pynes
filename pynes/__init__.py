@@ -1,7 +1,7 @@
 __version__ = '0.1.0'
 
 import copy
-from dataclasses import dataclass
+from dataclasses import *
 from enum import auto, Enum
 import logging
 import logging.config

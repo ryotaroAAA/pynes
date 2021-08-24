@@ -125,7 +125,7 @@ class Image:
 
 class Palette(Ram):
     def __init__(self, size):
-        super.__init__(size)
+        super().__init__(size)
 
     def read(self):
         data = []
@@ -154,15 +154,15 @@ class Palette(Ram):
         return addr % 0x20
 
 class Ppu:
-    def __init__(self, vram, cas, interrupts):
+    def __init__(self, cas, vram, interrupts):
         self.vram = vram
         self.cas = cas
         self.interrupts = interrupts
         
         self.palette = Palette(PALETTE_SIZE)
-        self.char_ram = Ram(cas.get_char_size())
-        for addr, data in enumerate(self.cas.get_char_rom()):
-            self.char_ram.write(addr, data)
+        self.char_ram = Ram(cas.char_size)
+        for addr, data in enumerate(self.cas.char_rom):
+            self.char_ram.data[addr] = data
         self.sprite_ram = Ram(SPRITE_RAM_SIZE)
 
         self.vram_buf = 0

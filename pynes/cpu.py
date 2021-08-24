@@ -236,10 +236,12 @@ class Register:
         self.P.reset()
 
 class Cpu:
-    def __init__(self, cas):
+    def __init__(self, cas, ram, ppu, inter):
         self.op_index = 0
         self.reg = Register()
-        self.ram = Ram(WRAM_SIZE)
+        self.ram = ram
+        self.ppu = ppu
+        self.inter = inter
         self.exram = Ram(EXRAM_SIZE)
         self.cas = cas
         self.reset()

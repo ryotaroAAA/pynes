@@ -2,7 +2,9 @@ import argparse
 
 from pynes.cassette import *
 from pynes.cpu import *
+from pynes.ppu import *
 from pynes.ram import *
+from pynes.interrupts import *
 
 def nestest():
     cas = Cassette("rom/nestest.nes")
@@ -26,7 +28,11 @@ def nestest():
 
 def hello():
     cas = Cassette("rom/hello.nes")
-    cpu = Cpu(cas)
+    wram = Ram(WRAM_SIZE)
+    vram = Ram(VRAM_SIZE)
+    inter = Interrupts()
+    ppu = Ppu(cas, vram, inter)
+    cpu = Cpu(cas, wram, ppu, inter)
     cpu.load_correct_log("log/hello.yaml")
     pprint(vars(cpu.reg))
 
