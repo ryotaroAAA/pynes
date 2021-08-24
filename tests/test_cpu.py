@@ -1,18 +1,28 @@
 import pytest
 from pynes.cassette import *
 from pynes.cpu import *
+from pynes.ppu import *
+from pynes.interrupts import *
 
 @pytest.fixture
 def hello_cpu():
     hello_cas = Cassette("rom/hello.nes")
-    cpu = Cpu(hello_cas)
+    wram = Ram(WRAM_SIZE)
+    vram = Ram(VRAM_SIZE)
+    inter = Interrupts()
+    ppu = Ppu(hello_cas, vram, inter)
+    cpu = Cpu(hello_cas, wram, ppu, inter)
     cpu.load_correct_log("log/hello.yaml")
     return cpu
 
 @pytest.fixture
 def nestest_cpu(limit = 8991):
     cas = Cassette("rom/nestest.nes")
-    cpu = Cpu(cas)
+    wram = Ram(WRAM_SIZE)
+    vram = Ram(VRAM_SIZE)
+    inter = Interrupts()
+    ppu = Ppu(cas, vram, inter)
+    cpu = Cpu(cas, wram, ppu, inter)
     cpu.reset_addr(0xc000)
     cpu.load_correct_log(f"log/nestest{limit}.yaml")
     return cpu
