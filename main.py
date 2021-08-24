@@ -8,7 +8,11 @@ from pynes.interrupts import *
 
 def nestest():
     cas = Cassette("rom/nestest.nes")
-    cpu = Cpu(cas)
+    wram = Ram(WRAM_SIZE)
+    vram = Ram(VRAM_SIZE)
+    inter = Interrupts()
+    ppu = Ppu(cas, vram, inter)
+    cpu = Cpu(cas, wram, ppu, inter)
     cpu.reset_addr(0xc000)
     cpu.load_correct_log(f"log/nestest.yaml")
     pprint(vars(cpu.reg))
