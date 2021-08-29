@@ -276,9 +276,7 @@ class Cpu:
             return self.ram.data[addr % WRAM_SIZE]
         elif addr < 0x4000:
             # PPU
-            pass
-            # raise NotImplementedError
-            # return self.ram[(addr - 0x2000) % 8] 
+            return self.ppu.read((addr - 0x2000) % 8)
         elif addr < 0x4020:
             if addr == 0x4014:
                 # DMA
@@ -317,7 +315,7 @@ class Cpu:
                 self.ram.data[addr % WRAM_SIZE] = data
             elif addr < 0x2008:
                 # PPU
-                pass
+                self.ppu.write(addr - 0x2000, data)
             elif 0x4000 <= addr < 0x4020:
                 if addr == 0x4014:
                     # DMA
@@ -495,7 +493,6 @@ class Cpu:
         elif mode in [Addrmode.IMD, Addrmode.ZPG]:
             oprand["data"] = self.fetch(1)
         elif mode == Addrmode.REL:
-            # pc = self.reg.PC
             addr = self.fetch(1)
             oprand["data"] = addr + self.reg.PC
             oprand["data"] -= 0 if addr < 0x80 else 0x100
@@ -525,20 +522,14 @@ class Cpu:
         elif mode == Addrmode.IND_Y:
             base = self.fetch(1)
             base_ = (base + 1) & 0xFF
-            # print(" > ", hex(base), hex(self.bread(base)),
-            #     hex(self.bread(base+1)),
-            #     hex(self.wread(base)), hex(self.wread(base+1)))
             oprand["data"] = (self.bread(base) +
                 (self.bread(base_) << 8) + self.reg.Y) & 0xFFFF
             oprand["add_cycle"] = \
                 int(not oprand["data"] == (self.reg.Y & 0xFF00))
         elif mode == Addrmode.ABS_IND:
             base = self.fetch(2)
-            # print(")))", hex(base & 0xFF00), ((base + 1) & 0xFF))
             base_ = (base & 0xFF00) + ((base + 1) & 0xFF)
-            # print(")))", hex(base_), hex((base & 0xFF00) + ((base + 1) & 0xFF)))
             oprand["data"] = self.bread(base) + (self.bread(base_) << 8)
-            # print(hex(base), hex(base_), hex(oprand["data"]))
         else:
             raise NotImplementedError
         return opset, oprand
@@ -551,9 +542,6 @@ class Cpu:
         if op in [Opcode.LDA, Opcode.LDX, Opcode.LDY]:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
             if op == Opcode.LDA:
-                # print(op, data, mode)
-                # print(f" # bread:{hex(self.bread(data))}, data:{hex(data)}, A:{hex(self.reg.A)}")
-                # print(f" # {hex(data_)}, {hex(self.bread(0x0400))}")
                 self.reg.A = data_
             elif op == Opcode.LDX:
                 self.reg.X = data_
@@ -846,6 +834,7 @@ class Cpu:
             opset, oprand = self.get_op(self.fetch(1))
             self.check_stat(opset, oprand, pc)
             self.exec(opset, oprand)
+            return opset["cycle"]
         except Exception as e:
             start, end = max(0, self.op_index - 5), self.op_index + 1
             for a in self.dump[start:end]:

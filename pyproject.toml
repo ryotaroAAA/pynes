@@ -5,7 +5,7 @@ description = ""
 authors = ["ryotaro <ryo.ex3991@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "=3.9"
 tabulate = "^0.8.9"
 cPython = "^0.0.6"
 hexdump = "^3.3"
@@ -13,6 +13,8 @@ PyYAML = "^5.4.1"
 pytest = "^6.2.4"
 pytest-cov = "^2.12.1"
 print-color = "^0.3.0"
+pygame = "^2.0.1"
+numpy = "^1.21.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
