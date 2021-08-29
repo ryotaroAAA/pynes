@@ -441,23 +441,13 @@ class Ppu:
         table_id_offset = \
             2 if int((self.get_tile_y() / V_SPRITE_NUM) % 2) else 0
 
-        # for (x = 0 x < H_SPRITE_NUM x++) {
         for x in range(0, H_SPRITE_NUM):
-            tile_x = (x + self.get_scroll_tile_x())
+            # tile_x = (x + self.get_scroll_tile_x())
             mod_x = x % H_SPRITE_NUM
             name_table_id = int(x / H_SPRITE_NUM) % 2 + table_id_offset
             offset_addr_by_name_table = name_table_id * 0x0400
             tile = self.build_tile(mod_x, mod_y, offset_addr_by_name_table)
             self.background.append(tile)
-            # print(mod_x, int(len(self.background)/H_SPRITE_NUM), len(self.background))
-            # if int(len(self.background)/H_SPRITE_NUM) == 14:
-            #     for i in range(0, 8):
-            #         for j in range(0, 8):
-            #             if tile.sprite.data[i][j] > 0:
-            #                 print(f"{tile.sprite.data[i][j]} ", end="")
-            #             else:
-            #                 print(f" ", end="")
-            #         print(f"")
 
     def run(self, cycle):
         self.cycle += cycle
@@ -471,7 +461,6 @@ class Ppu:
 
             if self.has_sprite_hit():
                 self.set_sprite_hit()
-            # print(self.line, not (self.line % TILE_SIZE), self.line % TILE_SIZE == 0)
             if self.line <= H_SIZE and \
                 not (self.line % TILE_SIZE) and \
                     (self.line % TILE_SIZE == 0):
