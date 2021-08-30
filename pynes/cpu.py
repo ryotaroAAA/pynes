@@ -238,6 +238,7 @@ class Register:
 class Cpu:
     def __init__(self, cas, ram, ppu, inter):
         self.op_index = 0
+        self.cycle = 0
         self.reg = Register()
         self.ram = ram
         self.ppu = ppu
@@ -253,6 +254,7 @@ class Cpu:
     def reset(self):
         self.reg.reset()
         self.reg.PC = self.wread(0xFFFC)
+        self.cycle += 7
 
     def reset_addr(self, addr):
         self.reg.reset()
@@ -362,11 +364,11 @@ class Cpu:
     def print_stat(self, op):
         if op["data"] == "":
             op["data"] = 0x00
-            
         print(
             f"{op['i']:4d} {op['pc']:04X} {op['opset']:5s} {op['mode']:7s} "
             f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
-            f"P:{op['P']:02X} SP:{op['SP']:04X}"
+            f"P:{op['P']:02X} SP:{op['SP']:04X} "
+            f"PPU:{op['line']:3d},{op['p_cycle']:3d} CYC:{op['c_cycle']}"
         )
 
     def dump_stat(self, opset, oprand, pc):
@@ -380,9 +382,12 @@ class Cpu:
             "X" : self.reg.X,
             "Y" : self.reg.Y,
             "P" : self.reg.P.get_val(),
-            "SP" : self.reg.SP
+            "SP" : self.reg.SP,
+            "line" : self.ppu.line,
+            "c_cycle" : self.cycle,
+            "p_cycle" : self.ppu.cycle
         }
-        # self.print_stat(op)
+        self.print_stat(op)
         self.dump.append(op)
     
     def comp_stat(self):
@@ -400,7 +405,10 @@ class Cpu:
             "X",
             "Y",
             "P",
-            "SP"
+            "SP",
+            "line",
+            "c_cycle",
+            "p_cycle"
         ]
         failed = False
         for item in check_items:
@@ -488,6 +496,7 @@ class Cpu:
         opset = self.opset[opcode]
         mode = addrmode_dic[opset["mode"]]
         oprand = DefaultDict(int)
+        oprand["add_cycle"] = 0
         if mode in [Addrmode.ACM, Addrmode.IMPL]:
             pass
         elif mode in [Addrmode.IMD, Addrmode.ZPG]:
@@ -538,6 +547,7 @@ class Cpu:
         op = opcode_dic[opset["op"]]
         data = oprand["data"]
         mode = addrmode_dic[opset["mode"]]
+        self.has_branched = False
         # load
         if op in [Opcode.LDA, Opcode.LDX, Opcode.LDY]:
             data_ = data if mode == Addrmode.IMD else self.bread(data)
@@ -828,13 +838,53 @@ class Cpu:
         else:
             raise NotImplementedError
 
+    def check_NMI(self):
+        if not self.inter.get_nmi_assert():
+            return
+        self.reg.P.BREAK = False
+        self.push_PC()
+        self.push_reg_status()
+        self.reg.P.INTERRUPT = True
+        self.reg.PC = self.wread(0xFFFA)
+
+    def check_IRQ(self):
+        if not self.inter.get_irq_assert():
+            return
+        if self.reg.P.INTERRUPT:
+            return
+        self.inter.deassert_irq()
+        self.reg.P.BREAK = False
+        self.push_PC()
+        self.push_reg_status()
+        self.reg.P.INTERRUPT = True
+        self.reg.PC = self.wread(0xFFFE)
+
+    def check_BRK(self):
+        return
+        if not self.inter.get_irq_assert():
+            return
+        if self.reg.P.INTERRUPT:
+            return
+        self.inter.deassert_irq()
+        self.reg.P.BREAK = False
+        self.push_PC()
+        self.push_reg_status()
+        self.reg.P.INTERRUPT = True
+        self.reg.PC = self.wread(0xFFFE)
+
     def run(self):
         try:
+            self.check_NMI()
+            self.check_IRQ()
+            self.check_BRK()
             pc = self.reg.PC
             opset, oprand = self.get_op(self.fetch(1))
             self.check_stat(opset, oprand, pc)
             self.exec(opset, oprand)
-            return opset["cycle"]
+            cycle = (opset["cycle"] + oprand["add_cycle"] +
+                (1 if self.has_branched else 0))
+            self.cycle += cycle
+            return cycle
         except Exception as e:
             start, end = max(0, self.op_index - 5), self.op_index + 1
             for a in self.dump[start:end]:

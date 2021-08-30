@@ -43,7 +43,6 @@ class Renderer:
         return int((data[y % 8][x % 8] % 4) > 0)
 
     def render_background(self):
-        print(len(self.image["background"]))
         for i, tile in enumerate(self.image["background"]):
             x = (i % 32) * 8
             y = int(i / 32) * 8

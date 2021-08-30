@@ -15,23 +15,22 @@ def nestest():
     inter = Interrupts()
     ppu = Ppu(cas, vram, inter)
     cpu = Cpu(cas, wram, ppu, inter)
-    # cpu.reset_addr(0xc000)
-    cpu.load_correct_log(f"log/nestest.yaml")
+    cpu.reset_addr(0xc000)
+    # cpu.load_correct_log(f"log/nestest.yaml")
     pprint(vars(cpu.reg))
 
-    renderer = Renderer()
-    video = Video()
+    # renderer = Renderer()
+    # video = Video()
 
-    for _ in range(10000):
+    for _ in range(100):
         cycle = cpu.run()
         if not (image := ppu.run(3 * cycle)) == None:
             print("image created")
-            renderer.render(image)
-            data = renderer.get_render_result()
-            video.update(data)
+            # renderer.render(image)
+            # data = renderer.get_render_result()
+            # video.update(data)
             print("video enable!")
-            time.sleep(30)
-    cpu.dump_stat_yaml(f"sample/nestest.yaml")
+    # cpu.dump_stat_yaml(f"sample/nestest.yaml")
     print("success!")
 
 def hello():
@@ -60,15 +59,31 @@ def hello():
     print("success!")
 
 def run(args):
-    cas = Cassette("rom/hello.nes")
-    cpu = Cpu(cas)
+    cas = Cassette(f"rom/{args.rom}")
+    wram = Ram(WRAM_SIZE)
+    vram = Ram(VRAM_SIZE)
+    inter = Interrupts()
+    ppu = Ppu(cas, vram, inter)
+    cpu = Cpu(cas, wram, ppu, inter)
     pprint(vars(cpu.reg))
-    for _ in range(args.loop):
-        cpu.run()
+
+    renderer = Renderer()
+    video = Video()
+
+    while 1:
+        cycle = cpu.run()
+        if not (image := ppu.run(3 * cycle)) == None:
+            renderer.render(image)
+            data = renderer.get_render_result()
+            video.update(data)
+            print(".")
+    # cpu.dump_stat_yaml(f"sample/nestest.yaml")
+    print("success!")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--loop", type=int, default=100, help="")
+    parser.add_argument("-l", "--loop", type=int, default=100, help="loop")
+    parser.add_argument("-rom", "--rom", default="", help="rom")
     parser.add_argument("-m", "--mode", default="run", help="run or test")
     args = parser.parse_args()
     print(vars(args), tag="args", tag_color="green", color="white")
