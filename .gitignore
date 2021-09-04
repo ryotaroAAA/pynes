@@ -2,6 +2,8 @@ dist/*
 __pycache__/*
 *.pyc
 # *.nes
+giko*.nes
+MapWalker.nes
 htmlcov/*
 .coverage
 sample/*

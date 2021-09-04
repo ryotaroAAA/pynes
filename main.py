@@ -15,22 +15,23 @@ def nestest():
     inter = Interrupts()
     ppu = Ppu(cas, vram, inter)
     cpu = Cpu(cas, wram, ppu, inter)
-    cpu.reset_addr(0xc000)
-    # cpu.load_correct_log(f"log/nestest.yaml")
+    # cpu.reset_addr(0xc000)
+    cpu.load_correct_log(f"test_log/nestest.yaml")
     pprint(vars(cpu.reg))
 
-    # renderer = Renderer()
-    # video = Video()
+    renderer = Renderer()
+    video = Video()
 
-    for _ in range(100):
+    # for _ in range(8991):
+    while True:
         cycle = cpu.run()
-        if not (image := ppu.run(3 * cycle)) == None:
-            print("image created")
-            # renderer.render(image)
-            # data = renderer.get_render_result()
-            # video.update(data)
-            print("video enable!")
-    # cpu.dump_stat_yaml(f"sample/nestest.yaml")
+        if not (image := ppu.run(cycle)) == None:
+            s = time.time()
+            renderer.render(image)
+            data = renderer.get_render_result()
+            video.update(data)
+            e = time.time()
+            print(f"[FPS] {1/(e - s):0.1f}")
     print("success!")
 
 def hello():
@@ -46,16 +47,15 @@ def hello():
     renderer = Renderer()
     video = Video()
 
-    for _ in range(10000):
+    while True:
         cycle = cpu.run()
-        if not (image := ppu.run(3 * cycle)) == None:
-            print("image created")
+        if not (image := ppu.run(cycle)) == None:
+            s = time.time()
             renderer.render(image)
             data = renderer.get_render_result()
             video.update(data)
-            print("video enable!")
-            time.sleep(30)
-    cpu.dump_stat_yaml("sample/hello.yaml")
+            e = time.time()
+            print(f"[FPS] {1/(e - s):0.1f}")
     print("success!")
 
 def run(args):
@@ -70,21 +70,26 @@ def run(args):
     renderer = Renderer()
     video = Video()
 
-    while 1:
+    loop = sys.maxsize if args.loop == -1 else args.loop
+    for _ in range(loop):
         cycle = cpu.run()
-        if not (image := ppu.run(3 * cycle)) == None:
+        if not (image := ppu.run(cycle)) == None:
+            s = time.time()
             renderer.render(image)
             data = renderer.get_render_result()
             video.update(data)
-            print(".")
-    # cpu.dump_stat_yaml(f"sample/nestest.yaml")
+            e = time.time()
+            print(f"[FPS] {1/(e - s):0.1f}")
+    if args.stop:
+        while True:
+            pass
     print("success!")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--loop", type=int, default=100, help="loop")
-    parser.add_argument("-rom", "--rom", default="", help="rom")
-    parser.add_argument("-m", "--mode", default="run", help="run or test")
+    parser.add_argument("-l", "--loop", type=int, default=-1, help="loop")
+    parser.add_argument("-r", "--rom", default="", help="rom")
+    parser.add_argument("-s", "--stop", action="store_true", help="stop after num of loop run")
     args = parser.parse_args()
     print(vars(args), tag="args", tag_color="green", color="white")
 

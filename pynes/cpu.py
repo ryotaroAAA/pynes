@@ -255,6 +255,7 @@ class Cpu:
         self.reg.reset()
         self.reg.PC = self.wread(0xFFFC)
         self.cycle += 7
+        self.ppu.cycle += 3 * self.cycle
 
     def reset_addr(self, addr):
         self.reg.reset()
@@ -264,6 +265,8 @@ class Cpu:
         if Path(path).exists():
             with Path(path).open() as f:
                 self.correct = yaml.safe_load(f)
+        else:
+            print(f"not exists: {path}")
 
     def bread(self, addr):
         return self._read(addr)
@@ -336,8 +339,8 @@ class Cpu:
             logger.error(hex(addr), hex(data))
             raise NotImplementedError
         except:
-            logger.error(traceback.format_exc())
-            logger.error(hex(addr), hex(data))
+            traceback.format_exc()
+            # logger.error(hex(addr), hex(data))
     
     def fetch(self, size):
         if size in [1, 2]:
@@ -347,7 +350,6 @@ class Cpu:
             else:
                 data = self.wread(self.reg.PC)
             self.reg.PC += size
-            # print(type(data), data, hex(data))
             return data
         else:
             raise NotImplementedError
@@ -387,7 +389,7 @@ class Cpu:
             "c_cycle" : self.cycle,
             "p_cycle" : self.ppu.cycle
         }
-        self.print_stat(op)
+        # self.print_stat(op)
         self.dump.append(op)
     
     def comp_stat(self):
@@ -405,10 +407,10 @@ class Cpu:
             "X",
             "Y",
             "P",
-            "SP",
-            "line",
-            "c_cycle",
-            "p_cycle"
+            "SP"
+            # "line",
+            # "c_cycle",
+            # "p_cycle"
         ]
         failed = False
         for item in check_items:
@@ -505,8 +507,6 @@ class Cpu:
             addr = self.fetch(1)
             oprand["data"] = addr + self.reg.PC
             oprand["data"] -= 0 if addr < 0x80 else 0x100
-            oprand["add_cycle"] = \
-                int((oprand["data"] ^ self.reg.PC) & 0xFF00)
         elif mode == Addrmode.ZPG_X:
             oprand["data"] = (self.reg.X + self.fetch(1)) & 0xFF
         elif mode == Addrmode.ZPG_Y:
@@ -514,27 +514,31 @@ class Cpu:
         elif mode == Addrmode.ABS:
             oprand["data"] = self.fetch(2)
         elif mode == Addrmode.ABS_X:
-            oprand["data"] = (self.reg.X + self.fetch(2)) & 0xFFFF
+            addr = self.fetch(2)
+            oprand["data"] = (self.reg.X + addr) & 0xFFFF
+            # print("addr:", hex(addr), f"({addr%56})", 
+            #     "reg:", self.reg.X, f"({self.reg.X%256})",
+            #     "result:", hex(oprand["data"]))
             oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.X & 0xFF00))
+                int(((oprand["data"] ^ addr) & 0xFF00) > 0)
         elif mode == Addrmode.ABS_Y:
-            oprand["data"] = (self.reg.Y + self.fetch(2)) & 0xFFFF
+            addr = self.fetch(2)
+            oprand["data"] = (self.reg.Y + addr) & 0xFFFF
             oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.Y & 0xFF00))
+                int(((oprand["data"] ^ addr) & 0xFF00) > 0)
+                # int((oprand["data"] & 0xFF00) != (addr & 0xFF00))
         elif mode == Addrmode.IND_X:
             base = (self.reg.X + self.fetch(1)) & 0xFF
             base_ = (base + 1) & 0xFF
             oprand["data"] = (self.bread(base) +
                 (self.bread(base_) << 8)) & 0xFFFF
-            oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.X & 0xFF00))
         elif mode == Addrmode.IND_Y:
             base = self.fetch(1)
             base_ = (base + 1) & 0xFF
-            oprand["data"] = (self.bread(base) +
-                (self.bread(base_) << 8) + self.reg.Y) & 0xFFFF
+            data = self.bread(base) + (self.bread(base_) << 8)
+            oprand["data"] = (data + self.reg.Y) & 0xFFFF
             oprand["add_cycle"] = \
-                int(not oprand["data"] == (self.reg.Y & 0xFF00))
+                int(((oprand["data"] ^ data) & 0xFF00) > 0)
         elif mode == Addrmode.ABS_IND:
             base = self.fetch(2)
             base_ = (base & 0xFF00) + ((base + 1) & 0xFF)
@@ -741,8 +745,6 @@ class Cpu:
             if self.reg.P.ZERO:
                 self.branch(data)
         elif op == Opcode.BNE:
-            # if mode == Addrmode.REL:
-            #     raise Exception
             if not self.reg.P.ZERO:
                 self.branch(data)
         elif op == Opcode.BMI:
@@ -859,30 +861,17 @@ class Cpu:
         self.reg.P.INTERRUPT = True
         self.reg.PC = self.wread(0xFFFE)
 
-    def check_BRK(self):
-        return
-        if not self.inter.get_irq_assert():
-            return
-        if self.reg.P.INTERRUPT:
-            return
-        self.inter.deassert_irq()
-        self.reg.P.BREAK = False
-        self.push_PC()
-        self.push_reg_status()
-        self.reg.P.INTERRUPT = True
-        self.reg.PC = self.wread(0xFFFE)
-
     def run(self):
         try:
             self.check_NMI()
             self.check_IRQ()
-            self.check_BRK()
             pc = self.reg.PC
             opset, oprand = self.get_op(self.fetch(1))
             self.check_stat(opset, oprand, pc)
             self.exec(opset, oprand)
             cycle = (opset["cycle"] + oprand["add_cycle"] +
                 (1 if self.has_branched else 0))
+            # print(hex(cycle), hex(opset["cycle"]), hex(oprand["add_cycle"]))
             self.cycle += cycle
             return cycle
         except Exception as e:

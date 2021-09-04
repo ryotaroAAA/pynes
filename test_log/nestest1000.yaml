@@ -3,10008 +3,13011 @@
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 7
   data: ''
   i: 1
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 21
   pc: 49152
 - A: 0
   P: 36
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 10
   data: ''
   i: 2
+  line: 0
   mode: ''
   opset: LDX
+  p_cycle: 30
   pc: 50677
 - A: 0
   P: 38
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 12
   data: ''
   i: 3
+  line: 0
   mode: ''
   opset: STX
+  p_cycle: 36
   pc: 50679
 - A: 0
   P: 38
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 15
   data: ''
   i: 4
+  line: 0
   mode: ''
   opset: STX
+  p_cycle: 45
   pc: 50681
 - A: 0
   P: 38
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 18
   data: ''
   i: 5
+  line: 0
   mode: ''
   opset: STX
+  p_cycle: 54
   pc: 50683
 - A: 0
   P: 38
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 21
   data: ''
   i: 6
+  line: 0
   mode: ''
   opset: JSR
+  p_cycle: 63
   pc: 50685
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 27
   data: ''
   i: 7
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 81
   pc: 50989
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 29
   data: ''
   i: 8
+  line: 0
   mode: ''
   opset: SEC
+  p_cycle: 87
   pc: 50990
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 31
   data: ''
   i: 9
+  line: 0
   mode: ''
   opset: BCS
+  p_cycle: 93
   pc: 50991
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 34
   data: ''
   i: 10
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 102
   pc: 50997
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 36
   data: ''
   i: 11
+  line: 0
   mode: ''
   opset: CLC
+  p_cycle: 108
   pc: 50998
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 38
   data: ''
   i: 12
+  line: 0
   mode: ''
   opset: BCS
+  p_cycle: 114
   pc: 50999
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 40
   data: ''
   i: 13
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 120
   pc: 51001
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 43
   data: ''
   i: 14
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 129
   pc: 51008
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 45
   data: ''
   i: 15
+  line: 0
   mode: ''
   opset: SEC
+  p_cycle: 135
   pc: 51009
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 47
   data: ''
   i: 16
+  line: 0
   mode: ''
   opset: BCC
+  p_cycle: 141
   pc: 51010
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 49
   data: ''
   i: 17
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 147
   pc: 51012
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 52
   data: ''
   i: 18
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 156
   pc: 51019
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 54
   data: ''
   i: 19
+  line: 0
   mode: ''
   opset: CLC
+  p_cycle: 162
   pc: 51020
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 56
   data: ''
   i: 20
+  line: 0
   mode: ''
   opset: BCC
+  p_cycle: 168
   pc: 51021
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 59
   data: ''
   i: 21
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 177
   pc: 51027
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 61
   data: ''
   i: 22
+  line: 0
   mode: ''
   opset: LDA
+  p_cycle: 183
   pc: 51028
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 63
   data: ''
   i: 23
+  line: 0
   mode: ''
   opset: BEQ
+  p_cycle: 189
   pc: 51030
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 66
   data: ''
   i: 24
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 198
   pc: 51036
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 68
   data: ''
   i: 25
+  line: 0
   mode: ''
   opset: LDA
+  p_cycle: 204
   pc: 51037
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 70
   data: ''
   i: 26
+  line: 0
   mode: ''
   opset: BEQ
+  p_cycle: 210
   pc: 51039
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 72
   data: ''
   i: 27
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 216
   pc: 51041
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 75
   data: ''
   i: 28
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 225
   pc: 51048
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 77
   data: ''
   i: 29
+  line: 0
   mode: ''
   opset: LDA
+  p_cycle: 231
   pc: 51049
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 79
   data: ''
   i: 30
+  line: 0
   mode: ''
   opset: BNE
+  p_cycle: 237
   pc: 51051
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 82
   data: ''
   i: 31
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 246
   pc: 51057
 - A: 64
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 84
   data: ''
   i: 32
+  line: 0
   mode: ''
   opset: LDA
+  p_cycle: 252
   pc: 51058
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 86
   data: ''
   i: 33
+  line: 0
   mode: ''
   opset: BNE
+  p_cycle: 258
   pc: 51060
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 88
   data: ''
   i: 34
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 264
   pc: 51062
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 91
   data: ''
   i: 35
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 273
   pc: 51069
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 93
   data: ''
   i: 36
+  line: 0
   mode: ''
   opset: LDA
+  p_cycle: 279
   pc: 51070
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 95
   data: ''
   i: 37
+  line: 0
   mode: ''
   opset: STA
+  p_cycle: 285
   pc: 51072
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 98
   data: ''
   i: 38
+  line: 0
   mode: ''
   opset: BIT
+  p_cycle: 294
   pc: 51074
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 101
   data: ''
   i: 39
+  line: 0
   mode: ''
   opset: BVS
+  p_cycle: 303
   pc: 51076
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 104
   data: ''
   i: 40
+  line: 0
   mode: ''
   opset: NOP
+  p_cycle: 312
   pc: 51082
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 106
   data: ''
   i: 41
+  line: 0
   mode: ''
   opset: BIT
+  p_cycle: 318
   pc: 51083
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 109
   data: ''
   i: 42
+  line: 0
   mode: ''
   opset: BVC
+  p_cycle: 327
   pc: 51085
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 111
   data: ''
   i: 43
+  line: 0
   mode: ''
   opset: JMP
+  p_cycle: 333
   pc: 51087
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 114
   data: ''
   i: 44
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 1
   pc: 51094
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 116
   data: ''
   i: 45
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 7
   pc: 51095
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 118
   data: ''
   i: 46
+  line: 1
   mode: ''
   opset: STA
+  p_cycle: 13
   pc: 51097
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 121
   data: ''
   i: 47
+  line: 1
   mode: ''
   opset: BIT
+  p_cycle: 22
   pc: 51099
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 124
   data: ''
   i: 48
+  line: 1
   mode: ''
   opset: BVC
+  p_cycle: 31
   pc: 51101
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 127
   data: ''
   i: 49
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 40
   pc: 51107
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 129
   data: ''
   i: 50
+  line: 1
   mode: ''
   opset: BIT
+  p_cycle: 46
   pc: 51108
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 132
   data: ''
   i: 51
+  line: 1
   mode: ''
   opset: BVS
+  p_cycle: 55
   pc: 51110
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 134
   data: ''
   i: 52
+  line: 1
   mode: ''
   opset: JMP
+  p_cycle: 61
   pc: 51112
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 137
   data: ''
   i: 53
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 70
   pc: 51119
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 139
   data: ''
   i: 54
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 76
   pc: 51120
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 141
   data: ''
   i: 55
+  line: 1
   mode: ''
   opset: BPL
+  p_cycle: 82
   pc: 51122
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 144
   data: ''
   i: 56
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 91
   pc: 51128
 - A: 0
   P: 38
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 146
   data: ''
   i: 57
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 97
   pc: 51129
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 148
   data: ''
   i: 58
+  line: 1
   mode: ''
   opset: BPL
+  p_cycle: 103
   pc: 51131
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 150
   data: ''
   i: 59
+  line: 1
   mode: ''
   opset: JMP
+  p_cycle: 109
   pc: 51133
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 153
   data: ''
   i: 60
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 118
   pc: 51161
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 155
   data: ''
   i: 61
+  line: 1
   mode: ''
   opset: RTS
+  p_cycle: 124
   pc: 51162
 - A: 128
   P: 164
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 161
   data: ''
   i: 62
+  line: 1
   mode: ''
   opset: JSR
+  p_cycle: 142
   pc: 50688
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 167
   data: ''
   i: 63
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 160
   pc: 51163
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 169
   data: ''
   i: 64
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 166
   pc: 51164
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 171
   data: ''
   i: 65
+  line: 1
   mode: ''
   opset: STA
+  p_cycle: 172
   pc: 51166
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 174
   data: ''
   i: 66
+  line: 1
   mode: ''
   opset: BIT
+  p_cycle: 181
   pc: 51168
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 177
   data: ''
   i: 67
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 190
   pc: 51170
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 179
   data: ''
   i: 68
+  line: 1
   mode: ''
   opset: SEC
+  p_cycle: 196
   pc: 51172
 - A: 0
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 181
   data: ''
   i: 69
+  line: 1
   mode: ''
   opset: SEI
+  p_cycle: 202
   pc: 51173
 - A: 0
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 183
   data: ''
   i: 70
+  line: 1
   mode: ''
   opset: SED
+  p_cycle: 208
   pc: 51174
 - A: 0
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 185
   data: ''
   i: 71
+  line: 1
   mode: ''
   opset: PHP
+  p_cycle: 214
   pc: 51175
 - A: 0
   P: 111
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 188
   data: ''
   i: 72
+  line: 1
   mode: ''
   opset: PLA
+  p_cycle: 223
   pc: 51176
 - A: 127
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 192
   data: ''
   i: 73
+  line: 1
   mode: ''
   opset: AND
+  p_cycle: 235
   pc: 51177
 - A: 111
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 194
   data: ''
   i: 74
+  line: 1
   mode: ''
   opset: CMP
+  p_cycle: 241
   pc: 51179
 - A: 111
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 196
   data: ''
   i: 75
+  line: 1
   mode: ''
   opset: BEQ
+  p_cycle: 247
   pc: 51181
 - A: 111
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 199
   data: ''
   i: 76
+  line: 1
   mode: ''
   opset: NOP
+  p_cycle: 256
   pc: 51187
 - A: 111
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 201
   data: ''
   i: 77
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 262
   pc: 51188
 - A: 64
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 203
   data: ''
   i: 78
+  line: 1
   mode: ''
   opset: STA
+  p_cycle: 268
   pc: 51190
 - A: 64
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 206
   data: ''
   i: 79
+  line: 1
   mode: ''
   opset: BIT
+  p_cycle: 277
   pc: 51192
 - A: 64
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 209
   data: ''
   i: 80
+  line: 1
   mode: ''
   opset: CLD
+  p_cycle: 286
   pc: 51194
 - A: 64
   P: 101
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 211
   data: ''
   i: 81
+  line: 1
   mode: ''
   opset: LDA
+  p_cycle: 292
   pc: 51195
 - A: 16
   P: 101
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 213
   data: ''
   i: 82
+  line: 1
   mode: ''
   opset: CLC
+  p_cycle: 298
   pc: 51197
 - A: 16
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 215
   data: ''
   i: 83
+  line: 1
   mode: ''
   opset: PHP
+  p_cycle: 304
   pc: 51198
 - A: 16
   P: 100
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 218
   data: ''
   i: 84
+  line: 1
   mode: ''
   opset: PLA
+  p_cycle: 313
   pc: 51199
 - A: 116
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 222
   data: ''
   i: 85
+  line: 1
   mode: ''
   opset: AND
+  p_cycle: 325
   pc: 51200
 - A: 100
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 224
   data: ''
   i: 86
+  line: 1
   mode: ''
   opset: CMP
+  p_cycle: 331
   pc: 51202
 - A: 100
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 226
   data: ''
   i: 87
+  line: 1
   mode: ''
   opset: BEQ
+  p_cycle: 337
   pc: 51204
 - A: 100
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 229
   data: ''
   i: 88
+  line: 2
   mode: ''
   opset: NOP
+  p_cycle: 5
   pc: 51210
 - A: 100
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 231
   data: ''
   i: 89
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 11
   pc: 51211
 - A: 128
   P: 229
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 233
   data: ''
   i: 90
+  line: 2
   mode: ''
   opset: STA
+  p_cycle: 17
   pc: 51213
 - A: 128
   P: 229
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 236
   data: ''
   i: 91
+  line: 2
   mode: ''
   opset: BIT
+  p_cycle: 26
   pc: 51215
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 239
   data: ''
   i: 92
+  line: 2
   mode: ''
   opset: SED
+  p_cycle: 35
   pc: 51217
 - A: 128
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 241
   data: ''
   i: 93
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 41
   pc: 51218
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 243
   data: ''
   i: 94
+  line: 2
   mode: ''
   opset: SEC
+  p_cycle: 47
   pc: 51220
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 245
   data: ''
   i: 95
+  line: 2
   mode: ''
   opset: PHP
+  p_cycle: 53
   pc: 51221
 - A: 0
   P: 47
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 248
   data: ''
   i: 96
+  line: 2
   mode: ''
   opset: PLA
+  p_cycle: 62
   pc: 51222
 - A: 63
   P: 45
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 252
   data: ''
   i: 97
+  line: 2
   mode: ''
   opset: AND
+  p_cycle: 74
   pc: 51223
 - A: 47
   P: 45
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 254
   data: ''
   i: 98
+  line: 2
   mode: ''
   opset: CMP
+  p_cycle: 80
   pc: 51225
 - A: 47
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 256
   data: ''
   i: 99
+  line: 2
   mode: ''
   opset: BEQ
+  p_cycle: 86
   pc: 51227
 - A: 47
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 259
   data: ''
   i: 100
+  line: 2
   mode: ''
   opset: NOP
+  p_cycle: 95
   pc: 51233
 - A: 47
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 261
   data: ''
   i: 101
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 101
   pc: 51234
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 263
   data: ''
   i: 102
+  line: 2
   mode: ''
   opset: PHA
+  p_cycle: 107
   pc: 51236
 - A: 255
   P: 173
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 266
   data: ''
   i: 103
+  line: 2
   mode: ''
   opset: PLP
+  p_cycle: 116
   pc: 51237
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 270
   data: ''
   i: 104
+  line: 2
   mode: ''
   opset: BNE
+  p_cycle: 128
   pc: 51238
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 272
   data: ''
   i: 105
+  line: 2
   mode: ''
   opset: BPL
+  p_cycle: 134
   pc: 51240
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 274
   data: ''
   i: 106
+  line: 2
   mode: ''
   opset: BVC
+  p_cycle: 140
   pc: 51242
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 276
   data: ''
   i: 107
+  line: 2
   mode: ''
   opset: BCC
+  p_cycle: 146
   pc: 51244
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 278
   data: ''
   i: 108
+  line: 2
   mode: ''
   opset: JMP
+  p_cycle: 152
   pc: 51246
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 281
   data: ''
   i: 109
+  line: 2
   mode: ''
   opset: NOP
+  p_cycle: 161
   pc: 51253
 - A: 255
   P: 239
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 283
   data: ''
   i: 110
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 167
   pc: 51254
 - A: 4
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 285
   data: ''
   i: 111
+  line: 2
   mode: ''
   opset: PHA
+  p_cycle: 173
   pc: 51256
 - A: 4
   P: 109
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 288
   data: ''
   i: 112
+  line: 2
   mode: ''
   opset: PLP
+  p_cycle: 182
   pc: 51257
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 292
   data: ''
   i: 113
+  line: 2
   mode: ''
   opset: BEQ
+  p_cycle: 194
   pc: 51258
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 294
   data: ''
   i: 114
+  line: 2
   mode: ''
   opset: BMI
+  p_cycle: 200
   pc: 51260
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 296
   data: ''
   i: 115
+  line: 2
   mode: ''
   opset: BVS
+  p_cycle: 206
   pc: 51262
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 298
   data: ''
   i: 116
+  line: 2
   mode: ''
   opset: BCS
+  p_cycle: 212
   pc: 51264
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 300
   data: ''
   i: 117
+  line: 2
   mode: ''
   opset: JMP
+  p_cycle: 218
   pc: 51266
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 303
   data: ''
   i: 118
+  line: 2
   mode: ''
   opset: NOP
+  p_cycle: 227
   pc: 51273
 - A: 4
   P: 36
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 305
   data: ''
   i: 119
+  line: 2
   mode: ''
   opset: SED
+  p_cycle: 233
   pc: 51274
 - A: 4
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 307
   data: ''
   i: 120
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 239
   pc: 51275
 - A: 255
   P: 172
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 309
   data: ''
   i: 121
+  line: 2
   mode: ''
   opset: STA
+  p_cycle: 245
   pc: 51277
 - A: 255
   P: 172
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 312
   data: ''
   i: 122
+  line: 2
   mode: ''
   opset: BIT
+  p_cycle: 254
   pc: 51279
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 315
   data: ''
   i: 123
+  line: 2
   mode: ''
   opset: CLC
+  p_cycle: 263
   pc: 51281
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 317
   data: ''
   i: 124
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 269
   pc: 51282
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 319
   data: ''
   i: 125
+  line: 2
   mode: ''
   opset: PHA
+  p_cycle: 275
   pc: 51284
 - A: 0
   P: 110
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 322
   data: ''
   i: 126
+  line: 2
   mode: ''
   opset: LDA
+  p_cycle: 284
   pc: 51285
 - A: 255
   P: 236
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 324
   data: ''
   i: 127
+  line: 2
   mode: ''
   opset: PLA
+  p_cycle: 290
   pc: 51287
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 328
   data: ''
   i: 128
+  line: 2
   mode: ''
   opset: BNE
+  p_cycle: 302
   pc: 51288
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 330
   data: ''
   i: 129
+  line: 2
   mode: ''
   opset: BMI
+  p_cycle: 308
   pc: 51290
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 332
   data: ''
   i: 130
+  line: 2
   mode: ''
   opset: BVC
+  p_cycle: 314
   pc: 51292
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 334
   data: ''
   i: 131
+  line: 2
   mode: ''
   opset: BCS
+  p_cycle: 320
   pc: 51294
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 336
   data: ''
   i: 132
+  line: 2
   mode: ''
   opset: JMP
+  p_cycle: 326
   pc: 51296
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 339
   data: ''
   i: 133
+  line: 2
   mode: ''
   opset: NOP
+  p_cycle: 335
   pc: 51303
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 341
   data: ''
   i: 134
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 0
   pc: 51304
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 343
   data: ''
   i: 135
+  line: 3
   mode: ''
   opset: STA
+  p_cycle: 6
   pc: 51306
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 346
   data: ''
   i: 136
+  line: 3
   mode: ''
   opset: BIT
+  p_cycle: 15
   pc: 51308
 - A: 0
   P: 46
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 349
   data: ''
   i: 137
+  line: 3
   mode: ''
   opset: SEC
+  p_cycle: 24
   pc: 51310
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 351
   data: ''
   i: 138
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 30
   pc: 51311
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 353
   data: ''
   i: 139
+  line: 3
   mode: ''
   opset: PHA
+  p_cycle: 36
   pc: 51313
 - A: 255
   P: 173
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 356
   data: ''
   i: 140
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 45
   pc: 51314
 - A: 0
   P: 47
   SP: 250
   X: 0
   Y: 0
+  c_cycle: 358
   data: ''
   i: 141
+  line: 3
   mode: ''
   opset: PLA
+  p_cycle: 51
   pc: 51316
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 362
   data: ''
   i: 142
+  line: 3
   mode: ''
   opset: BEQ
+  p_cycle: 63
   pc: 51317
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 364
   data: ''
   i: 143
+  line: 3
   mode: ''
   opset: BPL
+  p_cycle: 69
   pc: 51319
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 366
   data: ''
   i: 144
+  line: 3
   mode: ''
   opset: BVS
+  p_cycle: 75
   pc: 51321
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 368
   data: ''
   i: 145
+  line: 3
   mode: ''
   opset: BCC
+  p_cycle: 81
   pc: 51323
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 370
   data: ''
   i: 146
+  line: 3
   mode: ''
   opset: JMP
+  p_cycle: 87
   pc: 51325
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 373
   data: ''
   i: 147
+  line: 3
   mode: ''
   opset: RTS
+  p_cycle: 96
   pc: 51332
 - A: 255
   P: 173
   SP: 253
   X: 0
   Y: 0
+  c_cycle: 379
   data: ''
   i: 148
+  line: 3
   mode: ''
   opset: JSR
+  p_cycle: 114
   pc: 50691
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 385
   data: ''
   i: 149
+  line: 3
   mode: ''
   opset: NOP
+  p_cycle: 132
   pc: 51333
 - A: 255
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 387
   data: ''
   i: 150
+  line: 3
   mode: ''
   opset: CLC
+  p_cycle: 138
   pc: 51334
 - A: 255
   P: 172
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 389
   data: ''
   i: 151
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 144
   pc: 51335
 - A: 255
   P: 172
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 391
   data: ''
   i: 152
+  line: 3
   mode: ''
   opset: STA
+  p_cycle: 150
   pc: 51337
 - A: 255
   P: 172
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 394
   data: ''
   i: 153
+  line: 3
   mode: ''
   opset: BIT
+  p_cycle: 159
   pc: 51339
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 397
   data: ''
   i: 154
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 168
   pc: 51341
 - A: 85
   P: 108
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 399
   data: ''
   i: 155
+  line: 3
   mode: ''
   opset: ORA
+  p_cycle: 174
   pc: 51343
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 401
   data: ''
   i: 156
+  line: 3
   mode: ''
   opset: BCS
+  p_cycle: 180
   pc: 51345
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 403
   data: ''
   i: 157
+  line: 3
   mode: ''
   opset: BPL
+  p_cycle: 186
   pc: 51347
 - A: 255
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 405
   data: ''
   i: 158
+  line: 3
   mode: ''
   opset: CMP
+  p_cycle: 192
   pc: 51349
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 407
   data: ''
   i: 159
+  line: 3
   mode: ''
   opset: BNE
+  p_cycle: 198
   pc: 51351
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 409
   data: ''
   i: 160
+  line: 3
   mode: ''
   opset: BVC
+  p_cycle: 204
   pc: 51353
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 411
   data: ''
   i: 161
+  line: 3
   mode: ''
   opset: JMP
+  p_cycle: 210
   pc: 51355
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 414
   data: ''
   i: 162
+  line: 3
   mode: ''
   opset: NOP
+  p_cycle: 219
   pc: 51362
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 416
   data: ''
   i: 163
+  line: 3
   mode: ''
   opset: SEC
+  p_cycle: 225
   pc: 51363
 - A: 255
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 418
   data: ''
   i: 164
+  line: 3
   mode: ''
   opset: CLV
+  p_cycle: 231
   pc: 51364
 - A: 255
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 420
   data: ''
   i: 165
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 237
   pc: 51365
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 422
   data: ''
   i: 166
+  line: 3
   mode: ''
   opset: ORA
+  p_cycle: 243
   pc: 51367
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 424
   data: ''
   i: 167
+  line: 3
   mode: ''
   opset: BNE
+  p_cycle: 249
   pc: 51369
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 426
   data: ''
   i: 168
+  line: 3
   mode: ''
   opset: BVS
+  p_cycle: 255
   pc: 51371
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 428
   data: ''
   i: 169
+  line: 3
   mode: ''
   opset: BCC
+  p_cycle: 261
   pc: 51373
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 430
   data: ''
   i: 170
+  line: 3
   mode: ''
   opset: BMI
+  p_cycle: 267
   pc: 51375
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 432
   data: ''
   i: 171
+  line: 3
   mode: ''
   opset: JMP
+  p_cycle: 273
   pc: 51377
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 435
   data: ''
   i: 172
+  line: 3
   mode: ''
   opset: NOP
+  p_cycle: 282
   pc: 51384
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 437
   data: ''
   i: 173
+  line: 3
   mode: ''
   opset: CLC
+  p_cycle: 288
   pc: 51385
 - A: 0
   P: 46
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 439
   data: ''
   i: 174
+  line: 3
   mode: ''
   opset: BIT
+  p_cycle: 294
   pc: 51386
 - A: 0
   P: 238
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 442
   data: ''
   i: 175
+  line: 3
   mode: ''
   opset: LDA
+  p_cycle: 303
   pc: 51388
 - A: 85
   P: 108
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 444
   data: ''
   i: 176
+  line: 3
   mode: ''
   opset: AND
+  p_cycle: 309
   pc: 51390
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 446
   data: ''
   i: 177
+  line: 3
   mode: ''
   opset: BNE
+  p_cycle: 315
   pc: 51392
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 448
   data: ''
   i: 178
+  line: 3
   mode: ''
   opset: BVC
+  p_cycle: 321
   pc: 51394
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 450
   data: ''
   i: 179
+  line: 3
   mode: ''
   opset: BCS
+  p_cycle: 327
   pc: 51396
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 452
   data: ''
   i: 180
+  line: 3
   mode: ''
   opset: BMI
+  p_cycle: 333
   pc: 51398
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 454
   data: ''
   i: 181
+  line: 3
   mode: ''
   opset: JMP
+  p_cycle: 339
   pc: 51400
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 457
   data: ''
   i: 182
+  line: 4
   mode: ''
   opset: NOP
+  p_cycle: 7
   pc: 51407
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 459
   data: ''
   i: 183
+  line: 4
   mode: ''
   opset: SEC
+  p_cycle: 13
   pc: 51408
 - A: 0
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 461
   data: ''
   i: 184
+  line: 4
   mode: ''
   opset: CLV
+  p_cycle: 19
   pc: 51409
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 463
   data: ''
   i: 185
+  line: 4
   mode: ''
   opset: LDA
+  p_cycle: 25
   pc: 51410
 - A: 248
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 465
   data: ''
   i: 186
+  line: 4
   mode: ''
   opset: AND
+  p_cycle: 31
   pc: 51412
 - A: 232
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 467
   data: ''
   i: 187
+  line: 4
   mode: ''
   opset: BCC
+  p_cycle: 37
   pc: 51414
 - A: 232
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 469
   data: ''
   i: 188
+  line: 4
   mode: ''
   opset: BPL
+  p_cycle: 43
   pc: 51416
 - A: 232
   P: 173
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 471
   data: ''
   i: 189
+  line: 4
   mode: ''
   opset: CMP
+  p_cycle: 49
   pc: 51418
 - A: 232
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 473
   data: ''
   i: 190
+  line: 4
   mode: ''
   opset: BNE
+  p_cycle: 55
   pc: 51420
 - A: 232
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 475
   data: ''
   i: 191
+  line: 4
   mode: ''
   opset: BVS
+  p_cycle: 61
   pc: 51422
 - A: 232
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 477
   data: ''
   i: 192
+  line: 4
   mode: ''
   opset: JMP
+  p_cycle: 67
   pc: 51424
 - A: 232
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 480
   data: ''
   i: 193
+  line: 4
   mode: ''
   opset: NOP
+  p_cycle: 76
   pc: 51431
 - A: 232
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 482
   data: ''
   i: 194
+  line: 4
   mode: ''
   opset: CLC
+  p_cycle: 82
   pc: 51432
 - A: 232
   P: 46
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 484
   data: ''
   i: 195
+  line: 4
   mode: ''
   opset: BIT
+  p_cycle: 88
   pc: 51433
 - A: 232
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 487
   data: ''
   i: 196
+  line: 4
   mode: ''
   opset: LDA
+  p_cycle: 97
   pc: 51435
 - A: 95
   P: 108
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 489
   data: ''
   i: 197
+  line: 4
   mode: ''
   opset: EOR
+  p_cycle: 103
   pc: 51437
 - A: 245
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 491
   data: ''
   i: 198
+  line: 4
   mode: ''
   opset: BCS
+  p_cycle: 109
   pc: 51439
 - A: 245
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 493
   data: ''
   i: 199
+  line: 4
   mode: ''
   opset: BPL
+  p_cycle: 115
   pc: 51441
 - A: 245
   P: 236
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 495
   data: ''
   i: 200
+  line: 4
   mode: ''
   opset: CMP
+  p_cycle: 121
   pc: 51443
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 497
   data: ''
   i: 201
+  line: 4
   mode: ''
   opset: BNE
+  p_cycle: 127
   pc: 51445
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 499
   data: ''
   i: 202
+  line: 4
   mode: ''
   opset: BVC
+  p_cycle: 133
   pc: 51447
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 501
   data: ''
   i: 203
+  line: 4
   mode: ''
   opset: JMP
+  p_cycle: 139
   pc: 51449
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 504
   data: ''
   i: 204
+  line: 4
   mode: ''
   opset: NOP
+  p_cycle: 148
   pc: 51456
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 506
   data: ''
   i: 205
+  line: 4
   mode: ''
   opset: SEC
+  p_cycle: 154
   pc: 51457
 - A: 245
   P: 111
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 508
   data: ''
   i: 206
+  line: 4
   mode: ''
   opset: CLV
+  p_cycle: 160
   pc: 51458
 - A: 245
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 510
   data: ''
   i: 207
+  line: 4
   mode: ''
   opset: LDA
+  p_cycle: 166
   pc: 51459
 - A: 112
   P: 45
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 512
   data: ''
   i: 208
+  line: 4
   mode: ''
   opset: EOR
+  p_cycle: 172
   pc: 51461
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 514
   data: ''
   i: 209
+  line: 4
   mode: ''
   opset: BNE
+  p_cycle: 178
   pc: 51463
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 516
   data: ''
   i: 210
+  line: 4
   mode: ''
   opset: BVS
+  p_cycle: 184
   pc: 51465
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 518
   data: ''
   i: 211
+  line: 4
   mode: ''
   opset: BCC
+  p_cycle: 190
   pc: 51467
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 520
   data: ''
   i: 212
+  line: 4
   mode: ''
   opset: BMI
+  p_cycle: 196
   pc: 51469
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 522
   data: ''
   i: 213
+  line: 4
   mode: ''
   opset: JMP
+  p_cycle: 202
   pc: 51471
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 525
   data: ''
   i: 214
+  line: 4
   mode: ''
   opset: NOP
+  p_cycle: 211
   pc: 51478
 - A: 0
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 527
   data: ''
   i: 215
+  line: 4
   mode: ''
   opset: CLC
+  p_cycle: 217
   pc: 51479
 - A: 0
   P: 46
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 529
   data: ''
   i: 216
+  line: 4
   mode: ''
   opset: BIT
+  p_cycle: 223
   pc: 51480
 - A: 0
   P: 238
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 532
   data: ''
   i: 217
+  line: 4
   mode: ''
   opset: LDA
+  p_cycle: 232
   pc: 51482
 - A: 0
   P: 110
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 534
   data: ''
   i: 218
+  line: 4
   mode: ''
   opset: ADC
+  p_cycle: 238
   pc: 51484
 - A: 105
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 536
   data: ''
   i: 219
+  line: 4
   mode: ''
   opset: BMI
+  p_cycle: 244
   pc: 51486
 - A: 105
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 538
   data: ''
   i: 220
+  line: 4
   mode: ''
   opset: BCS
+  p_cycle: 250
   pc: 51488
 - A: 105
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 540
   data: ''
   i: 221
+  line: 4
   mode: ''
   opset: CMP
+  p_cycle: 256
   pc: 51490
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 542
   data: ''
   i: 222
+  line: 4
   mode: ''
   opset: BNE
+  p_cycle: 262
   pc: 51492
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 544
   data: ''
   i: 223
+  line: 4
   mode: ''
   opset: BVS
+  p_cycle: 268
   pc: 51494
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 546
   data: ''
   i: 224
+  line: 4
   mode: ''
   opset: JMP
+  p_cycle: 274
   pc: 51496
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 549
   data: ''
   i: 225
+  line: 4
   mode: ''
   opset: NOP
+  p_cycle: 283
   pc: 51503
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 551
   data: ''
   i: 226
+  line: 4
   mode: ''
   opset: SEC
+  p_cycle: 289
   pc: 51504
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 553
   data: ''
   i: 227
+  line: 4
   mode: ''
   opset: SED
+  p_cycle: 295
   pc: 51505
 - A: 105
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 555
   data: ''
   i: 228
+  line: 4
   mode: ''
   opset: BIT
+  p_cycle: 301
   pc: 51506
 - A: 105
   P: 237
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 558
   data: ''
   i: 229
+  line: 4
   mode: ''
   opset: LDA
+  p_cycle: 310
   pc: 51508
 - A: 1
   P: 109
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 560
   data: ''
   i: 230
+  line: 4
   mode: ''
   opset: ADC
+  p_cycle: 316
   pc: 51510
 - A: 107
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 562
   data: ''
   i: 231
+  line: 4
   mode: ''
   opset: BMI
+  p_cycle: 322
   pc: 51512
 - A: 107
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 564
   data: ''
   i: 232
+  line: 4
   mode: ''
   opset: BCS
+  p_cycle: 328
   pc: 51514
 - A: 107
   P: 44
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 566
   data: ''
   i: 233
+  line: 4
   mode: ''
   opset: CMP
+  p_cycle: 334
   pc: 51516
 - A: 107
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 568
   data: ''
   i: 234
+  line: 4
   mode: ''
   opset: BNE
+  p_cycle: 340
   pc: 51518
 - A: 107
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 570
   data: ''
   i: 235
+  line: 5
   mode: ''
   opset: BVS
+  p_cycle: 5
   pc: 51520
 - A: 107
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 572
   data: ''
   i: 236
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 11
   pc: 51522
 - A: 107
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 575
   data: ''
   i: 237
+  line: 5
   mode: ''
   opset: NOP
+  p_cycle: 20
   pc: 51529
 - A: 107
   P: 47
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 577
   data: ''
   i: 238
+  line: 5
   mode: ''
   opset: CLD
+  p_cycle: 26
   pc: 51530
 - A: 107
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 579
   data: ''
   i: 239
+  line: 5
   mode: ''
   opset: SEC
+  p_cycle: 32
   pc: 51531
 - A: 107
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 581
   data: ''
   i: 240
+  line: 5
   mode: ''
   opset: CLV
+  p_cycle: 38
   pc: 51532
 - A: 107
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 583
   data: ''
   i: 241
+  line: 5
   mode: ''
   opset: LDA
+  p_cycle: 44
   pc: 51533
 - A: 127
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 585
   data: ''
   i: 242
+  line: 5
   mode: ''
   opset: ADC
+  p_cycle: 50
   pc: 51535
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 587
   data: ''
   i: 243
+  line: 5
   mode: ''
   opset: BPL
+  p_cycle: 56
   pc: 51537
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 589
   data: ''
   i: 244
+  line: 5
   mode: ''
   opset: BCS
+  p_cycle: 62
   pc: 51539
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 591
   data: ''
   i: 245
+  line: 5
   mode: ''
   opset: CMP
+  p_cycle: 68
   pc: 51541
 - A: 255
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 593
   data: ''
   i: 246
+  line: 5
   mode: ''
   opset: BNE
+  p_cycle: 74
   pc: 51543
 - A: 255
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 595
   data: ''
   i: 247
+  line: 5
   mode: ''
   opset: BVC
+  p_cycle: 80
   pc: 51545
 - A: 255
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 597
   data: ''
   i: 248
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 86
   pc: 51547
 - A: 255
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 600
   data: ''
   i: 249
+  line: 5
   mode: ''
   opset: NOP
+  p_cycle: 95
   pc: 51554
 - A: 255
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 602
   data: ''
   i: 250
+  line: 5
   mode: ''
   opset: CLC
+  p_cycle: 101
   pc: 51555
 - A: 255
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 604
   data: ''
   i: 251
+  line: 5
   mode: ''
   opset: BIT
+  p_cycle: 107
   pc: 51556
 - A: 255
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 607
   data: ''
   i: 252
+  line: 5
   mode: ''
   opset: LDA
+  p_cycle: 116
   pc: 51558
 - A: 127
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 609
   data: ''
   i: 253
+  line: 5
   mode: ''
   opset: ADC
+  p_cycle: 122
   pc: 51560
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 611
   data: ''
   i: 254
+  line: 5
   mode: ''
   opset: BPL
+  p_cycle: 128
   pc: 51562
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 613
   data: ''
   i: 255
+  line: 5
   mode: ''
   opset: BCS
+  p_cycle: 134
   pc: 51564
 - A: 255
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 615
   data: ''
   i: 256
+  line: 5
   mode: ''
   opset: CMP
+  p_cycle: 140
   pc: 51566
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 617
   data: ''
   i: 257
+  line: 5
   mode: ''
   opset: BNE
+  p_cycle: 146
   pc: 51568
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 619
   data: ''
   i: 258
+  line: 5
   mode: ''
   opset: BVS
+  p_cycle: 152
   pc: 51570
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 621
   data: ''
   i: 259
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 158
   pc: 51572
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 624
   data: ''
   i: 260
+  line: 5
   mode: ''
   opset: NOP
+  p_cycle: 167
   pc: 51579
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 626
   data: ''
   i: 261
+  line: 5
   mode: ''
   opset: SEC
+  p_cycle: 173
   pc: 51580
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 628
   data: ''
   i: 262
+  line: 5
   mode: ''
   opset: CLV
+  p_cycle: 179
   pc: 51581
 - A: 255
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 630
   data: ''
   i: 263
+  line: 5
   mode: ''
   opset: LDA
+  p_cycle: 185
   pc: 51582
 - A: 127
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 632
   data: ''
   i: 264
+  line: 5
   mode: ''
   opset: ADC
+  p_cycle: 191
   pc: 51584
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 634
   data: ''
   i: 265
+  line: 5
   mode: ''
   opset: BNE
+  p_cycle: 197
   pc: 51586
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 636
   data: ''
   i: 266
+  line: 5
   mode: ''
   opset: BMI
+  p_cycle: 203
   pc: 51588
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 638
   data: ''
   i: 267
+  line: 5
   mode: ''
   opset: BVS
+  p_cycle: 209
   pc: 51590
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 640
   data: ''
   i: 268
+  line: 5
   mode: ''
   opset: BCC
+  p_cycle: 215
   pc: 51592
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 642
   data: ''
   i: 269
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 221
   pc: 51594
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 645
   data: ''
   i: 270
+  line: 5
   mode: ''
   opset: NOP
+  p_cycle: 230
   pc: 51601
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 647
   data: ''
   i: 271
+  line: 5
   mode: ''
   opset: SEC
+  p_cycle: 236
   pc: 51602
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 649
   data: ''
   i: 272
+  line: 5
   mode: ''
   opset: CLV
+  p_cycle: 242
   pc: 51603
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 651
   data: ''
   i: 273
+  line: 5
   mode: ''
   opset: LDA
+  p_cycle: 248
   pc: 51604
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 653
   data: ''
   i: 274
+  line: 5
   mode: ''
   opset: BEQ
+  p_cycle: 254
   pc: 51606
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 655
   data: ''
   i: 275
+  line: 5
   mode: ''
   opset: BPL
+  p_cycle: 260
   pc: 51608
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 657
   data: ''
   i: 276
+  line: 5
   mode: ''
   opset: BVS
+  p_cycle: 266
   pc: 51610
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 659
   data: ''
   i: 277
+  line: 5
   mode: ''
   opset: BCC
+  p_cycle: 272
   pc: 51612
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 661
   data: ''
   i: 278
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 278
   pc: 51614
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 664
   data: ''
   i: 279
+  line: 5
   mode: ''
   opset: NOP
+  p_cycle: 287
   pc: 51621
 - A: 159
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 666
   data: ''
   i: 280
+  line: 5
   mode: ''
   opset: CLC
+  p_cycle: 293
   pc: 51622
 - A: 159
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 668
   data: ''
   i: 281
+  line: 5
   mode: ''
   opset: BIT
+  p_cycle: 299
   pc: 51623
 - A: 159
   P: 228
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 671
   data: ''
   i: 282
+  line: 5
   mode: ''
   opset: LDA
+  p_cycle: 308
   pc: 51625
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 673
   data: ''
   i: 283
+  line: 5
   mode: ''
   opset: BNE
+  p_cycle: 314
   pc: 51627
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 675
   data: ''
   i: 284
+  line: 5
   mode: ''
   opset: BMI
+  p_cycle: 320
   pc: 51629
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 677
   data: ''
   i: 285
+  line: 5
   mode: ''
   opset: BVC
+  p_cycle: 326
   pc: 51631
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 679
   data: ''
   i: 286
+  line: 5
   mode: ''
   opset: BCS
+  p_cycle: 332
   pc: 51633
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 681
   data: ''
   i: 287
+  line: 5
   mode: ''
   opset: JMP
+  p_cycle: 338
   pc: 51635
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 684
   data: ''
   i: 288
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 6
   pc: 51642
 - A: 0
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 686
   data: ''
   i: 289
+  line: 6
   mode: ''
   opset: BIT
+  p_cycle: 12
   pc: 51643
 - A: 0
   P: 230
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 689
   data: ''
   i: 290
+  line: 6
   mode: ''
   opset: LDA
+  p_cycle: 21
   pc: 51645
 - A: 64
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 691
   data: ''
   i: 291
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 27
   pc: 51647
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 693
   data: ''
   i: 292
+  line: 6
   mode: ''
   opset: BMI
+  p_cycle: 33
   pc: 51649
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 695
   data: ''
   i: 293
+  line: 6
   mode: ''
   opset: BCC
+  p_cycle: 39
   pc: 51651
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 697
   data: ''
   i: 294
+  line: 6
   mode: ''
   opset: BNE
+  p_cycle: 45
   pc: 51653
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 699
   data: ''
   i: 295
+  line: 6
   mode: ''
   opset: BVC
+  p_cycle: 51
   pc: 51655
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 701
   data: ''
   i: 296
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 57
   pc: 51657
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 704
   data: ''
   i: 297
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 66
   pc: 51664
 - A: 64
   P: 103
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 706
   data: ''
   i: 298
+  line: 6
   mode: ''
   opset: CLV
+  p_cycle: 72
   pc: 51665
 - A: 64
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 708
   data: ''
   i: 299
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 78
   pc: 51666
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 710
   data: ''
   i: 300
+  line: 6
   mode: ''
   opset: BEQ
+  p_cycle: 84
   pc: 51668
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 712
   data: ''
   i: 301
+  line: 6
   mode: ''
   opset: BMI
+  p_cycle: 90
   pc: 51670
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 714
   data: ''
   i: 302
+  line: 6
   mode: ''
   opset: BCC
+  p_cycle: 96
   pc: 51672
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 716
   data: ''
   i: 303
+  line: 6
   mode: ''
   opset: BVS
+  p_cycle: 102
   pc: 51674
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 718
   data: ''
   i: 304
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 108
   pc: 51676
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 721
   data: ''
   i: 305
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 117
   pc: 51683
 - A: 64
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 723
   data: ''
   i: 306
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 123
   pc: 51684
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 725
   data: ''
   i: 307
+  line: 6
   mode: ''
   opset: BEQ
+  p_cycle: 129
   pc: 51686
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 727
   data: ''
   i: 308
+  line: 6
   mode: ''
   opset: BPL
+  p_cycle: 135
   pc: 51688
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 729
   data: ''
   i: 309
+  line: 6
   mode: ''
   opset: BPL
+  p_cycle: 141
   pc: 51690
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 731
   data: ''
   i: 310
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 147
   pc: 51692
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 734
   data: ''
   i: 311
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 156
   pc: 51699
 - A: 64
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 736
   data: ''
   i: 312
+  line: 6
   mode: ''
   opset: LDA
+  p_cycle: 162
   pc: 51700
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 738
   data: ''
   i: 313
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 168
   pc: 51702
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 740
   data: ''
   i: 314
+  line: 6
   mode: ''
   opset: BEQ
+  p_cycle: 174
   pc: 51704
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 742
   data: ''
   i: 315
+  line: 6
   mode: ''
   opset: BPL
+  p_cycle: 180
   pc: 51706
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 744
   data: ''
   i: 316
+  line: 6
   mode: ''
   opset: BCC
+  p_cycle: 186
   pc: 51708
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 746
   data: ''
   i: 317
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 192
   pc: 51710
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 749
   data: ''
   i: 318
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 201
   pc: 51717
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 751
   data: ''
   i: 319
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 207
   pc: 51718
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 753
   data: ''
   i: 320
+  line: 6
   mode: ''
   opset: BNE
+  p_cycle: 213
   pc: 51720
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 755
   data: ''
   i: 321
+  line: 6
   mode: ''
   opset: BMI
+  p_cycle: 219
   pc: 51722
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 757
   data: ''
   i: 322
+  line: 6
   mode: ''
   opset: BCC
+  p_cycle: 225
   pc: 51724
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 759
   data: ''
   i: 323
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 231
   pc: 51726
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 762
   data: ''
   i: 324
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 240
   pc: 51733
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 764
   data: ''
   i: 325
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 246
   pc: 51734
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 766
   data: ''
   i: 326
+  line: 6
   mode: ''
   opset: BCS
+  p_cycle: 252
   pc: 51736
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 768
   data: ''
   i: 327
+  line: 6
   mode: ''
   opset: BEQ
+  p_cycle: 258
   pc: 51738
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 770
   data: ''
   i: 328
+  line: 6
   mode: ''
   opset: BPL
+  p_cycle: 264
   pc: 51740
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 772
   data: ''
   i: 329
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 270
   pc: 51742
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 775
   data: ''
   i: 330
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 279
   pc: 51749
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 777
   data: ''
   i: 331
+  line: 6
   mode: ''
   opset: CMP
+  p_cycle: 285
   pc: 51750
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 779
   data: ''
   i: 332
+  line: 6
   mode: ''
   opset: BCC
+  p_cycle: 291
   pc: 51752
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 781
   data: ''
   i: 333
+  line: 6
   mode: ''
   opset: BEQ
+  p_cycle: 297
   pc: 51754
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 783
   data: ''
   i: 334
+  line: 6
   mode: ''
   opset: BMI
+  p_cycle: 303
   pc: 51756
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 785
   data: ''
   i: 335
+  line: 6
   mode: ''
   opset: JMP
+  p_cycle: 309
   pc: 51758
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 788
   data: ''
   i: 336
+  line: 6
   mode: ''
   opset: NOP
+  p_cycle: 318
   pc: 51765
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 790
   data: ''
   i: 337
+  line: 6
   mode: ''
   opset: BIT
+  p_cycle: 324
   pc: 51766
 - A: 128
   P: 229
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 793
   data: ''
   i: 338
+  line: 6
   mode: ''
   opset: LDY
+  p_cycle: 333
   pc: 51768
 - A: 128
   P: 101
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 795
   data: ''
   i: 339
+  line: 6
   mode: ''
   opset: CPY
+  p_cycle: 339
   pc: 51770
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 797
   data: ''
   i: 340
+  line: 7
   mode: ''
   opset: BNE
+  p_cycle: 4
   pc: 51772
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 799
   data: ''
   i: 341
+  line: 7
   mode: ''
   opset: BMI
+  p_cycle: 10
   pc: 51774
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 801
   data: ''
   i: 342
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 16
   pc: 51776
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 803
   data: ''
   i: 343
+  line: 7
   mode: ''
   opset: BVC
+  p_cycle: 22
   pc: 51778
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 805
   data: ''
   i: 344
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 28
   pc: 51780
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 808
   data: ''
   i: 345
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 37
   pc: 51787
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 810
   data: ''
   i: 346
+  line: 7
   mode: ''
   opset: CLV
+  p_cycle: 43
   pc: 51788
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 812
   data: ''
   i: 347
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 49
   pc: 51789
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 814
   data: ''
   i: 348
+  line: 7
   mode: ''
   opset: BEQ
+  p_cycle: 55
   pc: 51791
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 816
   data: ''
   i: 349
+  line: 7
   mode: ''
   opset: BMI
+  p_cycle: 61
   pc: 51793
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 818
   data: ''
   i: 350
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 67
   pc: 51795
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 820
   data: ''
   i: 351
+  line: 7
   mode: ''
   opset: BVS
+  p_cycle: 73
   pc: 51797
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 822
   data: ''
   i: 352
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 79
   pc: 51799
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 825
   data: ''
   i: 353
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 88
   pc: 51806
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 827
   data: ''
   i: 354
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 94
   pc: 51807
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 829
   data: ''
   i: 355
+  line: 7
   mode: ''
   opset: BEQ
+  p_cycle: 100
   pc: 51809
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 831
   data: ''
   i: 356
+  line: 7
   mode: ''
   opset: BPL
+  p_cycle: 106
   pc: 51811
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 833
   data: ''
   i: 357
+  line: 7
   mode: ''
   opset: BPL
+  p_cycle: 112
   pc: 51813
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 835
   data: ''
   i: 358
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 118
   pc: 51815
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 838
   data: ''
   i: 359
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 127
   pc: 51822
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 64
+  c_cycle: 840
   data: ''
   i: 360
+  line: 7
   mode: ''
   opset: LDY
+  p_cycle: 133
   pc: 51823
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 842
   data: ''
   i: 361
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 139
   pc: 51825
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 844
   data: ''
   i: 362
+  line: 7
   mode: ''
   opset: BEQ
+  p_cycle: 145
   pc: 51827
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 846
   data: ''
   i: 363
+  line: 7
   mode: ''
   opset: BPL
+  p_cycle: 151
   pc: 51829
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 848
   data: ''
   i: 364
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 157
   pc: 51831
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 850
   data: ''
   i: 365
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 163
   pc: 51833
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 853
   data: ''
   i: 366
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 172
   pc: 51840
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 855
   data: ''
   i: 367
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 178
   pc: 51841
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 857
   data: ''
   i: 368
+  line: 7
   mode: ''
   opset: BNE
+  p_cycle: 184
   pc: 51843
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 859
   data: ''
   i: 369
+  line: 7
   mode: ''
   opset: BMI
+  p_cycle: 190
   pc: 51845
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 861
   data: ''
   i: 370
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 196
   pc: 51847
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 863
   data: ''
   i: 371
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 202
   pc: 51849
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 866
   data: ''
   i: 372
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 211
   pc: 51856
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 868
   data: ''
   i: 373
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 217
   pc: 51857
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 870
   data: ''
   i: 374
+  line: 7
   mode: ''
   opset: BCS
+  p_cycle: 223
   pc: 51859
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 872
   data: ''
   i: 375
+  line: 7
   mode: ''
   opset: BEQ
+  p_cycle: 229
   pc: 51861
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 874
   data: ''
   i: 376
+  line: 7
   mode: ''
   opset: BPL
+  p_cycle: 235
   pc: 51863
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 876
   data: ''
   i: 377
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 241
   pc: 51865
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 879
   data: ''
   i: 378
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 250
   pc: 51872
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 881
   data: ''
   i: 379
+  line: 7
   mode: ''
   opset: CPY
+  p_cycle: 256
   pc: 51873
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 883
   data: ''
   i: 380
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 262
   pc: 51875
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 885
   data: ''
   i: 381
+  line: 7
   mode: ''
   opset: BEQ
+  p_cycle: 268
   pc: 51877
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 887
   data: ''
   i: 382
+  line: 7
   mode: ''
   opset: BMI
+  p_cycle: 274
   pc: 51879
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 889
   data: ''
   i: 383
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 280
   pc: 51881
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 892
   data: ''
   i: 384
+  line: 7
   mode: ''
   opset: NOP
+  p_cycle: 289
   pc: 51888
 - A: 128
   P: 37
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 894
   data: ''
   i: 385
+  line: 7
   mode: ''
   opset: BIT
+  p_cycle: 295
   pc: 51889
 - A: 128
   P: 229
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 897
   data: ''
   i: 386
+  line: 7
   mode: ''
   opset: LDX
+  p_cycle: 304
   pc: 51891
 - A: 128
   P: 101
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 899
   data: ''
   i: 387
+  line: 7
   mode: ''
   opset: CPX
+  p_cycle: 310
   pc: 51893
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 901
   data: ''
   i: 388
+  line: 7
   mode: ''
   opset: BNE
+  p_cycle: 316
   pc: 51895
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 903
   data: ''
   i: 389
+  line: 7
   mode: ''
   opset: BMI
+  p_cycle: 322
   pc: 51897
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 905
   data: ''
   i: 390
+  line: 7
   mode: ''
   opset: BCC
+  p_cycle: 328
   pc: 51899
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 907
   data: ''
   i: 391
+  line: 7
   mode: ''
   opset: BVC
+  p_cycle: 334
   pc: 51901
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 909
   data: ''
   i: 392
+  line: 7
   mode: ''
   opset: JMP
+  p_cycle: 340
   pc: 51903
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 912
   data: ''
   i: 393
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 8
   pc: 51910
 - A: 128
   P: 103
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 914
   data: ''
   i: 394
+  line: 8
   mode: ''
   opset: CLV
+  p_cycle: 14
   pc: 51911
 - A: 128
   P: 39
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 916
   data: ''
   i: 395
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 20
   pc: 51912
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 918
   data: ''
   i: 396
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 26
   pc: 51914
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 920
   data: ''
   i: 397
+  line: 8
   mode: ''
   opset: BMI
+  p_cycle: 32
   pc: 51916
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 922
   data: ''
   i: 398
+  line: 8
   mode: ''
   opset: BCC
+  p_cycle: 38
   pc: 51918
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 924
   data: ''
   i: 399
+  line: 8
   mode: ''
   opset: BVS
+  p_cycle: 44
   pc: 51920
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 926
   data: ''
   i: 400
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 50
   pc: 51922
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 929
   data: ''
   i: 401
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 59
   pc: 51929
 - A: 128
   P: 37
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 931
   data: ''
   i: 402
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 65
   pc: 51930
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 933
   data: ''
   i: 403
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 71
   pc: 51932
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 935
   data: ''
   i: 404
+  line: 8
   mode: ''
   opset: BPL
+  p_cycle: 77
   pc: 51934
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 937
   data: ''
   i: 405
+  line: 8
   mode: ''
   opset: BPL
+  p_cycle: 83
   pc: 51936
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 939
   data: ''
   i: 406
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 89
   pc: 51938
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 942
   data: ''
   i: 407
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 98
   pc: 51945
 - A: 128
   P: 164
   SP: 251
   X: 64
   Y: 128
+  c_cycle: 944
   data: ''
   i: 408
+  line: 8
   mode: ''
   opset: LDX
+  p_cycle: 104
   pc: 51946
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 946
   data: ''
   i: 409
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 110
   pc: 51948
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 948
   data: ''
   i: 410
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 116
   pc: 51950
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 950
   data: ''
   i: 411
+  line: 8
   mode: ''
   opset: BPL
+  p_cycle: 122
   pc: 51952
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 952
   data: ''
   i: 412
+  line: 8
   mode: ''
   opset: BCC
+  p_cycle: 128
   pc: 51954
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 954
   data: ''
   i: 413
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 134
   pc: 51956
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 957
   data: ''
   i: 414
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 143
   pc: 51963
 - A: 128
   P: 165
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 959
   data: ''
   i: 415
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 149
   pc: 51964
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 961
   data: ''
   i: 416
+  line: 8
   mode: ''
   opset: BNE
+  p_cycle: 155
   pc: 51966
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 963
   data: ''
   i: 417
+  line: 8
   mode: ''
   opset: BMI
+  p_cycle: 161
   pc: 51968
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 965
   data: ''
   i: 418
+  line: 8
   mode: ''
   opset: BCC
+  p_cycle: 167
   pc: 51970
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 967
   data: ''
   i: 419
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 173
   pc: 51972
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 970
   data: ''
   i: 420
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 182
   pc: 51979
 - A: 128
   P: 39
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 972
   data: ''
   i: 421
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 188
   pc: 51980
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 974
   data: ''
   i: 422
+  line: 8
   mode: ''
   opset: BCS
+  p_cycle: 194
   pc: 51982
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 976
   data: ''
   i: 423
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 200
   pc: 51984
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 978
   data: ''
   i: 424
+  line: 8
   mode: ''
   opset: BPL
+  p_cycle: 206
   pc: 51986
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 980
   data: ''
   i: 425
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 212
   pc: 51988
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 983
   data: ''
   i: 426
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 221
   pc: 51995
 - A: 128
   P: 164
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 985
   data: ''
   i: 427
+  line: 8
   mode: ''
   opset: CPX
+  p_cycle: 227
   pc: 51996
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 987
   data: ''
   i: 428
+  line: 8
   mode: ''
   opset: BCC
+  p_cycle: 233
   pc: 51998
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 989
   data: ''
   i: 429
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 239
   pc: 52000
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 991
   data: ''
   i: 430
+  line: 8
   mode: ''
   opset: BMI
+  p_cycle: 245
   pc: 52002
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 993
   data: ''
   i: 431
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 251
   pc: 52004
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 996
   data: ''
   i: 432
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 260
   pc: 52011
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 998
   data: ''
   i: 433
+  line: 8
   mode: ''
   opset: SEC
+  p_cycle: 266
   pc: 52012
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 1000
   data: ''
   i: 434
+  line: 8
   mode: ''
   opset: CLV
+  p_cycle: 272
   pc: 52013
 - A: 128
   P: 37
   SP: 251
   X: 128
   Y: 128
+  c_cycle: 1002
   data: ''
   i: 435
+  line: 8
   mode: ''
   opset: LDX
+  p_cycle: 278
   pc: 52014
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1004
   data: ''
   i: 436
+  line: 8
   mode: ''
   opset: BEQ
+  p_cycle: 284
   pc: 52016
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1006
   data: ''
   i: 437
+  line: 8
   mode: ''
   opset: BPL
+  p_cycle: 290
   pc: 52018
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1008
   data: ''
   i: 438
+  line: 8
   mode: ''
   opset: BVS
+  p_cycle: 296
   pc: 52020
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1010
   data: ''
   i: 439
+  line: 8
   mode: ''
   opset: BCC
+  p_cycle: 302
   pc: 52022
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1012
   data: ''
   i: 440
+  line: 8
   mode: ''
   opset: JMP
+  p_cycle: 308
   pc: 52024
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1015
   data: ''
   i: 441
+  line: 8
   mode: ''
   opset: NOP
+  p_cycle: 317
   pc: 52031
 - A: 128
   P: 165
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1017
   data: ''
   i: 442
+  line: 8
   mode: ''
   opset: CLC
+  p_cycle: 323
   pc: 52032
 - A: 128
   P: 164
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1019
   data: ''
   i: 443
+  line: 8
   mode: ''
   opset: BIT
+  p_cycle: 329
   pc: 52033
 - A: 128
   P: 228
   SP: 251
   X: 159
   Y: 128
+  c_cycle: 1022
   data: ''
   i: 444
+  line: 8
   mode: ''
   opset: LDX
+  p_cycle: 338
   pc: 52035
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1024
   data: ''
   i: 445
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 3
   pc: 52037
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1026
   data: ''
   i: 446
+  line: 9
   mode: ''
   opset: BMI
+  p_cycle: 9
   pc: 52039
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1028
   data: ''
   i: 447
+  line: 9
   mode: ''
   opset: BVC
+  p_cycle: 15
   pc: 52041
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1030
   data: ''
   i: 448
+  line: 9
   mode: ''
   opset: BCS
+  p_cycle: 21
   pc: 52043
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1032
   data: ''
   i: 449
+  line: 9
   mode: ''
   opset: JMP
+  p_cycle: 27
   pc: 52045
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1035
   data: ''
   i: 450
+  line: 9
   mode: ''
   opset: NOP
+  p_cycle: 36
   pc: 52052
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1037
   data: ''
   i: 451
+  line: 9
   mode: ''
   opset: SEC
+  p_cycle: 42
   pc: 52053
 - A: 128
   P: 103
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1039
   data: ''
   i: 452
+  line: 9
   mode: ''
   opset: CLV
+  p_cycle: 48
   pc: 52054
 - A: 128
   P: 39
   SP: 251
   X: 0
   Y: 128
+  c_cycle: 1041
   data: ''
   i: 453
+  line: 9
   mode: ''
   opset: LDY
+  p_cycle: 54
   pc: 52055
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1043
   data: ''
   i: 454
+  line: 9
   mode: ''
   opset: BEQ
+  p_cycle: 60
   pc: 52057
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1045
   data: ''
   i: 455
+  line: 9
   mode: ''
   opset: BPL
+  p_cycle: 66
   pc: 52059
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1047
   data: ''
   i: 456
+  line: 9
   mode: ''
   opset: BVS
+  p_cycle: 72
   pc: 52061
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1049
   data: ''
   i: 457
+  line: 9
   mode: ''
   opset: BCC
+  p_cycle: 78
   pc: 52063
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1051
   data: ''
   i: 458
+  line: 9
   mode: ''
   opset: JMP
+  p_cycle: 84
   pc: 52065
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1054
   data: ''
   i: 459
+  line: 9
   mode: ''
   opset: NOP
+  p_cycle: 93
   pc: 52072
 - A: 128
   P: 165
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1056
   data: ''
   i: 460
+  line: 9
   mode: ''
   opset: CLC
+  p_cycle: 99
   pc: 52073
 - A: 128
   P: 164
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1058
   data: ''
   i: 461
+  line: 9
   mode: ''
   opset: BIT
+  p_cycle: 105
   pc: 52074
 - A: 128
   P: 228
   SP: 251
   X: 0
   Y: 159
+  c_cycle: 1061
   data: ''
   i: 462
+  line: 9
   mode: ''
   opset: LDY
+  p_cycle: 114
   pc: 52076
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1063
   data: ''
   i: 463
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 120
   pc: 52078
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1065
   data: ''
   i: 464
+  line: 9
   mode: ''
   opset: BMI
+  p_cycle: 126
   pc: 52080
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1067
   data: ''
   i: 465
+  line: 9
   mode: ''
   opset: BVC
+  p_cycle: 132
   pc: 52082
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1069
   data: ''
   i: 466
+  line: 9
   mode: ''
   opset: BCS
+  p_cycle: 138
   pc: 52084
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1071
   data: ''
   i: 467
+  line: 9
   mode: ''
   opset: JMP
+  p_cycle: 144
   pc: 52086
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1074
   data: ''
   i: 468
+  line: 9
   mode: ''
   opset: NOP
+  p_cycle: 153
   pc: 52093
 - A: 128
   P: 102
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1076
   data: ''
   i: 469
+  line: 9
   mode: ''
   opset: LDA
+  p_cycle: 159
   pc: 52094
 - A: 85
   P: 100
   SP: 251
   X: 0
   Y: 0
+  c_cycle: 1078
   data: ''
   i: 470
+  line: 9
   mode: ''
   opset: LDX
+  p_cycle: 165
   pc: 52096
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 0
+  c_cycle: 1080
   data: ''
   i: 471
+  line: 9
   mode: ''
   opset: LDY
+  p_cycle: 171
   pc: 52098
 - A: 85
   P: 100
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1082
   data: ''
   i: 472
+  line: 9
   mode: ''
   opset: CMP
+  p_cycle: 177
   pc: 52100
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1084
   data: ''
   i: 473
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 183
   pc: 52102
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1086
   data: ''
   i: 474
+  line: 9
   mode: ''
   opset: CPX
+  p_cycle: 189
   pc: 52104
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1088
   data: ''
   i: 475
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 195
   pc: 52106
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1090
   data: ''
   i: 476
+  line: 9
   mode: ''
   opset: CPY
+  p_cycle: 201
   pc: 52108
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1092
   data: ''
   i: 477
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 207
   pc: 52110
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1094
   data: ''
   i: 478
+  line: 9
   mode: ''
   opset: CMP
+  p_cycle: 213
   pc: 52112
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1096
   data: ''
   i: 479
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 219
   pc: 52114
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1098
   data: ''
   i: 480
+  line: 9
   mode: ''
   opset: CPX
+  p_cycle: 225
   pc: 52116
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1100
   data: ''
   i: 481
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 231
   pc: 52118
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1102
   data: ''
   i: 482
+  line: 9
   mode: ''
   opset: CPY
+  p_cycle: 237
   pc: 52120
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1104
   data: ''
   i: 483
+  line: 9
   mode: ''
   opset: BNE
+  p_cycle: 243
   pc: 52122
 - A: 85
   P: 103
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1106
   data: ''
   i: 484
+  line: 9
   mode: ''
   opset: CMP
+  p_cycle: 249
   pc: 52124
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1108
   data: ''
   i: 485
+  line: 9
   mode: ''
   opset: BEQ
+  p_cycle: 255
   pc: 52126
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1110
   data: ''
   i: 486
+  line: 9
   mode: ''
   opset: CPX
+  p_cycle: 261
   pc: 52128
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1112
   data: ''
   i: 487
+  line: 9
   mode: ''
   opset: BEQ
+  p_cycle: 267
   pc: 52130
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1114
   data: ''
   i: 488
+  line: 9
   mode: ''
   opset: CPY
+  p_cycle: 273
   pc: 52132
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1116
   data: ''
   i: 489
+  line: 9
   mode: ''
   opset: BEQ
+  p_cycle: 279
   pc: 52134
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1118
   data: ''
   i: 490
+  line: 9
   mode: ''
   opset: JMP
+  p_cycle: 285
   pc: 52136
 - A: 85
   P: 228
   SP: 251
   X: 170
   Y: 51
+  c_cycle: 1121
   data: ''
   i: 491
+  line: 9
   mode: ''
   opset: LDY
+  p_cycle: 294
   pc: 52143
 - A: 85
   P: 100
   SP: 251
   X: 170
   Y: 113
+  c_cycle: 1123
   data: ''
   i: 492
+  line: 9
   mode: ''
   opset: JSR
+  p_cycle: 300
   pc: 52145
 - A: 85
   P: 100
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1129
   data: ''
   i: 493
+  line: 9
   mode: ''
   opset: BIT
+  p_cycle: 318
   pc: 63793
 - A: 85
   P: 228
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1132
   data: ''
   i: 494
+  line: 9
   mode: ''
   opset: LDA
+  p_cycle: 327
   pc: 63795
 - A: 64
   P: 100
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1134
   data: ''
   i: 495
+  line: 9
   mode: ''
   opset: SEC
+  p_cycle: 333
   pc: 63797
 - A: 64
   P: 101
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1136
   data: ''
   i: 496
+  line: 9
   mode: ''
   opset: RTS
+  p_cycle: 339
   pc: 63798
 - A: 64
   P: 101
   SP: 251
   X: 170
   Y: 113
+  c_cycle: 1142
   data: ''
   i: 497
+  line: 10
   mode: ''
   opset: SBC
+  p_cycle: 16
   pc: 52148
 - A: 0
   P: 39
   SP: 251
   X: 170
   Y: 113
+  c_cycle: 1144
   data: ''
   i: 498
+  line: 10
   mode: ''
   opset: JSR
+  p_cycle: 22
   pc: 52150
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1150
   data: ''
   i: 499
+  line: 10
   mode: ''
   opset: BMI
+  p_cycle: 40
   pc: 63799
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1152
   data: ''
   i: 500
+  line: 10
   mode: ''
   opset: BCC
+  p_cycle: 46
   pc: 63801
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1154
   data: ''
   i: 501
+  line: 10
   mode: ''
   opset: BNE
+  p_cycle: 52
   pc: 63803
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1156
   data: ''
   i: 502
+  line: 10
   mode: ''
   opset: BVS
+  p_cycle: 58
   pc: 63805
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1158
   data: ''
   i: 503
+  line: 10
   mode: ''
   opset: CMP
+  p_cycle: 64
   pc: 63807
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1160
   data: ''
   i: 504
+  line: 10
   mode: ''
   opset: BNE
+  p_cycle: 70
   pc: 63809
 - A: 0
   P: 39
   SP: 249
   X: 170
   Y: 113
+  c_cycle: 1162
   data: ''
   i: 505
+  line: 10
   mode: ''
   opset: RTS
+  p_cycle: 76
   pc: 63811
 - A: 0
   P: 39
   SP: 251
   X: 170
   Y: 113
+  c_cycle: 1168
   data: ''
   i: 506
+  line: 10
   mode: ''
   opset: INY
+  p_cycle: 94
   pc: 52153
 - A: 0
   P: 37
   SP: 251
   X: 170
   Y: 114
+  c_cycle: 1170
   data: ''
   i: 507
+  line: 10
   mode: ''
   opset: JSR
+  p_cycle: 100
   pc: 52154
 - A: 0
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1176
   data: ''
   i: 508
+  line: 10
   mode: ''
   opset: CLV
+  p_cycle: 118
   pc: 63815
 - A: 0
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1178
   data: ''
   i: 509
+  line: 10
   mode: ''
   opset: SEC
+  p_cycle: 124
   pc: 63816
 - A: 0
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1180
   data: ''
   i: 510
+  line: 10
   mode: ''
   opset: LDA
+  p_cycle: 130
   pc: 63817
 - A: 64
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1182
   data: ''
   i: 511
+  line: 10
   mode: ''
   opset: RTS
+  p_cycle: 136
   pc: 63819
 - A: 64
   P: 37
   SP: 251
   X: 170
   Y: 114
+  c_cycle: 1188
   data: ''
   i: 512
+  line: 10
   mode: ''
   opset: SBC
+  p_cycle: 154
   pc: 52157
 - A: 1
   P: 37
   SP: 251
   X: 170
   Y: 114
+  c_cycle: 1190
   data: ''
   i: 513
+  line: 10
   mode: ''
   opset: JSR
+  p_cycle: 160
   pc: 52159
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1196
   data: ''
   i: 514
+  line: 10
   mode: ''
   opset: BEQ
+  p_cycle: 178
   pc: 63820
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1198
   data: ''
   i: 515
+  line: 10
   mode: ''
   opset: BMI
+  p_cycle: 184
   pc: 63822
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1200
   data: ''
   i: 516
+  line: 10
   mode: ''
   opset: BCC
+  p_cycle: 190
   pc: 63824
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1202
   data: ''
   i: 517
+  line: 10
   mode: ''
   opset: BVS
+  p_cycle: 196
   pc: 63826
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1204
   data: ''
   i: 518
+  line: 10
   mode: ''
   opset: CMP
+  p_cycle: 202
   pc: 63828
 - A: 1
   P: 39
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1206
   data: ''
   i: 519
+  line: 10
   mode: ''
   opset: BNE
+  p_cycle: 208
   pc: 63830
 - A: 1
   P: 39
   SP: 249
   X: 170
   Y: 114
+  c_cycle: 1208
   data: ''
   i: 520
+  line: 10
   mode: ''
   opset: RTS
+  p_cycle: 214
   pc: 63832
 - A: 1
   P: 39
   SP: 251
   X: 170
   Y: 114
+  c_cycle: 1214
   data: ''
   i: 521
+  line: 10
   mode: ''
   opset: INY
+  p_cycle: 232
   pc: 52162
 - A: 1
   P: 37
   SP: 251
   X: 170
   Y: 115
+  c_cycle: 1216
   data: ''
   i: 522
+  line: 10
   mode: ''
   opset: JSR
+  p_cycle: 238
   pc: 52163
 - A: 1
   P: 37
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1222
   data: ''
   i: 523
+  line: 10
   mode: ''
   opset: LDA
+  p_cycle: 256
   pc: 63836
 - A: 64
   P: 37
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1224
   data: ''
   i: 524
+  line: 10
   mode: ''
   opset: SEC
+  p_cycle: 262
   pc: 63838
 - A: 64
   P: 37
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1226
   data: ''
   i: 525
+  line: 10
   mode: ''
   opset: BIT
+  p_cycle: 268
   pc: 63839
 - A: 64
   P: 229
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1229
   data: ''
   i: 526
+  line: 10
   mode: ''
   opset: RTS
+  p_cycle: 277
   pc: 63841
 - A: 64
   P: 229
   SP: 251
   X: 170
   Y: 115
+  c_cycle: 1235
   data: ''
   i: 527
+  line: 10
   mode: ''
   opset: SBC
+  p_cycle: 295
   pc: 52166
 - A: 255
   P: 164
   SP: 251
   X: 170
   Y: 115
+  c_cycle: 1237
   data: ''
   i: 528
+  line: 10
   mode: ''
   opset: JSR
+  p_cycle: 301
   pc: 52168
 - A: 255
   P: 164
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1243
   data: ''
   i: 529
+  line: 10
   mode: ''
   opset: BCS
+  p_cycle: 319
   pc: 63842
 - A: 255
   P: 164
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1245
   data: ''
   i: 530
+  line: 10
   mode: ''
   opset: BEQ
+  p_cycle: 325
   pc: 63844
 - A: 255
   P: 164
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1247
   data: ''
   i: 531
+  line: 10
   mode: ''
   opset: BPL
+  p_cycle: 331
   pc: 63846
 - A: 255
   P: 164
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1249
   data: ''
   i: 532
+  line: 10
   mode: ''
   opset: BVS
+  p_cycle: 337
   pc: 63848
 - A: 255
   P: 164
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1251
   data: ''
   i: 533
+  line: 11
   mode: ''
   opset: CMP
+  p_cycle: 2
   pc: 63850
 - A: 255
   P: 39
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1253
   data: ''
   i: 534
+  line: 11
   mode: ''
   opset: BNE
+  p_cycle: 8
   pc: 63852
 - A: 255
   P: 39
   SP: 249
   X: 170
   Y: 115
+  c_cycle: 1255
   data: ''
   i: 535
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 14
   pc: 63854
 - A: 255
   P: 39
   SP: 251
   X: 170
   Y: 115
+  c_cycle: 1261
   data: ''
   i: 536
+  line: 11
   mode: ''
   opset: INY
+  p_cycle: 32
   pc: 52171
 - A: 255
   P: 37
   SP: 251
   X: 170
   Y: 116
+  c_cycle: 1263
   data: ''
   i: 537
+  line: 11
   mode: ''
   opset: JSR
+  p_cycle: 38
   pc: 52172
 - A: 255
   P: 37
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1269
   data: ''
   i: 538
+  line: 11
   mode: ''
   opset: CLC
+  p_cycle: 56
   pc: 63858
 - A: 255
   P: 36
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1271
   data: ''
   i: 539
+  line: 11
   mode: ''
   opset: LDA
+  p_cycle: 62
   pc: 63859
 - A: 128
   P: 164
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1273
   data: ''
   i: 540
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 68
   pc: 63861
 - A: 128
   P: 164
   SP: 251
   X: 170
   Y: 116
+  c_cycle: 1279
   data: ''
   i: 541
+  line: 11
   mode: ''
   opset: SBC
+  p_cycle: 86
   pc: 52175
 - A: 127
   P: 101
   SP: 251
   X: 170
   Y: 116
+  c_cycle: 1281
   data: ''
   i: 542
+  line: 11
   mode: ''
   opset: JSR
+  p_cycle: 92
   pc: 52177
 - A: 127
   P: 101
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1287
   data: ''
   i: 543
+  line: 11
   mode: ''
   opset: BCC
+  p_cycle: 110
   pc: 63862
 - A: 127
   P: 101
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1289
   data: ''
   i: 544
+  line: 11
   mode: ''
   opset: CMP
+  p_cycle: 116
   pc: 63864
 - A: 127
   P: 103
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1291
   data: ''
   i: 545
+  line: 11
   mode: ''
   opset: BNE
+  p_cycle: 122
   pc: 63866
 - A: 127
   P: 103
   SP: 249
   X: 170
   Y: 116
+  c_cycle: 1293
   data: ''
   i: 546
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 128
   pc: 63868
 - A: 127
   P: 103
   SP: 251
   X: 170
   Y: 116
+  c_cycle: 1299
   data: ''
   i: 547
+  line: 11
   mode: ''
   opset: INY
+  p_cycle: 146
   pc: 52180
 - A: 127
   P: 101
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1301
   data: ''
   i: 548
+  line: 11
   mode: ''
   opset: JSR
+  p_cycle: 152
   pc: 52181
 - A: 127
   P: 101
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1307
   data: ''
   i: 549
+  line: 11
   mode: ''
   opset: SEC
+  p_cycle: 170
   pc: 63872
 - A: 127
   P: 101
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1309
   data: ''
   i: 550
+  line: 11
   mode: ''
   opset: LDA
+  p_cycle: 176
   pc: 63873
 - A: 129
   P: 229
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1311
   data: ''
   i: 551
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 182
   pc: 63875
 - A: 129
   P: 229
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1317
   data: ''
   i: 552
+  line: 11
   mode: ''
   opset: SBC
+  p_cycle: 200
   pc: 52184
 - A: 2
   P: 101
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1319
   data: ''
   i: 553
+  line: 11
   mode: ''
   opset: JSR
+  p_cycle: 206
   pc: 52186
 - A: 2
   P: 101
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1325
   data: ''
   i: 554
+  line: 11
   mode: ''
   opset: BVC
+  p_cycle: 224
   pc: 63876
 - A: 2
   P: 101
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1327
   data: ''
   i: 555
+  line: 11
   mode: ''
   opset: BCC
+  p_cycle: 230
   pc: 63878
 - A: 2
   P: 101
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1329
   data: ''
   i: 556
+  line: 11
   mode: ''
   opset: CMP
+  p_cycle: 236
   pc: 63880
 - A: 2
   P: 103
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1331
   data: ''
   i: 557
+  line: 11
   mode: ''
   opset: BNE
+  p_cycle: 242
   pc: 63882
 - A: 2
   P: 103
   SP: 249
   X: 170
   Y: 117
+  c_cycle: 1333
   data: ''
   i: 558
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 248
   pc: 63884
 - A: 2
   P: 103
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1339
   data: ''
   i: 559
+  line: 11
   mode: ''
   opset: RTS
+  p_cycle: 266
   pc: 52189
 - A: 2
   P: 103
   SP: 253
   X: 170
   Y: 117
+  c_cycle: 1345
   data: ''
   i: 560
+  line: 11
   mode: ''
   opset: JSR
+  p_cycle: 284
   pc: 50694
 - A: 2
   P: 103
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1351
   data: ''
   i: 561
+  line: 11
   mode: ''
   opset: NOP
+  p_cycle: 302
   pc: 52190
 - A: 2
   P: 103
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1353
   data: ''
   i: 562
+  line: 11
   mode: ''
   opset: LDA
+  p_cycle: 308
   pc: 52191
 - A: 255
   P: 229
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1355
   data: ''
   i: 563
+  line: 11
   mode: ''
   opset: STA
+  p_cycle: 314
   pc: 52193
 - A: 255
   P: 229
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1358
   data: ''
   i: 564
+  line: 11
   mode: ''
   opset: LDA
+  p_cycle: 323
   pc: 52195
 - A: 68
   P: 101
   SP: 251
   X: 170
   Y: 117
+  c_cycle: 1360
   data: ''
   i: 565
+  line: 11
   mode: ''
   opset: LDX
+  p_cycle: 329
   pc: 52197
 - A: 68
   P: 101
   SP: 251
   X: 85
   Y: 117
+  c_cycle: 1362
   data: ''
   i: 566
+  line: 11
   mode: ''
   opset: LDY
+  p_cycle: 335
   pc: 52199
 - A: 68
   P: 101
   SP: 251
   X: 85
   Y: 102
+  c_cycle: 1364
   data: ''
   i: 567
+  line: 12
   mode: ''
   opset: INX
+  p_cycle: 0
   pc: 52201
 - A: 68
   P: 101
   SP: 251
   X: 86
   Y: 102
+  c_cycle: 1366
   data: ''
   i: 568
+  line: 12
   mode: ''
   opset: DEY
+  p_cycle: 6
   pc: 52202
 - A: 68
   P: 101
   SP: 251
   X: 86
   Y: 101
+  c_cycle: 1368
   data: ''
   i: 569
+  line: 12
   mode: ''
   opset: CPX
+  p_cycle: 12
   pc: 52203
 - A: 68
   P: 103
   SP: 251
   X: 86
   Y: 101
+  c_cycle: 1370
   data: ''
   i: 570
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 18
   pc: 52205
 - A: 68
   P: 103
   SP: 251
   X: 86
   Y: 101
+  c_cycle: 1372
   data: ''
   i: 571
+  line: 12
   mode: ''
   opset: CPY
+  p_cycle: 24
   pc: 52207
 - A: 68
   P: 103
   SP: 251
   X: 86
   Y: 101
+  c_cycle: 1374
   data: ''
   i: 572
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 30
   pc: 52209
 - A: 68
   P: 103
   SP: 251
   X: 86
   Y: 101
+  c_cycle: 1376
   data: ''
   i: 573
+  line: 12
   mode: ''
   opset: INX
+  p_cycle: 36
   pc: 52211
 - A: 68
   P: 101
   SP: 251
   X: 87
   Y: 101
+  c_cycle: 1378
   data: ''
   i: 574
+  line: 12
   mode: ''
   opset: INX
+  p_cycle: 42
   pc: 52212
 - A: 68
   P: 101
   SP: 251
   X: 88
   Y: 101
+  c_cycle: 1380
   data: ''
   i: 575
+  line: 12
   mode: ''
   opset: DEY
+  p_cycle: 48
   pc: 52213
 - A: 68
   P: 101
   SP: 251
   X: 88
   Y: 100
+  c_cycle: 1382
   data: ''
   i: 576
+  line: 12
   mode: ''
   opset: DEY
+  p_cycle: 54
   pc: 52214
 - A: 68
   P: 101
   SP: 251
   X: 88
   Y: 99
+  c_cycle: 1384
   data: ''
   i: 577
+  line: 12
   mode: ''
   opset: CPX
+  p_cycle: 60
   pc: 52215
 - A: 68
   P: 103
   SP: 251
   X: 88
   Y: 99
+  c_cycle: 1386
   data: ''
   i: 578
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 66
   pc: 52217
 - A: 68
   P: 103
   SP: 251
   X: 88
   Y: 99
+  c_cycle: 1388
   data: ''
   i: 579
+  line: 12
   mode: ''
   opset: CPY
+  p_cycle: 72
   pc: 52219
 - A: 68
   P: 103
   SP: 251
   X: 88
   Y: 99
+  c_cycle: 1390
   data: ''
   i: 580
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 78
   pc: 52221
 - A: 68
   P: 103
   SP: 251
   X: 88
   Y: 99
+  c_cycle: 1392
   data: ''
   i: 581
+  line: 12
   mode: ''
   opset: DEX
+  p_cycle: 84
   pc: 52223
 - A: 68
   P: 101
   SP: 251
   X: 87
   Y: 99
+  c_cycle: 1394
   data: ''
   i: 582
+  line: 12
   mode: ''
   opset: INY
+  p_cycle: 90
   pc: 52224
 - A: 68
   P: 101
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1396
   data: ''
   i: 583
+  line: 12
   mode: ''
   opset: CPX
+  p_cycle: 96
   pc: 52225
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1398
   data: ''
   i: 584
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 102
   pc: 52227
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1400
   data: ''
   i: 585
+  line: 12
   mode: ''
   opset: CPY
+  p_cycle: 108
   pc: 52229
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1402
   data: ''
   i: 586
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 114
   pc: 52231
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1404
   data: ''
   i: 587
+  line: 12
   mode: ''
   opset: CMP
+  p_cycle: 120
   pc: 52233
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1406
   data: ''
   i: 588
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 126
   pc: 52235
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1408
   data: ''
   i: 589
+  line: 12
   mode: ''
   opset: JMP
+  p_cycle: 132
   pc: 52237
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1411
   data: ''
   i: 590
+  line: 12
   mode: ''
   opset: NOP
+  p_cycle: 141
   pc: 52244
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1413
   data: ''
   i: 591
+  line: 12
   mode: ''
   opset: SEC
+  p_cycle: 147
   pc: 52245
 - A: 68
   P: 103
   SP: 251
   X: 87
   Y: 100
+  c_cycle: 1415
   data: ''
   i: 592
+  line: 12
   mode: ''
   opset: LDX
+  p_cycle: 153
   pc: 52246
 - A: 68
   P: 101
   SP: 251
   X: 105
   Y: 100
+  c_cycle: 1417
   data: ''
   i: 593
+  line: 12
   mode: ''
   opset: LDA
+  p_cycle: 159
   pc: 52248
 - A: 150
   P: 229
   SP: 251
   X: 105
   Y: 100
+  c_cycle: 1419
   data: ''
   i: 594
+  line: 12
   mode: ''
   opset: BIT
+  p_cycle: 165
   pc: 52250
 - A: 150
   P: 229
   SP: 251
   X: 105
   Y: 100
+  c_cycle: 1422
   data: ''
   i: 595
+  line: 12
   mode: ''
   opset: LDY
+  p_cycle: 174
   pc: 52252
 - A: 150
   P: 229
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1424
   data: ''
   i: 596
+  line: 12
   mode: ''
   opset: INY
+  p_cycle: 180
   pc: 52254
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1426
   data: ''
   i: 597
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 186
   pc: 52255
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1428
   data: ''
   i: 598
+  line: 12
   mode: ''
   opset: BMI
+  p_cycle: 192
   pc: 52257
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1430
   data: ''
   i: 599
+  line: 12
   mode: ''
   opset: BCC
+  p_cycle: 198
   pc: 52259
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1432
   data: ''
   i: 600
+  line: 12
   mode: ''
   opset: BVC
+  p_cycle: 204
   pc: 52261
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1434
   data: ''
   i: 601
+  line: 12
   mode: ''
   opset: CPY
+  p_cycle: 210
   pc: 52263
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1436
   data: ''
   i: 602
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 216
   pc: 52265
 - A: 150
   P: 103
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1438
   data: ''
   i: 603
+  line: 12
   mode: ''
   opset: INY
+  p_cycle: 222
   pc: 52267
 - A: 150
   P: 101
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1440
   data: ''
   i: 604
+  line: 12
   mode: ''
   opset: BEQ
+  p_cycle: 228
   pc: 52268
 - A: 150
   P: 101
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1442
   data: ''
   i: 605
+  line: 12
   mode: ''
   opset: BMI
+  p_cycle: 234
   pc: 52270
 - A: 150
   P: 101
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1444
   data: ''
   i: 606
+  line: 12
   mode: ''
   opset: BCC
+  p_cycle: 240
   pc: 52272
 - A: 150
   P: 101
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1446
   data: ''
   i: 607
+  line: 12
   mode: ''
   opset: BVC
+  p_cycle: 246
   pc: 52274
 - A: 150
   P: 101
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1448
   data: ''
   i: 608
+  line: 12
   mode: ''
   opset: CLC
+  p_cycle: 252
   pc: 52276
 - A: 150
   P: 100
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1450
   data: ''
   i: 609
+  line: 12
   mode: ''
   opset: CLV
+  p_cycle: 258
   pc: 52277
 - A: 150
   P: 36
   SP: 251
   X: 105
   Y: 1
+  c_cycle: 1452
   data: ''
   i: 610
+  line: 12
   mode: ''
   opset: LDY
+  p_cycle: 264
   pc: 52278
 - A: 150
   P: 38
   SP: 251
   X: 105
   Y: 0
+  c_cycle: 1454
   data: ''
   i: 611
+  line: 12
   mode: ''
   opset: DEY
+  p_cycle: 270
   pc: 52280
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1456
   data: ''
   i: 612
+  line: 12
   mode: ''
   opset: BEQ
+  p_cycle: 276
   pc: 52281
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1458
   data: ''
   i: 613
+  line: 12
   mode: ''
   opset: BPL
+  p_cycle: 282
   pc: 52283
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1460
   data: ''
   i: 614
+  line: 12
   mode: ''
   opset: BCS
+  p_cycle: 288
   pc: 52285
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1462
   data: ''
   i: 615
+  line: 12
   mode: ''
   opset: BVS
+  p_cycle: 294
   pc: 52287
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1464
   data: ''
   i: 616
+  line: 12
   mode: ''
   opset: CPY
+  p_cycle: 300
   pc: 52289
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1466
   data: ''
   i: 617
+  line: 12
   mode: ''
   opset: BNE
+  p_cycle: 306
   pc: 52291
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1468
   data: ''
   i: 618
+  line: 12
   mode: ''
   opset: CLC
+  p_cycle: 312
   pc: 52293
 - A: 150
   P: 38
   SP: 251
   X: 105
   Y: 255
+  c_cycle: 1470
   data: ''
   i: 619
+  line: 12
   mode: ''
   opset: DEY
+  p_cycle: 318
   pc: 52294
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1472
   data: ''
   i: 620
+  line: 12
   mode: ''
   opset: BEQ
+  p_cycle: 324
   pc: 52295
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1474
   data: ''
   i: 621
+  line: 12
   mode: ''
   opset: BPL
+  p_cycle: 330
   pc: 52297
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1476
   data: ''
   i: 622
+  line: 12
   mode: ''
   opset: BCS
+  p_cycle: 336
   pc: 52299
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1478
   data: ''
   i: 623
+  line: 13
   mode: ''
   opset: BVS
+  p_cycle: 1
   pc: 52301
 - A: 150
   P: 164
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1480
   data: ''
   i: 624
+  line: 13
   mode: ''
   opset: CPY
+  p_cycle: 7
   pc: 52303
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1482
   data: ''
   i: 625
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 13
   pc: 52305
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1484
   data: ''
   i: 626
+  line: 13
   mode: ''
   opset: CMP
+  p_cycle: 19
   pc: 52307
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1486
   data: ''
   i: 627
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 25
   pc: 52309
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1488
   data: ''
   i: 628
+  line: 13
   mode: ''
   opset: CPX
+  p_cycle: 31
   pc: 52311
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1490
   data: ''
   i: 629
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 37
   pc: 52313
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1492
   data: ''
   i: 630
+  line: 13
   mode: ''
   opset: JMP
+  p_cycle: 43
   pc: 52315
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1495
   data: ''
   i: 631
+  line: 13
   mode: ''
   opset: NOP
+  p_cycle: 52
   pc: 52322
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1497
   data: ''
   i: 632
+  line: 13
   mode: ''
   opset: SEC
+  p_cycle: 58
   pc: 52323
 - A: 150
   P: 39
   SP: 251
   X: 105
   Y: 254
+  c_cycle: 1499
   data: ''
   i: 633
+  line: 13
   mode: ''
   opset: LDY
+  p_cycle: 64
   pc: 52324
 - A: 150
   P: 37
   SP: 251
   X: 105
   Y: 105
+  c_cycle: 1501
   data: ''
   i: 634
+  line: 13
   mode: ''
   opset: LDA
+  p_cycle: 70
   pc: 52326
 - A: 150
   P: 165
   SP: 251
   X: 105
   Y: 105
+  c_cycle: 1503
   data: ''
   i: 635
+  line: 13
   mode: ''
   opset: BIT
+  p_cycle: 76
   pc: 52328
 - A: 150
   P: 229
   SP: 251
   X: 105
   Y: 105
+  c_cycle: 1506
   data: ''
   i: 636
+  line: 13
   mode: ''
   opset: LDX
+  p_cycle: 85
   pc: 52330
 - A: 150
   P: 229
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1508
   data: ''
   i: 637
+  line: 13
   mode: ''
   opset: INX
+  p_cycle: 91
   pc: 52332
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1510
   data: ''
   i: 638
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 97
   pc: 52333
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1512
   data: ''
   i: 639
+  line: 13
   mode: ''
   opset: BMI
+  p_cycle: 103
   pc: 52335
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1514
   data: ''
   i: 640
+  line: 13
   mode: ''
   opset: BCC
+  p_cycle: 109
   pc: 52337
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1516
   data: ''
   i: 641
+  line: 13
   mode: ''
   opset: BVC
+  p_cycle: 115
   pc: 52339
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1518
   data: ''
   i: 642
+  line: 13
   mode: ''
   opset: CPX
+  p_cycle: 121
   pc: 52341
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1520
   data: ''
   i: 643
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 127
   pc: 52343
 - A: 150
   P: 103
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1522
   data: ''
   i: 644
+  line: 13
   mode: ''
   opset: INX
+  p_cycle: 133
   pc: 52345
 - A: 150
   P: 101
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1524
   data: ''
   i: 645
+  line: 13
   mode: ''
   opset: BEQ
+  p_cycle: 139
   pc: 52346
 - A: 150
   P: 101
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1526
   data: ''
   i: 646
+  line: 13
   mode: ''
   opset: BMI
+  p_cycle: 145
   pc: 52348
 - A: 150
   P: 101
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1528
   data: ''
   i: 647
+  line: 13
   mode: ''
   opset: BCC
+  p_cycle: 151
   pc: 52350
 - A: 150
   P: 101
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1530
   data: ''
   i: 648
+  line: 13
   mode: ''
   opset: BVC
+  p_cycle: 157
   pc: 52352
 - A: 150
   P: 101
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1532
   data: ''
   i: 649
+  line: 13
   mode: ''
   opset: CLC
+  p_cycle: 163
   pc: 52354
 - A: 150
   P: 100
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1534
   data: ''
   i: 650
+  line: 13
   mode: ''
   opset: CLV
+  p_cycle: 169
   pc: 52355
 - A: 150
   P: 36
   SP: 251
   X: 1
   Y: 105
+  c_cycle: 1536
   data: ''
   i: 651
+  line: 13
   mode: ''
   opset: LDX
+  p_cycle: 175
   pc: 52356
 - A: 150
   P: 38
   SP: 251
   X: 0
   Y: 105
+  c_cycle: 1538
   data: ''
   i: 652
+  line: 13
   mode: ''
   opset: DEX
+  p_cycle: 181
   pc: 52358
 - A: 150
   P: 164
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1540
   data: ''
   i: 653
+  line: 13
   mode: ''
   opset: BEQ
+  p_cycle: 187
   pc: 52359
 - A: 150
   P: 164
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1542
   data: ''
   i: 654
+  line: 13
   mode: ''
   opset: BPL
+  p_cycle: 193
   pc: 52361
 - A: 150
   P: 164
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1544
   data: ''
   i: 655
+  line: 13
   mode: ''
   opset: BCS
+  p_cycle: 199
   pc: 52363
 - A: 150
   P: 164
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1546
   data: ''
   i: 656
+  line: 13
   mode: ''
   opset: BVS
+  p_cycle: 205
   pc: 52365
 - A: 150
   P: 164
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1548
   data: ''
   i: 657
+  line: 13
   mode: ''
   opset: CPX
+  p_cycle: 211
   pc: 52367
 - A: 150
   P: 39
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1550
   data: ''
   i: 658
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 217
   pc: 52369
 - A: 150
   P: 39
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1552
   data: ''
   i: 659
+  line: 13
   mode: ''
   opset: CLC
+  p_cycle: 223
   pc: 52371
 - A: 150
   P: 38
   SP: 251
   X: 255
   Y: 105
+  c_cycle: 1554
   data: ''
   i: 660
+  line: 13
   mode: ''
   opset: DEX
+  p_cycle: 229
   pc: 52372
 - A: 150
   P: 164
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1556
   data: ''
   i: 661
+  line: 13
   mode: ''
   opset: BEQ
+  p_cycle: 235
   pc: 52373
 - A: 150
   P: 164
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1558
   data: ''
   i: 662
+  line: 13
   mode: ''
   opset: BPL
+  p_cycle: 241
   pc: 52375
 - A: 150
   P: 164
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1560
   data: ''
   i: 663
+  line: 13
   mode: ''
   opset: BCS
+  p_cycle: 247
   pc: 52377
 - A: 150
   P: 164
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1562
   data: ''
   i: 664
+  line: 13
   mode: ''
   opset: BVS
+  p_cycle: 253
   pc: 52379
 - A: 150
   P: 164
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1564
   data: ''
   i: 665
+  line: 13
   mode: ''
   opset: CPX
+  p_cycle: 259
   pc: 52381
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1566
   data: ''
   i: 666
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 265
   pc: 52383
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1568
   data: ''
   i: 667
+  line: 13
   mode: ''
   opset: CMP
+  p_cycle: 271
   pc: 52385
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1570
   data: ''
   i: 668
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 277
   pc: 52387
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1572
   data: ''
   i: 669
+  line: 13
   mode: ''
   opset: CPY
+  p_cycle: 283
   pc: 52389
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1574
   data: ''
   i: 670
+  line: 13
   mode: ''
   opset: BNE
+  p_cycle: 289
   pc: 52391
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1576
   data: ''
   i: 671
+  line: 13
   mode: ''
   opset: JMP
+  p_cycle: 295
   pc: 52393
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1579
   data: ''
   i: 672
+  line: 13
   mode: ''
   opset: NOP
+  p_cycle: 304
   pc: 52400
 - A: 150
   P: 39
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1581
   data: ''
   i: 673
+  line: 13
   mode: ''
   opset: LDA
+  p_cycle: 310
   pc: 52401
 - A: 133
   P: 165
   SP: 251
   X: 254
   Y: 105
+  c_cycle: 1583
   data: ''
   i: 674
+  line: 13
   mode: ''
   opset: LDX
+  p_cycle: 316
   pc: 52403
 - A: 133
   P: 37
   SP: 251
   X: 52
   Y: 105
+  c_cycle: 1585
   data: ''
   i: 675
+  line: 13
   mode: ''
   opset: LDY
+  p_cycle: 322
   pc: 52405
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1587
   data: ''
   i: 676
+  line: 13
   mode: ''
   opset: CLC
+  p_cycle: 328
   pc: 52407
 - A: 133
   P: 164
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1589
   data: ''
   i: 677
+  line: 13
   mode: ''
   opset: BIT
+  p_cycle: 334
   pc: 52408
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1592
   data: ''
   i: 678
+  line: 14
   mode: ''
   opset: TAY
+  p_cycle: 2
   pc: 52410
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1594
   data: ''
   i: 679
+  line: 14
   mode: ''
   opset: BEQ
+  p_cycle: 8
   pc: 52411
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1596
   data: ''
   i: 680
+  line: 14
   mode: ''
   opset: BCS
+  p_cycle: 14
   pc: 52413
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1598
   data: ''
   i: 681
+  line: 14
   mode: ''
   opset: BVC
+  p_cycle: 20
   pc: 52415
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1600
   data: ''
   i: 682
+  line: 14
   mode: ''
   opset: BPL
+  p_cycle: 26
   pc: 52417
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1602
   data: ''
   i: 683
+  line: 14
   mode: ''
   opset: CMP
+  p_cycle: 32
   pc: 52419
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1604
   data: ''
   i: 684
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 38
   pc: 52421
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1606
   data: ''
   i: 685
+  line: 14
   mode: ''
   opset: CPX
+  p_cycle: 44
   pc: 52423
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1608
   data: ''
   i: 686
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 50
   pc: 52425
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1610
   data: ''
   i: 687
+  line: 14
   mode: ''
   opset: CPY
+  p_cycle: 56
   pc: 52427
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1612
   data: ''
   i: 688
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 62
   pc: 52429
 - A: 133
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1614
   data: ''
   i: 689
+  line: 14
   mode: ''
   opset: LDA
+  p_cycle: 68
   pc: 52431
 - A: 0
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1616
   data: ''
   i: 690
+  line: 14
   mode: ''
   opset: SEC
+  p_cycle: 74
   pc: 52433
 - A: 0
   P: 103
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1618
   data: ''
   i: 691
+  line: 14
   mode: ''
   opset: CLV
+  p_cycle: 80
   pc: 52434
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 133
+  c_cycle: 1620
   data: ''
   i: 692
+  line: 14
   mode: ''
   opset: TAY
+  p_cycle: 86
   pc: 52435
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1622
   data: ''
   i: 693
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 92
   pc: 52436
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1624
   data: ''
   i: 694
+  line: 14
   mode: ''
   opset: BCC
+  p_cycle: 98
   pc: 52438
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1626
   data: ''
   i: 695
+  line: 14
   mode: ''
   opset: BVS
+  p_cycle: 104
   pc: 52440
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1628
   data: ''
   i: 696
+  line: 14
   mode: ''
   opset: BMI
+  p_cycle: 110
   pc: 52442
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1630
   data: ''
   i: 697
+  line: 14
   mode: ''
   opset: CMP
+  p_cycle: 116
   pc: 52444
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1632
   data: ''
   i: 698
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 122
   pc: 52446
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1634
   data: ''
   i: 699
+  line: 14
   mode: ''
   opset: CPX
+  p_cycle: 128
   pc: 52448
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1636
   data: ''
   i: 700
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 134
   pc: 52450
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1638
   data: ''
   i: 701
+  line: 14
   mode: ''
   opset: CPY
+  p_cycle: 140
   pc: 52452
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1640
   data: ''
   i: 702
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 146
   pc: 52454
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1642
   data: ''
   i: 703
+  line: 14
   mode: ''
   opset: JMP
+  p_cycle: 152
   pc: 52456
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1645
   data: ''
   i: 704
+  line: 14
   mode: ''
   opset: NOP
+  p_cycle: 161
   pc: 52463
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1647
   data: ''
   i: 705
+  line: 14
   mode: ''
   opset: LDA
+  p_cycle: 167
   pc: 52464
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1649
   data: ''
   i: 706
+  line: 14
   mode: ''
   opset: LDX
+  p_cycle: 173
   pc: 52466
 - A: 133
   P: 37
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1651
   data: ''
   i: 707
+  line: 14
   mode: ''
   opset: LDY
+  p_cycle: 179
   pc: 52468
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1653
   data: ''
   i: 708
+  line: 14
   mode: ''
   opset: CLC
+  p_cycle: 185
   pc: 52470
 - A: 133
   P: 164
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1655
   data: ''
   i: 709
+  line: 14
   mode: ''
   opset: BIT
+  p_cycle: 191
   pc: 52471
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1658
   data: ''
   i: 710
+  line: 14
   mode: ''
   opset: TAX
+  p_cycle: 200
   pc: 52473
 - A: 133
   P: 228
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1660
   data: ''
   i: 711
+  line: 14
   mode: ''
   opset: BEQ
+  p_cycle: 206
   pc: 52474
 - A: 133
   P: 228
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1662
   data: ''
   i: 712
+  line: 14
   mode: ''
   opset: BCS
+  p_cycle: 212
   pc: 52476
 - A: 133
   P: 228
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1664
   data: ''
   i: 713
+  line: 14
   mode: ''
   opset: BVC
+  p_cycle: 218
   pc: 52478
 - A: 133
   P: 228
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1666
   data: ''
   i: 714
+  line: 14
   mode: ''
   opset: BPL
+  p_cycle: 224
   pc: 52480
 - A: 133
   P: 228
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1668
   data: ''
   i: 715
+  line: 14
   mode: ''
   opset: CMP
+  p_cycle: 230
   pc: 52482
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1670
   data: ''
   i: 716
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 236
   pc: 52484
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1672
   data: ''
   i: 717
+  line: 14
   mode: ''
   opset: CPX
+  p_cycle: 242
   pc: 52486
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1674
   data: ''
   i: 718
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 248
   pc: 52488
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1676
   data: ''
   i: 719
+  line: 14
   mode: ''
   opset: CPY
+  p_cycle: 254
   pc: 52490
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1678
   data: ''
   i: 720
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 260
   pc: 52492
 - A: 133
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1680
   data: ''
   i: 721
+  line: 14
   mode: ''
   opset: LDA
+  p_cycle: 266
   pc: 52494
 - A: 0
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1682
   data: ''
   i: 722
+  line: 14
   mode: ''
   opset: SEC
+  p_cycle: 272
   pc: 52496
 - A: 0
   P: 103
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1684
   data: ''
   i: 723
+  line: 14
   mode: ''
   opset: CLV
+  p_cycle: 278
   pc: 52497
 - A: 0
   P: 39
   SP: 251
   X: 133
   Y: 153
+  c_cycle: 1686
   data: ''
   i: 724
+  line: 14
   mode: ''
   opset: TAX
+  p_cycle: 284
   pc: 52498
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1688
   data: ''
   i: 725
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 290
   pc: 52499
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1690
   data: ''
   i: 726
+  line: 14
   mode: ''
   opset: BCC
+  p_cycle: 296
   pc: 52501
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1692
   data: ''
   i: 727
+  line: 14
   mode: ''
   opset: BVS
+  p_cycle: 302
   pc: 52503
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1694
   data: ''
   i: 728
+  line: 14
   mode: ''
   opset: BMI
+  p_cycle: 308
   pc: 52505
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1696
   data: ''
   i: 729
+  line: 14
   mode: ''
   opset: CMP
+  p_cycle: 314
   pc: 52507
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1698
   data: ''
   i: 730
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 320
   pc: 52509
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1700
   data: ''
   i: 731
+  line: 14
   mode: ''
   opset: CPX
+  p_cycle: 326
   pc: 52511
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1702
   data: ''
   i: 732
+  line: 14
   mode: ''
   opset: BNE
+  p_cycle: 332
   pc: 52513
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1704
   data: ''
   i: 733
+  line: 14
   mode: ''
   opset: CPY
+  p_cycle: 338
   pc: 52515
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1706
   data: ''
   i: 734
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 3
   pc: 52517
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1708
   data: ''
   i: 735
+  line: 15
   mode: ''
   opset: JMP
+  p_cycle: 9
   pc: 52519
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1711
   data: ''
   i: 736
+  line: 15
   mode: ''
   opset: NOP
+  p_cycle: 18
   pc: 52526
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1713
   data: ''
   i: 737
+  line: 15
   mode: ''
   opset: LDA
+  p_cycle: 24
   pc: 52527
 - A: 133
   P: 165
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1715
   data: ''
   i: 738
+  line: 15
   mode: ''
   opset: LDX
+  p_cycle: 30
   pc: 52529
 - A: 133
   P: 37
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1717
   data: ''
   i: 739
+  line: 15
   mode: ''
   opset: LDY
+  p_cycle: 36
   pc: 52531
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1719
   data: ''
   i: 740
+  line: 15
   mode: ''
   opset: CLC
+  p_cycle: 42
   pc: 52533
 - A: 133
   P: 164
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1721
   data: ''
   i: 741
+  line: 15
   mode: ''
   opset: BIT
+  p_cycle: 48
   pc: 52534
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1724
   data: ''
   i: 742
+  line: 15
   mode: ''
   opset: TYA
+  p_cycle: 57
   pc: 52536
 - A: 153
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1726
   data: ''
   i: 743
+  line: 15
   mode: ''
   opset: BEQ
+  p_cycle: 63
   pc: 52537
 - A: 153
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1728
   data: ''
   i: 744
+  line: 15
   mode: ''
   opset: BCS
+  p_cycle: 69
   pc: 52539
 - A: 153
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1730
   data: ''
   i: 745
+  line: 15
   mode: ''
   opset: BVC
+  p_cycle: 75
   pc: 52541
 - A: 153
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1732
   data: ''
   i: 746
+  line: 15
   mode: ''
   opset: BPL
+  p_cycle: 81
   pc: 52543
 - A: 153
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1734
   data: ''
   i: 747
+  line: 15
   mode: ''
   opset: CMP
+  p_cycle: 87
   pc: 52545
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1736
   data: ''
   i: 748
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 93
   pc: 52547
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1738
   data: ''
   i: 749
+  line: 15
   mode: ''
   opset: CPX
+  p_cycle: 99
   pc: 52549
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1740
   data: ''
   i: 750
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 105
   pc: 52551
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1742
   data: ''
   i: 751
+  line: 15
   mode: ''
   opset: CPY
+  p_cycle: 111
   pc: 52553
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1744
   data: ''
   i: 752
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 117
   pc: 52555
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1746
   data: ''
   i: 753
+  line: 15
   mode: ''
   opset: LDY
+  p_cycle: 123
   pc: 52557
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1748
   data: ''
   i: 754
+  line: 15
   mode: ''
   opset: SEC
+  p_cycle: 129
   pc: 52559
 - A: 153
   P: 103
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1750
   data: ''
   i: 755
+  line: 15
   mode: ''
   opset: CLV
+  p_cycle: 135
   pc: 52560
 - A: 153
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1752
   data: ''
   i: 756
+  line: 15
   mode: ''
   opset: TYA
+  p_cycle: 141
   pc: 52561
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1754
   data: ''
   i: 757
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 147
   pc: 52562
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1756
   data: ''
   i: 758
+  line: 15
   mode: ''
   opset: BCC
+  p_cycle: 153
   pc: 52564
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1758
   data: ''
   i: 759
+  line: 15
   mode: ''
   opset: BVS
+  p_cycle: 159
   pc: 52566
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1760
   data: ''
   i: 760
+  line: 15
   mode: ''
   opset: BMI
+  p_cycle: 165
   pc: 52568
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1762
   data: ''
   i: 761
+  line: 15
   mode: ''
   opset: CMP
+  p_cycle: 171
   pc: 52570
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1764
   data: ''
   i: 762
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 177
   pc: 52572
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1766
   data: ''
   i: 763
+  line: 15
   mode: ''
   opset: CPX
+  p_cycle: 183
   pc: 52574
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1768
   data: ''
   i: 764
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 189
   pc: 52576
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1770
   data: ''
   i: 765
+  line: 15
   mode: ''
   opset: CPY
+  p_cycle: 195
   pc: 52578
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1772
   data: ''
   i: 766
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 201
   pc: 52580
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1774
   data: ''
   i: 767
+  line: 15
   mode: ''
   opset: JMP
+  p_cycle: 207
   pc: 52582
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1777
   data: ''
   i: 768
+  line: 15
   mode: ''
   opset: NOP
+  p_cycle: 216
   pc: 52589
 - A: 0
   P: 39
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1779
   data: ''
   i: 769
+  line: 15
   mode: ''
   opset: LDA
+  p_cycle: 222
   pc: 52590
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1781
   data: ''
   i: 770
+  line: 15
   mode: ''
   opset: LDX
+  p_cycle: 228
   pc: 52592
 - A: 133
   P: 37
   SP: 251
   X: 52
   Y: 0
+  c_cycle: 1783
   data: ''
   i: 771
+  line: 15
   mode: ''
   opset: LDY
+  p_cycle: 234
   pc: 52594
 - A: 133
   P: 165
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1785
   data: ''
   i: 772
+  line: 15
   mode: ''
   opset: CLC
+  p_cycle: 240
   pc: 52596
 - A: 133
   P: 164
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1787
   data: ''
   i: 773
+  line: 15
   mode: ''
   opset: BIT
+  p_cycle: 246
   pc: 52597
 - A: 133
   P: 228
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1790
   data: ''
   i: 774
+  line: 15
   mode: ''
   opset: TXA
+  p_cycle: 255
   pc: 52599
 - A: 52
   P: 100
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1792
   data: ''
   i: 775
+  line: 15
   mode: ''
   opset: BEQ
+  p_cycle: 261
   pc: 52600
 - A: 52
   P: 100
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1794
   data: ''
   i: 776
+  line: 15
   mode: ''
   opset: BCS
+  p_cycle: 267
   pc: 52602
 - A: 52
   P: 100
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1796
   data: ''
   i: 777
+  line: 15
   mode: ''
   opset: BVC
+  p_cycle: 273
   pc: 52604
 - A: 52
   P: 100
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1798
   data: ''
   i: 778
+  line: 15
   mode: ''
   opset: BMI
+  p_cycle: 279
   pc: 52606
 - A: 52
   P: 100
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1800
   data: ''
   i: 779
+  line: 15
   mode: ''
   opset: CMP
+  p_cycle: 285
   pc: 52608
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1802
   data: ''
   i: 780
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 291
   pc: 52610
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1804
   data: ''
   i: 781
+  line: 15
   mode: ''
   opset: CPX
+  p_cycle: 297
   pc: 52612
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1806
   data: ''
   i: 782
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 303
   pc: 52614
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1808
   data: ''
   i: 783
+  line: 15
   mode: ''
   opset: CPY
+  p_cycle: 309
   pc: 52616
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1810
   data: ''
   i: 784
+  line: 15
   mode: ''
   opset: BNE
+  p_cycle: 315
   pc: 52618
 - A: 52
   P: 103
   SP: 251
   X: 52
   Y: 153
+  c_cycle: 1812
   data: ''
   i: 785
+  line: 15
   mode: ''
   opset: LDX
+  p_cycle: 321
   pc: 52620
 - A: 52
   P: 103
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1814
   data: ''
   i: 786
+  line: 15
   mode: ''
   opset: SEC
+  p_cycle: 327
   pc: 52622
 - A: 52
   P: 103
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1816
   data: ''
   i: 787
+  line: 15
   mode: ''
   opset: CLV
+  p_cycle: 333
   pc: 52623
 - A: 52
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1818
   data: ''
   i: 788
+  line: 15
   mode: ''
   opset: TXA
+  p_cycle: 339
   pc: 52624
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1820
   data: ''
   i: 789
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 4
   pc: 52625
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1822
   data: ''
   i: 790
+  line: 16
   mode: ''
   opset: BCC
+  p_cycle: 10
   pc: 52627
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1824
   data: ''
   i: 791
+  line: 16
   mode: ''
   opset: BVS
+  p_cycle: 16
   pc: 52629
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1826
   data: ''
   i: 792
+  line: 16
   mode: ''
   opset: BMI
+  p_cycle: 22
   pc: 52631
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1828
   data: ''
   i: 793
+  line: 16
   mode: ''
   opset: CMP
+  p_cycle: 28
   pc: 52633
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1830
   data: ''
   i: 794
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 34
   pc: 52635
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1832
   data: ''
   i: 795
+  line: 16
   mode: ''
   opset: CPX
+  p_cycle: 40
   pc: 52637
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1834
   data: ''
   i: 796
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 46
   pc: 52639
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1836
   data: ''
   i: 797
+  line: 16
   mode: ''
   opset: CPY
+  p_cycle: 52
   pc: 52641
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1838
   data: ''
   i: 798
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 58
   pc: 52643
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1840
   data: ''
   i: 799
+  line: 16
   mode: ''
   opset: JMP
+  p_cycle: 64
   pc: 52645
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1843
   data: ''
   i: 800
+  line: 16
   mode: ''
   opset: NOP
+  p_cycle: 73
   pc: 52652
 - A: 0
   P: 39
   SP: 251
   X: 0
   Y: 153
+  c_cycle: 1845
   data: ''
   i: 801
+  line: 16
   mode: ''
   opset: TSX
+  p_cycle: 79
   pc: 52653
 - A: 0
   P: 165
   SP: 251
   X: 251
   Y: 153
+  c_cycle: 1847
   data: ''
   i: 802
+  line: 16
   mode: ''
   opset: STX
+  p_cycle: 85
   pc: 52654
 - A: 0
   P: 165
   SP: 251
   X: 251
   Y: 153
+  c_cycle: 1851
   data: ''
   i: 803
+  line: 16
   mode: ''
   opset: LDY
+  p_cycle: 97
   pc: 52657
 - A: 0
   P: 37
   SP: 251
   X: 251
   Y: 51
+  c_cycle: 1853
   data: ''
   i: 804
+  line: 16
   mode: ''
   opset: LDX
+  p_cycle: 103
   pc: 52659
 - A: 0
   P: 37
   SP: 251
   X: 105
   Y: 51
+  c_cycle: 1855
   data: ''
   i: 805
+  line: 16
   mode: ''
   opset: LDA
+  p_cycle: 109
   pc: 52661
 - A: 132
   P: 165
   SP: 251
   X: 105
   Y: 51
+  c_cycle: 1857
   data: ''
   i: 806
+  line: 16
   mode: ''
   opset: CLC
+  p_cycle: 115
   pc: 52663
 - A: 132
   P: 164
   SP: 251
   X: 105
   Y: 51
+  c_cycle: 1859
   data: ''
   i: 807
+  line: 16
   mode: ''
   opset: BIT
+  p_cycle: 121
   pc: 52664
 - A: 132
   P: 228
   SP: 251
   X: 105
   Y: 51
+  c_cycle: 1862
   data: ''
   i: 808
+  line: 16
   mode: ''
   opset: TXS
+  p_cycle: 130
   pc: 52666
 - A: 132
   P: 228
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1864
   data: ''
   i: 809
+  line: 16
   mode: ''
   opset: BEQ
+  p_cycle: 136
   pc: 52667
 - A: 132
   P: 228
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1866
   data: ''
   i: 810
+  line: 16
   mode: ''
   opset: BPL
+  p_cycle: 142
   pc: 52669
 - A: 132
   P: 228
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1868
   data: ''
   i: 811
+  line: 16
   mode: ''
   opset: BCS
+  p_cycle: 148
   pc: 52671
 - A: 132
   P: 228
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1870
   data: ''
   i: 812
+  line: 16
   mode: ''
   opset: BVC
+  p_cycle: 154
   pc: 52673
 - A: 132
   P: 228
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1872
   data: ''
   i: 813
+  line: 16
   mode: ''
   opset: CMP
+  p_cycle: 160
   pc: 52675
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1874
   data: ''
   i: 814
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 166
   pc: 52677
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1876
   data: ''
   i: 815
+  line: 16
   mode: ''
   opset: CPX
+  p_cycle: 172
   pc: 52679
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1878
   data: ''
   i: 816
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 178
   pc: 52681
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1880
   data: ''
   i: 817
+  line: 16
   mode: ''
   opset: CPY
+  p_cycle: 184
   pc: 52683
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1882
   data: ''
   i: 818
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 190
   pc: 52685
 - A: 132
   P: 103
   SP: 105
   X: 105
   Y: 51
+  c_cycle: 1884
   data: ''
   i: 819
+  line: 16
   mode: ''
   opset: LDY
+  p_cycle: 196
   pc: 52687
 - A: 132
   P: 101
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1886
   data: ''
   i: 820
+  line: 16
   mode: ''
   opset: LDA
+  p_cycle: 202
   pc: 52689
 - A: 4
   P: 101
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1888
   data: ''
   i: 821
+  line: 16
   mode: ''
   opset: SEC
+  p_cycle: 208
   pc: 52691
 - A: 4
   P: 101
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1890
   data: ''
   i: 822
+  line: 16
   mode: ''
   opset: CLV
+  p_cycle: 214
   pc: 52692
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1892
   data: ''
   i: 823
+  line: 16
   mode: ''
   opset: LDX
+  p_cycle: 220
   pc: 52693
 - A: 4
   P: 39
   SP: 105
   X: 0
   Y: 1
+  c_cycle: 1894
   data: ''
   i: 824
+  line: 16
   mode: ''
   opset: TSX
+  p_cycle: 226
   pc: 52695
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1896
   data: ''
   i: 825
+  line: 16
   mode: ''
   opset: BEQ
+  p_cycle: 232
   pc: 52696
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1898
   data: ''
   i: 826
+  line: 16
   mode: ''
   opset: BMI
+  p_cycle: 238
   pc: 52698
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1900
   data: ''
   i: 827
+  line: 16
   mode: ''
   opset: BCC
+  p_cycle: 244
   pc: 52700
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1902
   data: ''
   i: 828
+  line: 16
   mode: ''
   opset: BVS
+  p_cycle: 250
   pc: 52702
 - A: 4
   P: 37
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1904
   data: ''
   i: 829
+  line: 16
   mode: ''
   opset: CPX
+  p_cycle: 256
   pc: 52704
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1906
   data: ''
   i: 830
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 262
   pc: 52706
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1908
   data: ''
   i: 831
+  line: 16
   mode: ''
   opset: CMP
+  p_cycle: 268
   pc: 52708
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1910
   data: ''
   i: 832
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 274
   pc: 52710
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1912
   data: ''
   i: 833
+  line: 16
   mode: ''
   opset: CPY
+  p_cycle: 280
   pc: 52712
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1914
   data: ''
   i: 834
+  line: 16
   mode: ''
   opset: BNE
+  p_cycle: 286
   pc: 52714
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1916
   data: ''
   i: 835
+  line: 16
   mode: ''
   opset: JMP
+  p_cycle: 292
   pc: 52716
 - A: 4
   P: 39
   SP: 105
   X: 105
   Y: 1
+  c_cycle: 1919
   data: ''
   i: 836
+  line: 16
   mode: ''
   opset: LDX
+  p_cycle: 301
   pc: 52723
 - A: 4
   P: 165
   SP: 105
   X: 251
   Y: 1
+  c_cycle: 1923
   data: ''
   i: 837
+  line: 16
   mode: ''
   opset: TXS
+  p_cycle: 313
   pc: 52726
 - A: 4
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1925
   data: ''
   i: 838
+  line: 16
   mode: ''
   opset: RTS
+  p_cycle: 319
   pc: 52727
 - A: 4
   P: 165
   SP: 253
   X: 251
   Y: 1
+  c_cycle: 1931
   data: ''
   i: 839
+  line: 16
   mode: ''
   opset: JSR
+  p_cycle: 337
   pc: 50697
 - A: 4
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1937
   data: ''
   i: 840
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 14
   pc: 52728
 - A: 255
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1939
   data: ''
   i: 841
+  line: 17
   mode: ''
   opset: STA
+  p_cycle: 20
   pc: 52730
 - A: 255
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1942
   data: ''
   i: 842
+  line: 17
   mode: ''
   opset: TSX
+  p_cycle: 29
   pc: 52732
 - A: 255
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1944
   data: ''
   i: 843
+  line: 17
   mode: ''
   opset: STX
+  p_cycle: 35
   pc: 52733
 - A: 255
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1948
   data: ''
   i: 844
+  line: 17
   mode: ''
   opset: NOP
+  p_cycle: 47
   pc: 52736
 - A: 255
   P: 165
   SP: 251
   X: 251
   Y: 1
+  c_cycle: 1950
   data: ''
   i: 845
+  line: 17
   mode: ''
   opset: LDX
+  p_cycle: 53
   pc: 52737
 - A: 255
   P: 165
   SP: 251
   X: 128
   Y: 1
+  c_cycle: 1952
   data: ''
   i: 846
+  line: 17
   mode: ''
   opset: TXS
+  p_cycle: 59
   pc: 52739
 - A: 255
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1954
   data: ''
   i: 847
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 65
   pc: 52740
 - A: 51
   P: 37
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1956
   data: ''
   i: 848
+  line: 17
   mode: ''
   opset: PHA
+  p_cycle: 71
   pc: 52742
 - A: 51
   P: 37
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 1959
   data: ''
   i: 849
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 80
   pc: 52743
 - A: 105
   P: 37
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 1961
   data: ''
   i: 850
+  line: 17
   mode: ''
   opset: PHA
+  p_cycle: 86
   pc: 52745
 - A: 105
   P: 37
   SP: 126
   X: 128
   Y: 1
+  c_cycle: 1964
   data: ''
   i: 851
+  line: 17
   mode: ''
   opset: TSX
+  p_cycle: 95
   pc: 52746
 - A: 105
   P: 37
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 1966
   data: ''
   i: 852
+  line: 17
   mode: ''
   opset: CPX
+  p_cycle: 101
   pc: 52747
 - A: 105
   P: 39
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 1968
   data: ''
   i: 853
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 107
   pc: 52749
 - A: 105
   P: 39
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 1970
   data: ''
   i: 854
+  line: 17
   mode: ''
   opset: PLA
+  p_cycle: 113
   pc: 52751
 - A: 105
   P: 37
   SP: 127
   X: 126
   Y: 1
+  c_cycle: 1974
   data: ''
   i: 855
+  line: 17
   mode: ''
   opset: CMP
+  p_cycle: 125
   pc: 52752
 - A: 105
   P: 39
   SP: 127
   X: 126
   Y: 1
+  c_cycle: 1976
   data: ''
   i: 856
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 131
   pc: 52754
 - A: 105
   P: 39
   SP: 127
   X: 126
   Y: 1
+  c_cycle: 1978
   data: ''
   i: 857
+  line: 17
   mode: ''
   opset: PLA
+  p_cycle: 137
   pc: 52756
 - A: 51
   P: 37
   SP: 128
   X: 126
   Y: 1
+  c_cycle: 1982
   data: ''
   i: 858
+  line: 17
   mode: ''
   opset: CMP
+  p_cycle: 149
   pc: 52757
 - A: 51
   P: 39
   SP: 128
   X: 126
   Y: 1
+  c_cycle: 1984
   data: ''
   i: 859
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 155
   pc: 52759
 - A: 51
   P: 39
   SP: 128
   X: 126
   Y: 1
+  c_cycle: 1986
   data: ''
   i: 860
+  line: 17
   mode: ''
   opset: TSX
+  p_cycle: 161
   pc: 52761
 - A: 51
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1988
   data: ''
   i: 861
+  line: 17
   mode: ''
   opset: CPX
+  p_cycle: 167
   pc: 52762
 - A: 51
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1990
   data: ''
   i: 862
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 173
   pc: 52764
 - A: 51
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1992
   data: ''
   i: 863
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 179
   pc: 52766
 - A: 51
   P: 37
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1996
   data: ''
   i: 864
+  line: 17
   mode: ''
   opset: CMP
+  p_cycle: 191
   pc: 52769
 - A: 51
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 1998
   data: ''
   i: 865
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 197
   pc: 52771
 - A: 51
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2000
   data: ''
   i: 866
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 203
   pc: 52773
 - A: 105
   P: 37
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2004
   data: ''
   i: 867
+  line: 17
   mode: ''
   opset: CMP
+  p_cycle: 215
   pc: 52776
 - A: 105
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2006
   data: ''
   i: 868
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 221
   pc: 52778
 - A: 105
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2008
   data: ''
   i: 869
+  line: 17
   mode: ''
   opset: JMP
+  p_cycle: 227
   pc: 52780
 - A: 105
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2011
   data: ''
   i: 870
+  line: 17
   mode: ''
   opset: NOP
+  p_cycle: 236
   pc: 52787
 - A: 105
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2013
   data: ''
   i: 871
+  line: 17
   mode: ''
   opset: LDX
+  p_cycle: 242
   pc: 52788
 - A: 105
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2015
   data: ''
   i: 872
+  line: 17
   mode: ''
   opset: TXS
+  p_cycle: 248
   pc: 52790
 - A: 105
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2017
   data: ''
   i: 873
+  line: 17
   mode: ''
   opset: JSR
+  p_cycle: 254
   pc: 52791
 - A: 105
   P: 165
   SP: 126
   X: 128
   Y: 1
+  c_cycle: 2023
   data: ''
   i: 874
+  line: 17
   mode: ''
   opset: TSX
+  p_cycle: 272
   pc: 52797
 - A: 105
   P: 37
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 2025
   data: ''
   i: 875
+  line: 17
   mode: ''
   opset: CPX
+  p_cycle: 278
   pc: 52798
 - A: 105
   P: 39
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 2027
   data: ''
   i: 876
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 284
   pc: 52800
 - A: 105
   P: 39
   SP: 126
   X: 126
   Y: 1
+  c_cycle: 2029
   data: ''
   i: 877
+  line: 17
   mode: ''
   opset: PLA
+  p_cycle: 290
   pc: 52802
 - A: 57
   P: 37
   SP: 127
   X: 126
   Y: 1
+  c_cycle: 2033
   data: ''
   i: 878
+  line: 17
   mode: ''
   opset: PLA
+  p_cycle: 302
   pc: 52803
 - A: 206
   P: 165
   SP: 128
   X: 126
   Y: 1
+  c_cycle: 2037
   data: ''
   i: 879
+  line: 17
   mode: ''
   opset: TSX
+  p_cycle: 314
   pc: 52804
 - A: 206
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2039
   data: ''
   i: 880
+  line: 17
   mode: ''
   opset: CPX
+  p_cycle: 320
   pc: 52805
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2041
   data: ''
   i: 881
+  line: 17
   mode: ''
   opset: BNE
+  p_cycle: 326
   pc: 52807
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2043
   data: ''
   i: 882
+  line: 17
   mode: ''
   opset: LDA
+  p_cycle: 332
   pc: 52809
 - A: 0
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2045
   data: ''
   i: 883
+  line: 17
   mode: ''
   opset: JSR
+  p_cycle: 338
   pc: 52811
 - A: 0
   P: 39
   SP: 126
   X: 128
   Y: 1
+  c_cycle: 2051
   data: ''
   i: 884
+  line: 18
   mode: ''
   opset: PLA
+  p_cycle: 15
   pc: 52814
 - A: 77
   P: 37
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 2055
   data: ''
   i: 885
+  line: 18
   mode: ''
   opset: CMP
+  p_cycle: 27
   pc: 52815
 - A: 77
   P: 39
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 2057
   data: ''
   i: 886
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 33
   pc: 52817
 - A: 77
   P: 39
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 2059
   data: ''
   i: 887
+  line: 18
   mode: ''
   opset: PLA
+  p_cycle: 39
   pc: 52819
 - A: 206
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2063
   data: ''
   i: 888
+  line: 18
   mode: ''
   opset: CMP
+  p_cycle: 51
   pc: 52820
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2065
   data: ''
   i: 889
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 57
   pc: 52822
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2067
   data: ''
   i: 890
+  line: 18
   mode: ''
   opset: JMP
+  p_cycle: 63
   pc: 52824
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2070
   data: ''
   i: 891
+  line: 18
   mode: ''
   opset: NOP
+  p_cycle: 72
   pc: 52831
 - A: 206
   P: 39
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2072
   data: ''
   i: 892
+  line: 18
   mode: ''
   opset: LDA
+  p_cycle: 78
   pc: 52832
 - A: 206
   P: 165
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2074
   data: ''
   i: 893
+  line: 18
   mode: ''
   opset: PHA
+  p_cycle: 84
   pc: 52834
 - A: 206
   P: 165
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 2077
   data: ''
   i: 894
+  line: 18
   mode: ''
   opset: LDA
+  p_cycle: 93
   pc: 52835
 - A: 102
   P: 37
   SP: 127
   X: 128
   Y: 1
+  c_cycle: 2079
   data: ''
   i: 895
+  line: 18
   mode: ''
   opset: PHA
+  p_cycle: 99
   pc: 52837
 - A: 102
   P: 37
   SP: 126
   X: 128
   Y: 1
+  c_cycle: 2082
   data: ''
   i: 896
+  line: 18
   mode: ''
   opset: RTS
+  p_cycle: 108
   pc: 52838
 - A: 102
   P: 37
   SP: 128
   X: 128
   Y: 1
+  c_cycle: 2088
   data: ''
   i: 897
+  line: 18
   mode: ''
   opset: LDX
+  p_cycle: 126
   pc: 52839
 - A: 102
   P: 37
   SP: 128
   X: 119
   Y: 1
+  c_cycle: 2090
   data: ''
   i: 898
+  line: 18
   mode: ''
   opset: LDY
+  p_cycle: 132
   pc: 52841
 - A: 102
   P: 37
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2092
   data: ''
   i: 899
+  line: 18
   mode: ''
   opset: CLC
+  p_cycle: 138
   pc: 52843
 - A: 102
   P: 36
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2094
   data: ''
   i: 900
+  line: 18
   mode: ''
   opset: BIT
+  p_cycle: 144
   pc: 52844
 - A: 102
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2097
   data: ''
   i: 901
+  line: 18
   mode: ''
   opset: LDA
+  p_cycle: 153
   pc: 52846
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2099
   data: ''
   i: 902
+  line: 18
   mode: ''
   opset: JSR
+  p_cycle: 159
   pc: 52848
 - A: 131
   P: 228
   SP: 126
   X: 119
   Y: 105
+  c_cycle: 2105
   data: ''
   i: 903
+  line: 18
   mode: ''
   opset: RTS
+  p_cycle: 177
   pc: 52838
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2111
   data: ''
   i: 904
+  line: 18
   mode: ''
   opset: BEQ
+  p_cycle: 195
   pc: 52851
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2113
   data: ''
   i: 905
+  line: 18
   mode: ''
   opset: BPL
+  p_cycle: 201
   pc: 52853
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2115
   data: ''
   i: 906
+  line: 18
   mode: ''
   opset: BCS
+  p_cycle: 207
   pc: 52855
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2117
   data: ''
   i: 907
+  line: 18
   mode: ''
   opset: BVC
+  p_cycle: 213
   pc: 52857
 - A: 131
   P: 228
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2119
   data: ''
   i: 908
+  line: 18
   mode: ''
   opset: CMP
+  p_cycle: 219
   pc: 52859
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2121
   data: ''
   i: 909
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 225
   pc: 52861
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2123
   data: ''
   i: 910
+  line: 18
   mode: ''
   opset: CPY
+  p_cycle: 231
   pc: 52863
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2125
   data: ''
   i: 911
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 237
   pc: 52865
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2127
   data: ''
   i: 912
+  line: 18
   mode: ''
   opset: CPX
+  p_cycle: 243
   pc: 52867
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2129
   data: ''
   i: 913
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 249
   pc: 52869
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2131
   data: ''
   i: 914
+  line: 18
   mode: ''
   opset: SEC
+  p_cycle: 255
   pc: 52871
 - A: 131
   P: 103
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2133
   data: ''
   i: 915
+  line: 18
   mode: ''
   opset: CLV
+  p_cycle: 261
   pc: 52872
 - A: 131
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2135
   data: ''
   i: 916
+  line: 18
   mode: ''
   opset: LDA
+  p_cycle: 267
   pc: 52873
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2137
   data: ''
   i: 917
+  line: 18
   mode: ''
   opset: JSR
+  p_cycle: 273
   pc: 52875
 - A: 0
   P: 39
   SP: 126
   X: 119
   Y: 105
+  c_cycle: 2143
   data: ''
   i: 918
+  line: 18
   mode: ''
   opset: RTS
+  p_cycle: 291
   pc: 52838
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2149
   data: ''
   i: 919
+  line: 18
   mode: ''
   opset: BNE
+  p_cycle: 309
   pc: 52878
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2151
   data: ''
   i: 920
+  line: 18
   mode: ''
   opset: BMI
+  p_cycle: 315
   pc: 52880
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2153
   data: ''
   i: 921
+  line: 18
   mode: ''
   opset: BCC
+  p_cycle: 321
   pc: 52882
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2155
   data: ''
   i: 922
+  line: 18
   mode: ''
   opset: BVS
+  p_cycle: 327
   pc: 52884
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2157
   data: ''
   i: 923
+  line: 18
   mode: ''
   opset: JMP
+  p_cycle: 333
   pc: 52886
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2160
   data: ''
   i: 924
+  line: 19
   mode: ''
   opset: NOP
+  p_cycle: 1
   pc: 52893
 - A: 0
   P: 39
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2162
   data: ''
   i: 925
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 7
   pc: 52894
 - A: 206
   P: 165
   SP: 128
   X: 119
   Y: 105
+  c_cycle: 2164
   data: ''
   i: 926
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 13
   pc: 52896
 - A: 206
   P: 165
   SP: 127
   X: 119
   Y: 105
+  c_cycle: 2167
   data: ''
   i: 927
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 22
   pc: 52897
 - A: 174
   P: 165
   SP: 127
   X: 119
   Y: 105
+  c_cycle: 2169
   data: ''
   i: 928
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 28
   pc: 52899
 - A: 174
   P: 165
   SP: 126
   X: 119
   Y: 105
+  c_cycle: 2172
   data: ''
   i: 929
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 37
   pc: 52900
 - A: 101
   P: 37
   SP: 126
   X: 119
   Y: 105
+  c_cycle: 2174
   data: ''
   i: 930
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 43
   pc: 52902
 - A: 101
   P: 37
   SP: 125
   X: 119
   Y: 105
+  c_cycle: 2177
   data: ''
   i: 931
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 52
   pc: 52903
 - A: 85
   P: 37
   SP: 125
   X: 119
   Y: 105
+  c_cycle: 2179
   data: ''
   i: 932
+  line: 19
   mode: ''
   opset: LDY
+  p_cycle: 58
   pc: 52905
 - A: 85
   P: 165
   SP: 125
   X: 119
   Y: 136
+  c_cycle: 2181
   data: ''
   i: 933
+  line: 19
   mode: ''
   opset: LDX
+  p_cycle: 64
   pc: 52907
 - A: 85
   P: 165
   SP: 125
   X: 153
   Y: 136
+  c_cycle: 2183
   data: ''
   i: 934
+  line: 19
   mode: ''
   opset: RTI
+  p_cycle: 70
   pc: 52909
 - A: 85
   P: 101
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2189
   data: ''
   i: 935
+  line: 19
   mode: ''
   opset: BMI
+  p_cycle: 88
   pc: 52910
 - A: 85
   P: 101
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2191
   data: ''
   i: 936
+  line: 19
   mode: ''
   opset: BVC
+  p_cycle: 94
   pc: 52912
 - A: 85
   P: 101
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2193
   data: ''
   i: 937
+  line: 19
   mode: ''
   opset: BEQ
+  p_cycle: 100
   pc: 52914
 - A: 85
   P: 101
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2195
   data: ''
   i: 938
+  line: 19
   mode: ''
   opset: BCC
+  p_cycle: 106
   pc: 52916
 - A: 85
   P: 101
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2197
   data: ''
   i: 939
+  line: 19
   mode: ''
   opset: CMP
+  p_cycle: 112
   pc: 52918
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2199
   data: ''
   i: 940
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 118
   pc: 52920
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2201
   data: ''
   i: 941
+  line: 19
   mode: ''
   opset: CPY
+  p_cycle: 124
   pc: 52922
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2203
   data: ''
   i: 942
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 130
   pc: 52924
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2205
   data: ''
   i: 943
+  line: 19
   mode: ''
   opset: CPX
+  p_cycle: 136
   pc: 52926
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2207
   data: ''
   i: 944
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 142
   pc: 52928
 - A: 85
   P: 103
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2209
   data: ''
   i: 945
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 148
   pc: 52930
 - A: 206
   P: 229
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2211
   data: ''
   i: 946
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 154
   pc: 52932
 - A: 206
   P: 229
   SP: 127
   X: 153
   Y: 136
+  c_cycle: 2214
   data: ''
   i: 947
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 163
   pc: 52933
 - A: 206
   P: 229
   SP: 127
   X: 153
   Y: 136
+  c_cycle: 2216
   data: ''
   i: 948
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 169
   pc: 52935
 - A: 206
   P: 229
   SP: 126
   X: 153
   Y: 136
+  c_cycle: 2219
   data: ''
   i: 949
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 178
   pc: 52936
 - A: 135
   P: 229
   SP: 126
   X: 153
   Y: 136
+  c_cycle: 2221
   data: ''
   i: 950
+  line: 19
   mode: ''
   opset: PHA
+  p_cycle: 184
   pc: 52938
 - A: 135
   P: 229
   SP: 125
   X: 153
   Y: 136
+  c_cycle: 2224
   data: ''
   i: 951
+  line: 19
   mode: ''
   opset: LDA
+  p_cycle: 193
   pc: 52939
 - A: 85
   P: 101
   SP: 125
   X: 153
   Y: 136
+  c_cycle: 2226
   data: ''
   i: 952
+  line: 19
   mode: ''
   opset: RTI
+  p_cycle: 199
   pc: 52941
 - A: 85
   P: 167
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2232
   data: ''
   i: 953
+  line: 19
   mode: ''
   opset: BPL
+  p_cycle: 217
   pc: 52942
 - A: 85
   P: 167
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2234
   data: ''
   i: 954
+  line: 19
   mode: ''
   opset: BVS
+  p_cycle: 223
   pc: 52944
 - A: 85
   P: 167
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2236
   data: ''
   i: 955
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 229
   pc: 52946
 - A: 85
   P: 167
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2238
   data: ''
   i: 956
+  line: 19
   mode: ''
   opset: BCC
+  p_cycle: 235
   pc: 52948
 - A: 85
   P: 167
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2240
   data: ''
   i: 957
+  line: 19
   mode: ''
   opset: CMP
+  p_cycle: 241
   pc: 52950
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2242
   data: ''
   i: 958
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 247
   pc: 52952
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2244
   data: ''
   i: 959
+  line: 19
   mode: ''
   opset: CPY
+  p_cycle: 253
   pc: 52954
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2246
   data: ''
   i: 960
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 259
   pc: 52956
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2248
   data: ''
   i: 961
+  line: 19
   mode: ''
   opset: CPX
+  p_cycle: 265
   pc: 52958
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2250
   data: ''
   i: 962
+  line: 19
   mode: ''
   opset: BNE
+  p_cycle: 271
   pc: 52960
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2252
   data: ''
   i: 963
+  line: 19
   mode: ''
   opset: JMP
+  p_cycle: 277
   pc: 52962
 - A: 85
   P: 39
   SP: 128
   X: 153
   Y: 136
+  c_cycle: 2255
   data: ''
   i: 964
+  line: 19
   mode: ''
   opset: LDX
+  p_cycle: 286
   pc: 52969
 - A: 85
   P: 165
   SP: 128
   X: 251
   Y: 136
+  c_cycle: 2259
   data: ''
   i: 965
+  line: 19
   mode: ''
   opset: TXS
+  p_cycle: 298
   pc: 52972
 - A: 85
   P: 165
   SP: 251
   X: 251
   Y: 136
+  c_cycle: 2261
   data: ''
   i: 966
+  line: 19
   mode: ''
   opset: RTS
+  p_cycle: 304
   pc: 52973
 - A: 85
   P: 165
   SP: 253
   X: 251
   Y: 136
+  c_cycle: 2267
   data: ''
   i: 967
+  line: 19
   mode: ''
   opset: JSR
+  p_cycle: 322
   pc: 50700
 - A: 85
   P: 165
   SP: 251
   X: 251
   Y: 136
+  c_cycle: 2273
   data: ''
   i: 968
+  line: 19
   mode: ''
   opset: LDX
+  p_cycle: 340
   pc: 52974
 - A: 85
   P: 37
   SP: 251
   X: 85
   Y: 136
+  c_cycle: 2275
   data: ''
   i: 969
+  line: 20
   mode: ''
   opset: LDY
+  p_cycle: 5
   pc: 52976
 - A: 85
   P: 37
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2277
   data: ''
   i: 970
+  line: 20
   mode: ''
   opset: LDA
+  p_cycle: 11
   pc: 52978
 - A: 255
   P: 165
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2279
   data: ''
   i: 971
+  line: 20
   mode: ''
   opset: STA
+  p_cycle: 17
   pc: 52980
 - A: 255
   P: 165
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2282
   data: ''
   i: 972
+  line: 20
   mode: ''
   opset: NOP
+  p_cycle: 26
   pc: 52982
 - A: 255
   P: 165
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2284
   data: ''
   i: 973
+  line: 20
   mode: ''
   opset: BIT
+  p_cycle: 32
   pc: 52983
 - A: 255
   P: 229
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2287
   data: ''
   i: 974
+  line: 20
   mode: ''
   opset: SEC
+  p_cycle: 41
   pc: 52985
 - A: 255
   P: 229
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2289
   data: ''
   i: 975
+  line: 20
   mode: ''
   opset: LDA
+  p_cycle: 47
   pc: 52986
 - A: 1
   P: 101
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2291
   data: ''
   i: 976
+  line: 20
   mode: ''
   opset: LSR
+  p_cycle: 53
   pc: 52988
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2293
   data: ''
   i: 977
+  line: 20
   mode: ''
   opset: BCC
+  p_cycle: 59
   pc: 52989
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2295
   data: ''
   i: 978
+  line: 20
   mode: ''
   opset: BNE
+  p_cycle: 65
   pc: 52991
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2297
   data: ''
   i: 979
+  line: 20
   mode: ''
   opset: BMI
+  p_cycle: 71
   pc: 52993
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2299
   data: ''
   i: 980
+  line: 20
   mode: ''
   opset: BVC
+  p_cycle: 77
   pc: 52995
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2301
   data: ''
   i: 981
+  line: 20
   mode: ''
   opset: CMP
+  p_cycle: 83
   pc: 52997
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2303
   data: ''
   i: 982
+  line: 20
   mode: ''
   opset: BNE
+  p_cycle: 89
   pc: 52999
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2305
   data: ''
   i: 983
+  line: 20
   mode: ''
   opset: CLV
+  p_cycle: 95
   pc: 53001
 - A: 0
   P: 39
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2307
   data: ''
   i: 984
+  line: 20
   mode: ''
   opset: LDA
+  p_cycle: 101
   pc: 53002
 - A: 170
   P: 165
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2309
   data: ''
   i: 985
+  line: 20
   mode: ''
   opset: LSR
+  p_cycle: 107
   pc: 53004
 - A: 85
   P: 36
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2311
   data: ''
   i: 986
+  line: 20
   mode: ''
   opset: BCS
+  p_cycle: 113
   pc: 53005
 - A: 85
   P: 36
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2313
   data: ''
   i: 987
+  line: 20
   mode: ''
   opset: BEQ
+  p_cycle: 119
   pc: 53007
 - A: 85
   P: 36
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2315
   data: ''
   i: 988
+  line: 20
   mode: ''
   opset: BMI
+  p_cycle: 125
   pc: 53009
 - A: 85
   P: 36
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2317
   data: ''
   i: 989
+  line: 20
   mode: ''
   opset: BVS
+  p_cycle: 131
   pc: 53011
 - A: 85
   P: 36
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2319
   data: ''
   i: 990
+  line: 20
   mode: ''
   opset: CMP
+  p_cycle: 137
   pc: 53013
 - A: 85
   P: 39
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2321
   data: ''
   i: 991
+  line: 20
   mode: ''
   opset: BNE
+  p_cycle: 143
   pc: 53015
 - A: 85
   P: 39
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2323
   data: ''
   i: 992
+  line: 20
   mode: ''
   opset: JMP
+  p_cycle: 149
   pc: 53017
 - A: 85
   P: 39
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2326
   data: ''
   i: 993
+  line: 20
   mode: ''
   opset: NOP
+  p_cycle: 158
   pc: 53024
 - A: 85
   P: 39
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2328
   data: ''
   i: 994
+  line: 20
   mode: ''
   opset: BIT
+  p_cycle: 164
   pc: 53025
 - A: 85
   P: 229
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2331
   data: ''
   i: 995
+  line: 20
   mode: ''
   opset: SEC
+  p_cycle: 173
   pc: 53027
 - A: 85
   P: 229
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2333
   data: ''
   i: 996
+  line: 20
   mode: ''
   opset: LDA
+  p_cycle: 179
   pc: 53028
 - A: 128
   P: 229
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2335
   data: ''
   i: 997
+  line: 20
   mode: ''
   opset: ASL
+  p_cycle: 185
   pc: 53030
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2337
   data: ''
   i: 998
+  line: 20
   mode: ''
   opset: BCC
+  p_cycle: 191
   pc: 53031
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2339
   data: ''
   i: 999
+  line: 20
   mode: ''
   opset: BNE
+  p_cycle: 197
   pc: 53033
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2341
   data: ''
   i: 1000
+  line: 20
   mode: ''
   opset: BMI
+  p_cycle: 203
   pc: 53035
 - A: 0
   P: 103
   SP: 251
   X: 85
   Y: 105
+  c_cycle: 2343
   data: ''
   i: 1001
+  line: 20
   mode: ''
   opset: BVC
+  p_cycle: 209
   pc: 53037

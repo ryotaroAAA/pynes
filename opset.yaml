@@ -587,7 +587,7 @@
   mode: IMPL
   op: TYA
 153:
-  cycle: 4
+  cycle: 5
   mode: ABS_Y
   op: STA
 154:

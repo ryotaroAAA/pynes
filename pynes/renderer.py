@@ -84,13 +84,14 @@ class Renderer:
         is_low_priority =  bool(sprite.attr & 0x20)
         palette_id = sprite.attr & 0x03
 
+        # print(sprite)
         for i in range(0, 8):
             for j in range(0, 8):
-                x = sprite.x + (7 - j) if is_horizontal_reverse else j
-                y = sprite.y + (7 - i) if is_vertical_reverse else i
+                x = sprite.x + ((7 - j) if is_horizontal_reverse else j)
+                y = sprite.y + ((7 - i) if is_vertical_reverse else i)
                 if is_low_priority and self.should_pixel_hide(x, y):
                     continue
 
-                if sprite.data[i][j]:
+                if sprite.data[i][j] > 0:
                     color_id = palette[palette_id * 4 + sprite.data[i][j] + 0x10]
-                    self.data = COLORS[color_id]
+                    self.data[y][x] = COLORS[color_id]

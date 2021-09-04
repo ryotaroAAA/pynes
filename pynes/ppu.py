@@ -1,3 +1,5 @@
+from logging import raiseExceptions
+from numpy import int8
 from pynes import *
 from pynes.ram import *
 logger = PynesLogger.get_logger(__name__)
@@ -59,48 +61,6 @@ H_SIZE_WITH_VBLANK = 262
 CYCLE_PER_LINE = 341
 
 @dataclass
-class Reg:
-    PPUCTRL: bool = False
-    PPUMASK: bool = False
-    PPUSTATUS: bool = True
-    OAMADDR: bool = False
-    OAMDATA: bool = False
-    PPUSCROLL: bool = True
-    PPUADDR: bool = False
-    PPUDATA: bool = False
-
-    def reset(self):
-        self.PPUCTRL = False
-        self.PPUMASK = False
-        self.PPUSTATUS = True
-        self.OAMADDR = False
-        self.OAMDATA = False
-        self.PPUSCROLL = True
-        self.PPUADDR = False
-        self.PPUDATA = False
-
-    def get_val(self):
-        p = (1 << 0) if self.PPUCTRL else 0
-        p += (1 << 1) if self.PPUMASK else 0
-        p += (1 << 2) if self.PPUSTATUS else 0
-        p += (1 << 3) if self.OAMADDR else 0
-        p += (1 << 4) if self.OAMDATA else 0
-        p += (1 << 5) if self.PPUSCROLL else 0
-        p += (1 << 6) if self.PPUADDR else 0
-        p += (1 << 7) if self.PPUDATA else 0
-        return p
-    
-    def set_val(self, p):
-        self.PPUCTRL = p & (1 << 0) > 0
-        self.PPUMASK = p & (1 << 1) > 0
-        self.PPUSTATUS = p & (1 << 2) > 0
-        self.OAMADDR = p & (1 << 3) > 0
-        self.OAMDATA = p & (1 << 4) > 0
-        self.PPUSCROLL = p & (1 << 5) > 0
-        self.PPUADDR = p & (1 << 6) > 0
-        self.PPUDATA = p & (1 << 7) > 0
-
-@dataclass
 class Sprite:
     data: list[list[int]]
     x: int = 0
@@ -143,22 +103,34 @@ class Palette(Ram):
 
     def write(self, addr, data):
         self.data[self.get_pallette_addr(addr)] = data
-    
+
     def is_background_mirror(self, addr):
         return (addr == 0x04 or
             addr == 0x08 or
             addr == 0x0c)
-    
+
     def is_sprite_mirror(self, addr):
         return (addr == 0x10 or
             addr == 0x14 or
             addr == 0x18 or
             addr == 0x1c)
-    
+
     def get_palette_addr(self, addr):
         mirror_downed = addr % 0x20
         return ((mirror_downed - 0x10) if
             self.is_sprite_mirror(mirror_downed) else mirror_downed)
+
+class SpriteRam(Ram):
+    def __init__(self, size):
+        super().__init__(size)
+        self.valid_addr = set()
+
+    def read(self, addr):
+        return self.data[addr]
+
+    def write(self, addr, data):
+        self.data[addr] = data
+        self.valid_addr.add(addr)
 
 class Ppu:
     def __init__(self, cas, vram, interrupts):
@@ -166,15 +138,19 @@ class Ppu:
         self.cas = cas
         self.interrupts = interrupts
         
-        self.reg = Reg()
-        self.sprites = [Sprite()] * 64
+        # control register 1
+        self.creg1 = 0
+        # control register 2
+        self.creg2 = 0
+        # status register 
+        self.sreg = 0
+        self.sprites = []
         self.background = []
         self.palette = Palette(PALETTE_SIZE)
         self.char_ram = Ram(cas.char_size)
         for addr, data in enumerate(self.cas.char_rom):
             self.char_ram.data[addr] = data
-        self.sprite_ram = Ram(SPRITE_RAM_SIZE)
-        # hexdump(self.char_ram.data)
+        self.sprite_ram = SpriteRam(SPRITE_RAM_SIZE)
 
         self.cycle = 0
         self.line = 0
@@ -189,51 +165,56 @@ class Ppu:
 
     # Control Register 1, PPU memory increment
     def get_vram_offset(self):
-        return 32 if (self.reg.PPUCTRL & 0x04) else 1
+        return 32 if (self.creg1 & 0x04) else 1
 
     # Control Register 1, Main Screen assignment by name table
     def get_name_table_id(self):
-        return (self.reg.PPUCTRL & 0x03)
+        return (self.creg1 & 0x03)
 
     # Control Register 1, Assert NMI when VBlank
     def has_vblank_irq_enabled(self):
-        return bool(self.reg.PPUCTRL & 0x80)
+        return bool(self.creg1 & 0x80)
 
     # Control Register 1, get background pattern table
     def get_background_table_offset(self):
-        return 0x1000 if (self.reg.PPUCTRL & 0x10) else 0x0000
+        return 0x1000 if (self.creg1 & 0x10) else 0x0000
+
+    # Control Register 1, get sprite pattern table
+    def get_sprite_table_offset(self):
+        return 0x1000 if (self.creg1 & 0x08) else 0x0000
 
     # Control Register 2, Enable sprite
     def get_is_background_enable(self):
-        return bool(self.reg.PPUMASK & 0x08)
+        return bool(self.creg2 & 0x08)
 
     # Control Register 2, Enable sprite
     def get_is_sprite_enable(self):
-        return bool(self.reg.PPUMASK & 0x10)
+        return bool(self.creg2 & 0x10)
 
     # PPU status register
     def set_sprite_hit(self):
-        self.reg.PPUMASK |= 0x40
+        self.sreg |= 0x40
 
     # PPU status register
     def clear_sprite_hit(self):
-        self.reg.PPUMASK &= 0xBF
+        self.sreg &= 0xBF
 
     # PPU status register
     def set_vblank(self):
-        self.reg.PPUSTATUS |= 0x80
+        # print("set_vlank")
+        self.sreg |= 0x80
 
     # PPU status register
     def get_is_vblank(self):
-        return bool(self.reg.PPUSTATUS & 0x80)
+        return bool(self.sreg & 0x80)
 
     # PPU status register
     def clear_vblank(self):
-        self.reg.PPUSTATUS &= 0x7F
+        self.sreg &= 0x7F
 
     def has_sprite_hit(self):
         # main screen y
-        y = self.sprite_ram.data[0x00]
+        y = self.sprite_ram.read(0x00)
         return ((y == self.line) and
             self.get_is_background_enable() and
             self.get_is_sprite_enable())
@@ -254,7 +235,9 @@ class Ppu:
     def get_sprite_id(self, x, y, offset):
         tile_num = y * 32 + x
         sprite_addr = tile_num + offset
-        return self.vram.data[sprite_addr]
+        # print("",x, y, tile_num, sprite_addr)
+        data = self.vram.data[sprite_addr]
+        return data
 
     def get_attribute(self, x, y, offset):
         addr = int(x / 4) + int(y / 4) * 8 + 0x03C0 + offset
@@ -300,14 +283,15 @@ class Ppu:
         '''
         if addr == 0x0002:
             # PPUSTATUS
+            status = self.sreg
             self.is_horizontal_scroll = True
             self.clear_vblank()
-            return self.reg.PPUSTATUS
+            # print(status)
+            return status
         elif addr == 0x0004:
             # OAMADDR
             # TODO?
-            # dprint("TODO!")
-            return self.sprite_ram.data[self.sprite_ram_addr]
+            return self.sprite_ram.read(self.sprite_ram_addr)
         elif addr == 0x0007:
             # PPUDATA
             return self.vram_read()
@@ -316,8 +300,8 @@ class Ppu:
         self.sprite_ram_addr = data
 
     def write_sprite_ram_data(self, data):
-        # dprint("addr:%d %p, data %d", self.sprite_ram_addr, self.sprite_ram_addr, data)    
-        self.sprite_ram.data[self.sprite_ram_addr] = data
+        # print("addr:", self.sprite_ram_addr, "data:", hex(data))    
+        self.sprite_ram.write(self.sprite_ram_addr, data)
         self.sprite_ram_addr += 1
 
     def write_scroll_data(self, data):
@@ -343,6 +327,7 @@ class Ppu:
         if self.vram_addr >= 0x2000:
             if (self.vram_addr >= 0x3F00 and self.vram_addr < 0x4000):
                 # pallette
+                # print(f"[palette write] addr:{hex(self.vram_addr)}, {hex(data)}")
                 self.palette.data[self.vram_addr - 0x3F00] = data
             else:
                 # name table, attr table
@@ -350,30 +335,41 @@ class Ppu:
                 self.vram.data[self.calc_vram_addr()] = data
         else:
             # pattern table from charactor rom
+            # print(f"[pattern write] addr:{hex(self.vram_addr)}, {hex(data)}")
             self.char_ram.data[self.vram_addr] = data
         self.vram_addr += self.get_vram_offset()
 
     def write(self, addr, data):
-        if addr == 0x0003:
+        if addr == 0x0000:
+            # logger.info(f"addr:{addr} data:{data}")
+            self.creg1 = data
+        elif addr == 0x0001:
+            # logger.info(f"addr:{addr} data:{data}")
+            self.creg2 = data
+        elif addr == 0x0003:
             # set sprite ram write addr
             # dprint("addr:%d, %p", addr)
+            # logger.info(f"[sprite addr] addr:{addr} data:{data}")
             self.write_sprite_ram_addr(data)
         elif addr == 0x0004:
             # sprite ram write
             # dprint("data:%d, %p", addr)
+            # logger.info(f"[sprite data] addr:{addr} data:{data}")
             self.write_sprite_ram_data(data)
         elif addr == 0x0005:
             # set scroll setting
             self.write_scroll_data(data)
         elif addr == 0x0006:
             # set vram write addr (first: high 8bit, second: low 8bit)
+            # logger.info(f"[vram addr write] addr:{addr} data:{hex(data)}")
             self.write_vram_addr(data)
         elif addr == 0x0007:
             # sprite ram write
+            # logger.info(f"[sprite ram write] addr:{addr} data:{hex(data)}")
             self.write_vram_data(data)
         else:
-            print(addr, data)
-            # raise NotImplementedError
+            # logger.info(f"[NotImplement] addr:{addr} data:{data}")
+            raise NotImplementedError
 
     # vector<vector<> 
     def build_sprite_data(self, sprite_id, offset):
@@ -412,16 +408,19 @@ class Ppu:
 
     def build_sprites(self):
         # see https:#wiki.nesdev.com/w/index.php/PPU_OAM
-        offset = 0x1000 if (self.reg.PPUCTRL & 0x08) else 0x0000
-        for i in range(0, SPRITE_RAM_SIZE, 4):
-            self.sprites[int(i/4)].y = self.sprite_ram.data[i] - 8
-            sprite_id = self.sprite_ram.data[i + 1]
-            # dprint("[%d] sprite_id : %d", i, sprite_id)
-            self.sprites[int(i/4)].attr = self.sprite_ram.data[i + 2]
-            self.sprites[int(i/4)].x = self.sprite_ram.data[i + 3]
-            self.sprites[int(i/4)].data = \
-                self.build_sprite_data(sprite_id, offset)
+        for i in range(0, self.sprite_ram_addr, 4):
+            sprite = Sprite()
+            sprite.y = self.sprite_ram.read(i)
+            sprite_id = self.sprite_ram.read(i + 1)
+            sprite.attr = self.sprite_ram.read(i + 2)
+            sprite.x = self.sprite_ram.read(i + 3)
+            sprite.data = \
+                self.build_sprite_data(sprite_id, self.get_sprite_table_offset())
+            # print(f"[{i}][{sprite_id}](x, y) = ({sprite.x}, {sprite.y})\n"
+            #     f"{sprite.data}")
+            self.sprites.append(sprite)
 
+    # the element of background
     def build_tile(self, x, y, offset):
         tile = Tile()
         block_id = self.get_block_id(x, y)
@@ -450,12 +449,12 @@ class Ppu:
             self.background.append(tile)
 
     def run(self, cycle):
-        self.cycle += cycle
+        self.cycle += 3 * cycle
         
         if self.line == 0:
             self.background.clear()
-            self.build_sprites()
-        if self.cycle > CYCLE_PER_LINE:
+            self.sprites.clear()
+        if self.cycle >= CYCLE_PER_LINE:
             self.cycle -= CYCLE_PER_LINE
             self.line += 1
 
@@ -468,11 +467,13 @@ class Ppu:
             
             if self.line == H_SIZE + 1:
                 self.set_vblank()
+                # raise Exception
                 self.interrupts.deassert_nmi()
                 if self.has_vblank_irq_enabled():
                     self.interrupts.deassert_nmi()
             
             if self.line == H_SIZE_WITH_VBLANK:
+                self.build_sprites()
                 self.clear_vblank()
                 self.clear_sprite_hit()
                 self.line = 0

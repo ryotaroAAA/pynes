@@ -24,8 +24,5 @@ class Cassette:
         self.prog_rom = content[prog_rom_s:prog_rom_e]
         self.char_rom = content[char_rom_s:char_rom_e]
 
-    def print_prog_rom(self, addr, r = 100):
-        hexdump(self.prog_rom[:])
-
-    def print_char_rom(self, addr, r = 100):
-        hexdump(self.char_rom[addr - r : addr + r])
+        # hexdump(self.prog_rom)
+        # hexdump(self.char_rom)
