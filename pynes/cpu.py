@@ -267,6 +267,7 @@ class PadRegister:
         self.io_reg = 0
 
     def read(self):
+        # print(self)
         self.count += 1
         if self.count == 1:
             return (1 if self.A else 0)
@@ -446,16 +447,6 @@ class Cpu:
         # self.comp_stat()
         self.op_index += 1
 
-    def print_stat(self, op):
-        if op["data"] == "":
-            op["data"] = 0x00
-        print(
-            f"{op['i']:4d} {op['pc']:04X} {op['opset']:5s} {op['mode']:7s} "
-            f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
-            f"P:{op['P']:02X} SP:{op['SP']:04X} "
-            f"PPU:{op['line']:3d},{op['p_cycle']:3d} CYC:{op['c_cycle']}"
-        )
-
     def dump_stat(self, opset, oprand, pc):
         op = {
             "i" : self.op_index + 1,
@@ -472,7 +463,7 @@ class Cpu:
             "c_cycle" : self.cycle,
             "p_cycle" : self.ppu.cycle
         }
-        # self.print_stat(op)
+        self.print_stat(op)
         self.dump.append(op)
     
     def comp_stat(self):
@@ -926,6 +917,7 @@ class Cpu:
     def check_NMI(self):
         if not self.inter.get_nmi_assert():
             return
+        self.inter.deassert_nmi()
         self.reg.P.BREAK = False
         self.push_PC()
         self.push_reg_status()
@@ -944,6 +936,17 @@ class Cpu:
         self.reg.P.INTERRUPT = True
         self.reg.PC = self.wread(0xFFFE)
 
+    def print_stat(self, op):
+        return
+        if op["data"] == "":
+            op["data"] = 0x00
+        print(
+            f"{op['i']:4d} {op['pc']:04X} {op['opset']:5s} {op['mode']:7s} "
+            f"{op['data']:04X} A:{op['A']:02X} X:{op['X']:02X} Y:{op['Y']:02X} "
+            f"P:{op['P']:02X} SP:{op['SP']:04X} "
+            f"PPU:{op['line']:3d},{op['p_cycle']:3d} CYC:{op['c_cycle']}"
+        )
+
     def run(self):
         try:
             self.check_NMI()
@@ -954,7 +957,6 @@ class Cpu:
             self.exec(opset, oprand)
             cycle = (opset["cycle"] + oprand["add_cycle"] +
                 (1 if self.has_branched else 0))
-            # print(hex(cycle), hex(opset["cycle"]), hex(oprand["add_cycle"]))
             self.cycle += cycle
             return cycle
         except Exception as e:

@@ -29,6 +29,14 @@ poetry run main
   - [x] hello world 
   - [x] nestest (8991/8991) 
 - [ ] ppu
-  - [x] hello world  
+  - [x] hello world 
+  - [ ] giko
+    - [x] giko005
+    - [x] giko008
+    - [x] giko009
+    - [x] giko010
+    - [x] giko010b
+  - [x] nestest (all)
+  - [x] nestest  
 - [ ] audio
-- [ ] keypad
+- [x] keypad

@@ -20,7 +20,7 @@ class Video:
         pygame.key.set_repeat(PAD_DELAY, PAD_INTERVAL)
 
     def update(self, data):
-        self.surface.fill((100, 100, 100))
+        self.surface.fill((0, 0, 0))
         try:
             for x in range(0, H_SIZE):
                 for y in range(0, V_SIZE):

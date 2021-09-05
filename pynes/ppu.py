@@ -127,6 +127,7 @@ class SpriteRam(Ram):
         return self.data[addr]
 
     def write(self, addr, data):
+        assert 0x00 <= addr < self.size, f"invalid addr: {addr}"
         # print("spriteram:", hex(addr), hex(data))
         self.data[addr] = data
 
@@ -352,7 +353,7 @@ class Ppu:
         elif addr == 0x0003:
             # set sprite ram write addr
             # dprint("addr:%d, %p", addr)
-            # logger.info(f"[sprite addr] addr:{addr} data:{data}")
+            logger.info(f"[sprite addr] addr:{addr} data:{data}")
             self.write_sprite_ram_addr(data)
         elif addr == 0x0004:
             # sprite ram write
@@ -421,15 +422,14 @@ class Ppu:
                 self.build_sprite_data(sprite_id, self.get_sprite_table_offset())
             if not (sprite.x == 0 and sprite.y == 0 and
                     sprite_id == 0 and sprite.attr == 0):
-                # print(f"[{i}][{sprite_id}](x, y) = ({sprite.x}, {sprite.y})\n"
-                #     f"{sprite.data}")
+                print(f"[{i}][{sprite_id}](x, y) = ({sprite.x}, {sprite.y})\n"
+                    f"{sprite.data}")
                 self.sprites.append(sprite)
 
     # the element of background
     def build_tile(self, x, y, offset):
         tile = Tile()
         block_id = self.get_block_id(x, y)
-        # print(x, y, offset)
         sprite_id = self.get_sprite_id(x, y, offset)
         attr = self.get_attribute(x, y, offset)
         tile.sprite_id = sprite_id
@@ -453,7 +453,6 @@ class Ppu:
             offset_addr_by_name_table = name_table_id * 0x0400
             tile = self.build_tile(mod_x, mod_y, offset_addr_by_name_table)
             self.background.append(tile)
-            # print("[bg]", x, mod_x, mod_y, offset_addr_by_name_table)
 
     def run(self, cycle):
         self.cycle += 3 * cycle
@@ -474,10 +473,9 @@ class Ppu:
             
             if self.line == V_SIZE + 1:
                 self.set_vblank()
-                # raise Exception
                 self.interrupts.deassert_nmi()
                 if self.has_vblank_irq_enabled():
-                    self.interrupts.deassert_nmi()
+                    self.interrupts.assert_nmi()
             
             if self.line == V_SIZE_WITH_VBLANK:
                 self.build_sprites()
