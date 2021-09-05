@@ -290,14 +290,14 @@ class PadRegister:
 
     def write(self, data):
         # https://wiki.nesdev.com/w/index.php?title=Input_devices
-        if self.io_reg == 0 and data == 1:
+        if self.io_reg == 0 and data & 0x01 == 1:
             # wait until next write $00 on $4016 
             self.io_reg = 1
-        elif self.io_reg == 1 and data == 0:
+        elif self.io_reg == 1 and data & 0x01 == 0:
             # pad reset
             self.reset()
         else:
-            print(vars(self), data)
+            print(vars(self), hex(data))
             raise NotImplementedError
 
 class Cpu:
@@ -360,8 +360,9 @@ class Cpu:
                 return data
             elif addr == 0x4017:
                 # keypad 2P
-                logger.info("pad2 read")
-                return self.pad2.read()
+                pass
+                # logger.info("pad2 read")
+                # return self.pad2.read()
             else:
                 # APU I/O
                 pass
@@ -396,8 +397,11 @@ class Cpu:
                 self.ppu.write(addr - 0x2000, data)
             elif 0x4000 <= addr < 0x4020:
                 if addr == 0x4014:
-                    # DMA
-                    pass
+                    # Sprite DMA
+                    ram_addr_s = data * SPRITE_RAM_SIZE
+                    self.ppu.write_sprite_ram_addr(0)
+                    for i in range(SPRITE_RAM_SIZE):
+                        self.ppu.write_sprite_ram_data(self.ram.data[ram_addr_s + i])
                 elif addr == 0x4016:
                     # keypad 1P
                     # logger.info(f"pad1 write {data}")
@@ -405,7 +409,8 @@ class Cpu:
                 elif addr == 0x4017:
                     # keypad 2P
                     # logger.info(f"pad2 write {data}")
-                    self.pad2.write(data)
+                    # self.pad2.write(data)
+                    pass
                 else:
                     # APU I/O
                     pass 

@@ -51,7 +51,6 @@ logger = PynesLogger.get_logger(__name__)
     | 0x3F20-0x3FFF  |  mirror of 0x3F00-0x3F1F   |
 '''
 
-SPRITE_RAM_SIZE = 0x0100
 PALETTE_SIZE = 0x20
 VRAM_SIZE = 0x0800
 TILE_SIZE = 8
@@ -123,14 +122,13 @@ class Palette(Ram):
 class SpriteRam(Ram):
     def __init__(self, size):
         super().__init__(size)
-        self.valid_addr = set()
 
     def read(self, addr):
         return self.data[addr]
 
     def write(self, addr, data):
+        # print("spriteram:", hex(addr), hex(data))
         self.data[addr] = data
-        self.valid_addr.add(addr)
 
 class Ppu:
     def __init__(self, cas, vram, interrupts):
@@ -421,9 +419,11 @@ class Ppu:
             sprite.x = self.sprite_ram.read(i + 3)
             sprite.data = \
                 self.build_sprite_data(sprite_id, self.get_sprite_table_offset())
-            # print(f"[{i}][{sprite_id}](x, y) = ({sprite.x}, {sprite.y})\n"
-            #     f"{sprite.data}")
-            self.sprites.append(sprite)
+            if not (sprite.x == 0 and sprite.y == 0 and
+                    sprite_id == 0 and sprite.attr == 0):
+                # print(f"[{i}][{sprite_id}](x, y) = ({sprite.x}, {sprite.y})\n"
+                #     f"{sprite.data}")
+                self.sprites.append(sprite)
 
     # the element of background
     def build_tile(self, x, y, offset):

@@ -20,9 +20,7 @@ import yaml
 
 H_SIZE = 256
 V_SIZE = 240
-
-# V_SIZE = 256
-# H_SIZE = 240
+SPRITE_RAM_SIZE = 0x0100
 
 class PynesLogger:
     def __init__(self, logger):
