@@ -20,7 +20,7 @@ def nestest():
     pprint(vars(cpu.reg))
 
     renderer = Renderer()
-    video = Video()
+    video = Video(cpu)
 
     # for _ in range(8991):
     while True:
@@ -45,7 +45,7 @@ def hello():
     pprint(vars(cpu.reg))
 
     renderer = Renderer()
-    video = Video()
+    video = Video(cpu)
 
     while True:
         cycle = cpu.run()
@@ -68,7 +68,7 @@ def run(args):
     pprint(vars(cpu.reg))
 
     renderer = Renderer()
-    video = Video()
+    video = Video(cpu)
 
     loop = sys.maxsize if args.loop == -1 else args.loop
     for _ in range(loop):

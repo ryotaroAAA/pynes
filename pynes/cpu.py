@@ -235,10 +235,77 @@ class Register:
         self.SP = 0x01FD
         self.P.reset()
 
+@dataclass
+class PadRegister:
+    A: bool = False
+    B: bool = False
+    STA: bool = False
+    SEL: bool = False
+    UP: bool = False
+    DOWN: bool = False
+    LEFT: bool = False
+    RIGHT: bool = False
+    switch: bool = False
+    count: int = 0
+    io_reg: int = 0
+
+    def reset(self):
+        if self.switch:
+            self.A = False
+            self.B = False
+            self.STA = False
+            self.SEL = False
+            self.UP = False
+            self.DOWN = False
+            self.LEFT = False
+            self.RIGHT = False
+            self.switch = False
+            # print("pad reset!!!")
+        else:
+            self.switch = True
+        self.count = 0
+        self.io_reg = 0
+
+    def read(self):
+        self.count += 1
+        if self.count == 1:
+            return (1 if self.A else 0)
+        elif self.count == 2:
+            return (1 if self.B else 0)
+        elif self.count == 3:
+            return (1 if self.STA else 0)
+        elif self.count == 4:
+            return (1 if self.SEL else 0)
+        elif self.count == 5:
+            return (1 if self.UP else 0)
+        elif self.count == 6:
+            return (1 if self.DOWN else 0)
+        elif self.count == 7:
+            return (1 if self.LEFT else 0)
+        elif self.count == 8:
+            return (1 if self.RIGHT else 0)
+        else:
+            print(vars(self))
+            raise NotImplementedError
+
+    def write(self, data):
+        # https://wiki.nesdev.com/w/index.php?title=Input_devices
+        if self.io_reg == 0 and data == 1:
+            # wait until next write $00 on $4016 
+            self.io_reg = 1
+        elif self.io_reg == 1 and data == 0:
+            # pad reset
+            self.reset()
+        else:
+            print(vars(self), data)
+            raise NotImplementedError
+
 class Cpu:
     def __init__(self, cas, ram, ppu, inter):
         self.op_index = 0
         self.cycle = 0
+        self.pad1 = PadRegister()
+        self.pad2 = PadRegister()
         self.reg = Register()
         self.ram = ram
         self.ppu = ppu
@@ -287,8 +354,14 @@ class Cpu:
                 # DMA
                 raise NotImplementedError
             elif addr == 0x4016:
-                # keypad
-                raise NotImplementedError
+                # keypad 1P
+                # logger.info(f"pad1 read1 {self.pad1.count}")
+                data = self.pad1.read()
+                return data
+            elif addr == 0x4017:
+                # keypad 2P
+                logger.info("pad2 read")
+                return self.pad2.read()
             else:
                 # APU I/O
                 pass
@@ -326,8 +399,13 @@ class Cpu:
                     # DMA
                     pass
                 elif addr == 0x4016:
-                    # keypad
-                    pass
+                    # keypad 1P
+                    # logger.info(f"pad1 write {data}")
+                    self.pad1.write(data)
+                elif addr == 0x4017:
+                    # keypad 2P
+                    # logger.info(f"pad2 write {data}")
+                    self.pad2.write(data)
                 else:
                     # APU I/O
                     pass 
@@ -336,7 +414,7 @@ class Cpu:
             else:
                 raise NotImplementedError
         except NotImplementedError:
-            logger.error(hex(addr), hex(data))
+            logger.error(f"{hex(addr)}, {hex(data)}")
             raise NotImplementedError
         except:
             traceback.format_exc()

@@ -23,7 +23,7 @@ COLORS = [
 
 class Renderer:
     def __init__(self):
-        self.data = np.zeros((H_SIZE, V_SIZE), dtype=np.int)
+        self.data = np.zeros((V_SIZE, H_SIZE), dtype=np.int)
 
     def render(self, image):
         self.image = image
@@ -59,13 +59,16 @@ class Renderer:
         offset_x = tile.scroll_x % 8
         offset_y = tile.scroll_y % 8
 
+        # print(len(self.data), len(self.data[0]))
         for i in range(0, 8):
             for j in range(0, 8):
                 palette_index = tile.palette_id * 4 + tile.sprite.data[i][j]
                 color_id = palette[palette_index]
                 x = tile_x + j - offset_x
                 y = tile_y + i - offset_y
-                if tile_x <= x < tile_x + 8 and tile_y <= y < tile_y + 8:
+                if (tile_x <= x < tile_x + 8 and
+                        tile_y <= y < tile_y + 8):
+                    # print(f"(x, y) = ({x}, {y})")
                     self.data[y][x] = COLORS[color_id]
                 else:
                     print(f"{tile_x} <= {x} < {tile_x + 7} and {tile_y} <= {y} < {tile_y + 7}")
@@ -94,4 +97,4 @@ class Renderer:
 
                 if sprite.data[i][j] > 0:
                     color_id = palette[palette_id * 4 + sprite.data[i][j] + 0x10]
-                    self.data[y][x] = COLORS[color_id]
+                    self.data[y % V_SIZE][x % H_SIZE] = COLORS[color_id]

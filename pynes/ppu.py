@@ -55,9 +55,9 @@ SPRITE_RAM_SIZE = 0x0100
 PALETTE_SIZE = 0x20
 VRAM_SIZE = 0x0800
 TILE_SIZE = 8
-V_SPRITE_NUM = 30
 H_SPRITE_NUM = 32
-H_SIZE_WITH_VBLANK = 262
+V_SPRITE_NUM = 30
+V_SIZE_WITH_VBLANK = 262
 CYCLE_PER_LINE = 341
 
 @dataclass
@@ -235,7 +235,7 @@ class Ppu:
     def get_sprite_id(self, x, y, offset):
         tile_num = y * 32 + x
         sprite_addr = tile_num + offset
-        # print("",x, y, tile_num, sprite_addr)
+        # print(sprite_addr, tile_num, offset)
         data = self.vram.data[sprite_addr]
         return data
 
@@ -254,6 +254,7 @@ class Ppu:
         else:
             return self.vram_addr - 0x2000
 
+    # read by cpu
     def vram_read(self):
         buf = self.vram_buf
         if self.vram_addr >= 0x2000:
@@ -271,6 +272,7 @@ class Ppu:
             # dprint("addr %p %d", self.vram_addr, self.vram_buf)
         return buf
 
+    # read by cpu
     def read(self, addr):
         '''
         | bit  | description                                 |
@@ -312,6 +314,7 @@ class Ppu:
             self.scroll_y = data & 0xFF
             self.is_horizontal_scroll = True
     
+    # write by cpu
     def write_vram_addr(self, data):
         if self.is_lower_vram_addr:
             # dprint("low add %p", data)
@@ -322,6 +325,7 @@ class Ppu:
             self.vram_addr = data << 8
             self.is_lower_vram_addr = True
 
+    # write by cpu
     def write_vram_data(self, data):
         # dprint("%p : %p %d", self.vram_addr, data, data)
         if self.vram_addr >= 0x2000:
@@ -339,6 +343,7 @@ class Ppu:
             self.char_ram.data[self.vram_addr] = data
         self.vram_addr += self.get_vram_offset()
 
+    # write by cpu
     def write(self, addr, data):
         if addr == 0x0000:
             # logger.info(f"addr:{addr} data:{data}")
@@ -424,6 +429,7 @@ class Ppu:
     def build_tile(self, x, y, offset):
         tile = Tile()
         block_id = self.get_block_id(x, y)
+        # print(x, y, offset)
         sprite_id = self.get_sprite_id(x, y, offset)
         attr = self.get_attribute(x, y, offset)
         tile.sprite_id = sprite_id
@@ -447,6 +453,7 @@ class Ppu:
             offset_addr_by_name_table = name_table_id * 0x0400
             tile = self.build_tile(mod_x, mod_y, offset_addr_by_name_table)
             self.background.append(tile)
+            # print("[bg]", x, mod_x, mod_y, offset_addr_by_name_table)
 
     def run(self, cycle):
         self.cycle += 3 * cycle
@@ -460,19 +467,19 @@ class Ppu:
 
             if self.has_sprite_hit():
                 self.set_sprite_hit()
-            if self.line <= H_SIZE and \
+            if self.line <= V_SIZE and \
                 not (self.line % TILE_SIZE) and \
                     (self.line % TILE_SIZE == 0):
                 self.build_background()
             
-            if self.line == H_SIZE + 1:
+            if self.line == V_SIZE + 1:
                 self.set_vblank()
                 # raise Exception
                 self.interrupts.deassert_nmi()
                 if self.has_vblank_irq_enabled():
                     self.interrupts.deassert_nmi()
             
-            if self.line == H_SIZE_WITH_VBLANK:
+            if self.line == V_SIZE_WITH_VBLANK:
                 self.build_sprites()
                 self.clear_vblank()
                 self.clear_sprite_hit()
